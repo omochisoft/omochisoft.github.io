@@ -8,7 +8,7 @@
   <style>
     :root {
       --bg-main: #fcf9f7;
-      --bg-header: #ffeef2;
+      --bg-header: #ffeef2;  /* もう使わなくなるが残しておいてもOK */
       --card-bg: #ffffff;
       --text-main: #333;
       --text-muted: #666;
@@ -29,13 +29,10 @@
     }
 
     /* ===== HEADER ===== */
-header {
-  background: var(--bg-header);
-  border-bottom: 1px solid var(--border-soft);  /* これが薄い線 */
-}
-
-
-
+    header {
+      background: var(--bg-main);  /* メイン背景と同じにする */
+      border-bottom: 0;            /* 下の線を消す */
+    }
 
     .header-inner {
       max-width: 1200px;
@@ -183,10 +180,9 @@ header {
           <a href="https://apps.apple.com/app/anniversary-keeper/id6755642205" target="_blank">
             View on the App Store
           </a>
-<a href="https://omochisoft.github.io/anniversary-keeper.html" target="_blank">
-  Contact / Support &amp; Privacy Policy
-</a>
-
+          <a href="https://omochisoft.github.io/anniversary-keeper.html" target="_blank">
+            Contact / Support &amp; Privacy Policy
+          </a>
         </div>
       </div>
     </article>
