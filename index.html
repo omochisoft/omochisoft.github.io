@@ -4,133 +4,192 @@
   <meta charset="UTF-8" />
   <title>Omochi Soft – Apps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
+    :root {
+      --bg-main: #fcf9f7;
+      --bg-header: #ffeef2;  /* もう使わなくなるが残しておいてもOK */
+      --card-bg: #ffffff;
+      --text-main: #333;
+      --text-muted: #666;
+      --accent: #e18ca5;
+      --accent-dark: #c86a87;
+      --border-soft: rgba(0,0,0,0.05);
+      --shadow-soft: 0 6px 20px rgba(0,0,0,0.04);
+      --radius-card: 18px;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f4eb; /* やわらかいアイボリー */
-      color: #333333;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.55;
     }
+
+    /* ===== HEADER ===== */
     header {
-      padding: 24px 16px;
-      text-align: center;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      background: var(--bg-main);  /* メイン背景と同じにする */
+      border-bottom: 0;            /* 下の線を消す */
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
     }
-    header p {
-      margin-top: 8px;
-      color: #666666;
-      font-size: 0.95rem;
+
+    .header-hero {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
+
+    /* ===== MAIN AREA ===== */
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
+      padding: 32px 16px 48px;
     }
+
     .section-title {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--accent-dark);
+      margin-bottom: 14px;
+      text-transform: uppercase;
     }
+
+    /* ===== APP CARD ===== */
     .app-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 16px 18px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      padding: 20px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-soft);
       display: flex;
-      gap: 14px;
+      gap: 16px;
       align-items: flex-start;
     }
-    .app-icon-placeholder {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #d3c08b, #f0e2ba);
+
+    .app-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: #f5d3db;
+      overflow: hidden;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.8rem;
-      flex-shrink: 0;
     }
+
+    .app-icon-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--accent-dark);
+      background: #ffeef4;
+      border-radius: 999px;
+      padding: 2px 10px;
+      margin-bottom: 6px;
+    }
+
     .app-info h2 {
       margin: 0 0 4px 0;
       font-size: 1.05rem;
     }
+
     .app-info p {
-      margin: 2px 0;
+      margin: 4px 0;
       font-size: 0.9rem;
-      color: #555555;
+      color: var(--text-muted);
     }
+
     .app-links {
-      margin-top: 8px;
-      font-size: 0.85rem;
+      margin-top: 10px;
+      font-size: 0.86rem;
     }
+
     .app-links a {
-      color: #b68a2e;
+      color: var(--accent);
       text-decoration: none;
-      margin-right: 12px;
+      margin-right: 14px;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
     }
+
     .app-links a:hover {
-      text-decoration: underline;
+      border-bottom-color: var(--accent);
     }
+
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      font-size: 0.8rem;
-      color: #777777;
-      padding: 16px;
-      border-top: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.78rem;
+      color: #8a7c80;
+      padding: 22px 12px;
+      border-top: 1px solid var(--border-soft);
     }
+
     footer a {
-      color: #b68a2e;
+      color: var(--accent);
       text-decoration: none;
     }
+
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Omochi Soft</h1>
-    <p>Simple, focused apps for your daily life.</p>
-  </header>
 
-  <main>
-    <section>
-      <h2 class="section-title">Apps</h2>
+<header>
+  <div class="header-inner">
+    <img
+      src="omochisoft-header3.jpg"
+      alt="Omochi Soft Header"
+      class="header-hero"
+    />
+  </div>
+</header>
 
-      <!-- Anniversary Keeper カード -->
-      <article class="app-card">
-        <div class="app-icon-placeholder">
-          AK
+<main>
+  <section>
+    <h2 class="section-title">Apps</h2>
+
+    <article class="app-card">
+      <div class="app-icon-wrapper">
+        <img src="anniversary-keeper-icon.png" alt="Anniversary Keeper icon" />
+      </div>
+
+      <div class="app-info">
+        <div class="app-badge">iOS • Free</div>
+        <h2>Anniversary Keeper</h2>
+        <p>A simple and dedicated calendar for birthdays and anniversaries.</p>
+        <p>Keep important dates organized and receive gentle reminders.</p>
+
+        <div class="app-links">
+          <a href="https://apps.apple.com/app/anniversary-keeper/id6755642205" target="_blank">
+            View on the App Store
+          </a>
+          <a href="https://omochisoft.github.io/anniversary-keeper.html" target="_blank">
+            Contact / Support &amp; Privacy Policy
+          </a>
         </div>
-        <div class="app-info">
-          <h2>Anniversary Keeper</h2>
-          <p>A calendar app focused on managing birthdays and anniversaries.</p>
-          <p>Keep important dates in one place and get reminders at the right time.</p>
+      </div>
+    </article>
 
-          <div class="app-links">
-            <!-- App Store URL はあとで差し替え -->
-            <a href="https://apps.apple.com/app/anniversary-keeper/id6755642205" target="_blank" rel="noopener noreferrer">
-              View on the App Store
-            </a>
-            <a href="https://omochisoft.github.io/anniversary-keeper.html">
-              Contact / Support &amp; privacy policy
-            </a>
-          </div>
-        </div>
-      </article>
+  </section>
+</main>
 
-      <!-- 将来のアプリ用に、ここにカードを増やしていける -->
-
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Omochi Soft. All rights reserved.
-  </footer>
-</body>
-</html>
+<footer>
+  &copy; 2025 Omochi Soft. All rights reserved.
+</footer>
