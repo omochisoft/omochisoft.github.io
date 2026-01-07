@@ -595,9 +595,9 @@
     if(!toc) return;
     toc.innerHTML = "";
 
-    const hasFull = (lang === "ja" || lang === "en");
+    const isFull = (lang === "ja" || lang === "en");
 
-    if(hasFull){
+    if(isFull){
       const labels = tocLabels[lang] || tocLabels["en"];
       for(let i=1; i<=15; i++){
         const div = document.createElement("div");
@@ -641,6 +641,7 @@
     return "en";
   }
 
+  // JA/EN のみ：#ja-tX <-> #en-tX を同期（必要な場合だけ）
   function syncHashToLang(lang){
     const h = (location.hash || "").replace("#","");
     const m = h.match(/^(ja|en)-t(\d{1,2})$/);
@@ -660,6 +661,9 @@
   }
 
   function setLanguage(lang, {syncHash=true} = {}){
+    // 現在のスクロール位置を保持（言語切替で末尾へ飛ぶのを防止）
+    const y = window.scrollY;
+
     document.querySelectorAll(".langblock").forEach(el=>{
       el.classList.toggle("active", el.dataset.lang === lang);
     });
@@ -681,18 +685,28 @@
 
     renderTOC(lang);
 
-    document.documentElement.lang = (lang === "zh-hans") ? "zh-Hans"
-      : (lang === "zh-hant") ? "zh-Hant"
-      : lang;
+    document.documentElement.lang =
+      (lang === "zh-hans") ? "zh-Hans" :
+      (lang === "zh-hant") ? "zh-Hant" :
+      lang;
 
-    if(syncHash) syncHashToLang(lang);
+    // hash 同期が不要なら scrollY を戻す
+    if(syncHash){
+      syncHashToLang(lang);
+    } else {
+      window.scrollTo(0, y);
+    }
   }
 
+  // --- events: hash を消してから言語切替（スクロール保持） ---
   document.querySelectorAll(".langbtn").forEach(btn=>{
-btn.addEventListener("click", ()=>{
-  history.replaceState(null, "", location.pathname + location.search); // hashを消す
-  setLanguage(btn.dataset.lang, { syncHash:false });
-});
+    btn.addEventListener("click", ()=>{
+      const y = window.scrollY;
+      history.replaceState(null, "", location.pathname + location.search); // hash削除
+      setLanguage(btn.dataset.lang, { syncHash:false });
+      window.scrollTo(0, y);
+    });
+  });
 
   (function init(){
     const params = new URLSearchParams(location.search);
@@ -701,6 +715,7 @@ btn.addEventListener("click", ()=>{
 
     setLanguage(initial, {syncHash:false});
 
+    // 初回に hash が付いていたら、そのセクションに移動（JA/ENのみ）
     if(location.hash){
       syncHashToLang(initial);
     }
