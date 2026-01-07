@@ -321,7 +321,7 @@
     </ol>
 
     <p class="smallnote"><strong>施行日：</strong>2026年1月8日<br>
-      <strong>Omochi Soft（開発者：大森 光太郎）</strong>
+      <strong>Omochi Soft（開発者：Kotaro Omori）</strong>
     </p>
   </section>
 
@@ -689,8 +689,10 @@
   }
 
   document.querySelectorAll(".langbtn").forEach(btn=>{
-    btn.addEventListener("click", ()=> setLanguage(btn.dataset.lang));
-  });
+btn.addEventListener("click", ()=>{
+  history.replaceState(null, "", location.pathname + location.search); // hashを消す
+  setLanguage(btn.dataset.lang, { syncHash:false });
+});
 
   (function init(){
     const params = new URLSearchParams(location.search);
