@@ -7,11 +7,11 @@
 
   <style>
     :root{
-      --bg:#f8f4eb;          /* ivory */
+      --bg:#f8f4eb;
       --text:#333;
       --muted:#666;
       --card:#fff;
-      --accent:#ba9a45;      /* muted gold */
+      --accent:#ba9a45;
       --border: rgba(0,0,0,0.06);
       --shadow: 0 8px 18px rgba(0,0,0,0.05);
       --radius: 16px;
@@ -79,7 +79,6 @@
       color: #888;
     }
 
-    /* language switch */
     .langbar{
       display:flex;
       flex-wrap: wrap;
@@ -170,8 +169,6 @@
 </header>
 
 <main>
-
-  <!-- About / TOC (shared) -->
   <section class="card">
     <h2 id="aboutHeading">このページについて</h2>
     <p class="smallnote" id="aboutText">
@@ -186,7 +183,7 @@
     </p>
   </section>
 
-  <!-- ===================== Japanese ===================== -->
+  <!-- ===================== Japanese (FULL) ===================== -->
   <section class="card langblock active" id="lang-ja" data-lang="ja" lang="ja">
     <h2>利用規約（見える化　冷蔵庫の在庫管理と食材費）</h2>
 
@@ -242,7 +239,6 @@
     </ol>
 
     <h3 id="ja-t6">第6条（有料機能・課金）</h3>
-    <!-- ここ以下はそのまま（見出し id だけ ja-t6 に変更済み） -->
     <ol>
       <li><strong>有料機能の概要</strong><br>
         本サービスでは、広告の非表示、カテゴリ編集、CSV出力、iCloud保存（CloudKit）等の追加機能（以下「プレミアム機能」といいます）を、有料で提供する場合があります。
@@ -329,7 +325,7 @@
     </p>
   </section>
 
-  <!-- ===================== English ===================== -->
+  <!-- ===================== English (FULL) ===================== -->
   <section class="card langblock" id="lang-en" data-lang="en" lang="en">
     <h2>Terms of Use (Fridge Inventory: Grocery Cost)</h2>
     <p>
@@ -427,8 +423,98 @@
     </p>
   </section>
 
-  <!-- 他言語は今のままでもOK（ただし目次ジャンプを完璧にするなら同様に xx-t1.. を付ける） -->
-  <!-- ここでは省略：あなたの既存ES/DE/FR/KO/ZHブロックをそのまま置いてOK -->
+  <!-- ===================== Español (SHORT) ===================== -->
+  <section class="card langblock" id="lang-es" data-lang="es" lang="es">
+    <h2>Términos de Uso (Inventario de Nevera y Costos)</h2>
+    <p>
+      Estos Términos de Uso (“Términos”) establecen las condiciones para usar la aplicación móvil
+      “Inventario de Nevera y Costos” (“App”) y sus funciones (“Servicio”), proporcionados por Omochi Soft
+      (Desarrollador: Kotaro Omori, “nosotros”). Al usar el Servicio, aceptas estos Términos.
+    </p>
+    <h3 id="es-summary">Resumen</h3>
+    <ul>
+      <li>Sin cuenta: por defecto los datos se guardan en tu dispositivo.</li>
+      <li>Si activas iCloud (CloudKit), los datos pueden guardarse en tu propia cuenta de iCloud.</li>
+      <li>Compras dentro de la app: suscripción auto-renovable y/o compra única.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== Deutsch (SHORT) ===================== -->
+  <section class="card langblock" id="lang-de" data-lang="de" lang="de">
+    <h2>Nutzungsbedingungen (Kühlschrank Inventar &amp; Kosten)</h2>
+    <p>
+      Diese Nutzungsbedingungen regeln die Nutzung der App „Kühlschrank Inventar &amp; Kosten“ („App“)
+      und der damit verbundenen Funktionen („Dienst“) von Omochi Soft (Entwickler: Kotaro Omori).
+      Durch die Nutzung stimmst du diesen Bedingungen zu.
+    </p>
+    <h3 id="de-summary">Kurzfassung</h3>
+    <ul>
+      <li>Kein Konto erforderlich; Daten werden standardmäßig lokal gespeichert.</li>
+      <li>Bei aktivierter iCloud-Speicherung (CloudKit) können Daten in deinem iCloud-Account liegen.</li>
+      <li>In-App-Käufe: Abo (automatisch verlängernd) und/oder Einmalkauf.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== Français (SHORT) ===================== -->
+  <section class="card langblock" id="lang-fr" data-lang="fr" lang="fr">
+    <h2>Conditions d’utilisation (Inventaire Frigo et Coût)</h2>
+    <p>
+      Les présentes Conditions d’utilisation régissent l’utilisation de l’application « Inventaire Frigo et Coût »
+      (« App ») et de ses fonctionnalités (« Service »), fournies par Omochi Soft (Développeur : Kotaro Omori).
+      En utilisant le Service, vous acceptez ces Conditions.
+    </p>
+    <h3 id="fr-summary">Résumé</h3>
+    <ul>
+      <li>Aucun compte requis ; données stockées localement par défaut.</li>
+      <li>Si iCloud (CloudKit) est activé, les données peuvent être stockées dans votre compte iCloud.</li>
+      <li>Achats intégrés : abonnement auto-renouvelable et/ou achat unique.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== 한국어 (SHORT) ===================== -->
+  <section class="card langblock" id="lang-ko" data-lang="ko" lang="ko">
+    <h2>이용약관 (냉장고 재고·식비 관리)</h2>
+    <p>
+      본 이용약관은 Omochi Soft(개발자: Kotaro Omori)가 제공하는 앱 “냉장고 재고·식비 관리” 및 관련 기능의 이용 조건을 규정합니다.
+      서비스를 이용함으로써 사용자는 본 약관에 동의합니다.
+    </p>
+    <h3 id="ko-summary">요약</h3>
+    <ul>
+      <li>계정 없이 사용 가능, 기본적으로 데이터는 기기에 저장됩니다.</li>
+      <li>iCloud(CloudKit) 저장을 활성화하면 데이터가 사용자의 iCloud 계정에 저장될 수 있습니다.</li>
+      <li>인앱 결제: 자동 갱신 구독 및/또는 일회성 구매.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== 简体中文 (SHORT) ===================== -->
+  <section class="card langblock" id="lang-zh-hans" data-lang="zh-hans" lang="zh-Hans">
+    <h2>使用条款（冰箱库存与食材费用）</h2>
+    <p>
+      本使用条款适用于由 Omochi Soft（开发者：Kotaro Omori）提供的应用“冰箱库存与食材费用”及其相关功能的使用。
+      使用本服务即表示你同意本条款。
+    </p>
+    <h3 id="zh-hans-summary">摘要</h3>
+    <ul>
+      <li>无需账号；默认数据仅保存在设备本地。</li>
+      <li>开启 iCloud（CloudKit）后，数据可能保存到你的 iCloud 账户。</li>
+      <li>应用内购买：自动续订订阅和/或一次性购买。</li>
+    </ul>
+  </section>
+
+  <!-- ===================== 繁體中文 (SHORT) ===================== -->
+  <section class="card langblock" id="lang-zh-hant" data-lang="zh-hant" lang="zh-Hant">
+    <h2>使用條款（冰箱庫存與食材費）</h2>
+    <p>
+      本使用條款適用於 Omochi Soft（開發者：Kotaro Omori）提供之應用「冰箱庫存與食材費」及其相關功能之使用。
+      使用本服務即表示你同意本條款。
+    </p>
+    <h3 id="zh-hant-summary">摘要</h3>
+    <ul>
+      <li>無需帳號；預設資料僅儲存在裝置本機。</li>
+      <li>啟用 iCloud（CloudKit）後，資料可能儲存在你的 iCloud 帳號中。</li>
+      <li>App 內購：自動續訂訂閱與／或一次性購買。</li>
+    </ul>
+  </section>
 
 </main>
 
@@ -438,7 +524,6 @@
 </footer>
 
 <script>
-  // --- app names per language ---
   const appNames = {
     "ja": "見える化　冷蔵庫の在庫管理と食材費",
     "en": "Fridge Inventory: Grocery Cost",
@@ -498,31 +583,49 @@
     "zh-hant":"隱私相關請查看隱私政策（Privacy Policy）頁面。"
   };
 
-  // --- canonical section keys (t1..t15) and per-language labels ---
   const tocLabels = {
     "ja": ["第1条（適用）","第2条（利用環境・アカウント）","第3条（データの取り扱い）","第4条（禁止事項）","第5条（提供の停止・中断）","第6条（有料機能・課金）","第7条（広告）","第8条（知的財産権）","第9条（ユーザーデータの責任）","第10条（外部サービス）","第11条（免責）","第12条（変更・終了）","第13条（規約変更）","第14条（連絡）","第15条（準拠法・管轄）"],
     "en": ["1. Scope","2. Environment / No Account","3. Data Handling","4. Prohibited Conduct","5. Suspension / Interruption","6. Paid Features / In-App Purchases","7. Ads","8. Intellectual Property","9. User Data Responsibility","10. External Services","11. Disclaimer","12. Changes / Termination","13. Amendments","14. Contact","15. Governing Law / Jurisdiction"]
   };
 
-  function anchorId(lang, idx){ // idx: 1..15
-    return `${lang}-t${idx}`;
-  }
+  function anchorId(lang, idx){ return `${lang}-t${idx}`; }
 
   function renderTOC(lang){
     const toc = document.getElementById("toc");
     if(!toc) return;
-
     toc.innerHTML = "";
-    const labels = tocLabels[lang] || tocLabels["en"];
 
-    for(let i=1; i<=15; i++){
-      const div = document.createElement("div");
-      const a = document.createElement("a");
-      a.href = `#${anchorId(lang, i)}`;
-      a.textContent = labels[i-1] || `Section ${i}`;
-      div.appendChild(a);
-      toc.appendChild(div);
+    const hasFull = (lang === "ja" || lang === "en");
+
+    if(hasFull){
+      const labels = tocLabels[lang] || tocLabels["en"];
+      for(let i=1; i<=15; i++){
+        const div = document.createElement("div");
+        const a = document.createElement("a");
+        a.href = `#${anchorId(lang, i)}`;
+        a.textContent = labels[i-1] || `Section ${i}`;
+        div.appendChild(a);
+        toc.appendChild(div);
+      }
+      return;
     }
+
+    const summaryAnchor = `${lang}-summary`;
+    const summaryTitle =
+      lang === "es" ? "Resumen" :
+      lang === "de" ? "Kurzfassung" :
+      lang === "fr" ? "Résumé" :
+      lang === "ko" ? "요약" :
+      lang === "zh-hans" ? "摘要" :
+      lang === "zh-hant" ? "摘要" :
+      "Summary";
+
+    const div = document.createElement("div");
+    const a = document.createElement("a");
+    a.href = `#${summaryAnchor}`;
+    a.textContent = summaryTitle;
+    div.appendChild(a);
+    toc.appendChild(div);
   }
 
   function normalizeLang(navLang){
@@ -538,53 +641,46 @@
     return "en";
   }
 
-  // If current hash is like "#ja-t6" and user switches to "en",
-  // move to "#en-t6" (same section number)
   function syncHashToLang(lang){
     const h = (location.hash || "").replace("#","");
-    const m = h.match(/^(ja|en|es|de|fr|ko|zh-hans|zh-hant)-t(\d{1,2})$/);
+    const m = h.match(/^(ja|en)-t(\d{1,2})$/);
     if(!m) return;
 
     const num = parseInt(m[2], 10);
     if(!(num >= 1 && num <= 15)) return;
 
+    if(lang !== "ja" && lang !== "en") return;
+
     const newId = anchorId(lang, num);
     const el = document.getElementById(newId);
     if(el){
-      // replace hash without extra history entries
       history.replaceState(null, "", `#${newId}`);
       el.scrollIntoView({behavior:"smooth", block:"start"});
     }
   }
 
   function setLanguage(lang, {syncHash=true} = {}){
-    // blocks
     document.querySelectorAll(".langblock").forEach(el=>{
       el.classList.toggle("active", el.dataset.lang === lang);
     });
 
-    // buttons
     document.querySelectorAll(".langbtn").forEach(btn=>{
       const active = btn.dataset.lang === lang;
       btn.classList.toggle("active", active);
       btn.setAttribute("aria-selected", active ? "true" : "false");
     });
 
-    // header texts
     document.getElementById("pageTitle").textContent = pageTitleByLang[lang] || pageTitleByLang["en"];
     document.getElementById("aboutHeading").textContent = aboutHeadingByLang[lang] || aboutHeadingByLang["en"];
     document.getElementById("aboutText").textContent = aboutTextByLang[lang] || aboutTextByLang["en"];
     document.getElementById("tocHeading").textContent = tocHeadingByLang[lang] || tocHeadingByLang["en"];
     document.getElementById("privacyNote").textContent = privacyNoteByLang[lang] || privacyNoteByLang["en"];
 
-    // app name pill
     const label = (lang === "ja") ? "アプリ名：" : "App:";
     document.getElementById("appNamePill").textContent = `${label} ${appNames[lang] || appNames["en"]}`;
 
-    // TOC
     renderTOC(lang);
 
-    // update <html lang>
     document.documentElement.lang = (lang === "zh-hans") ? "zh-Hans"
       : (lang === "zh-hant") ? "zh-Hant"
       : lang;
@@ -592,7 +688,6 @@
     if(syncHash) syncHashToLang(lang);
   }
 
-  // attach events
   document.querySelectorAll(".langbtn").forEach(btn=>{
     btn.addEventListener("click", ()=> setLanguage(btn.dataset.lang));
   });
@@ -602,11 +697,8 @@
     const q = params.get("lang");
     const initial = (q && appNames[q]) ? q : normalizeLang(navigator.language || "ja");
 
-    // initial render (don't smooth scroll on load)
     setLanguage(initial, {syncHash:false});
 
-    // If opened with #ja-tX etc, keep it (or map to initial lang)
-    // If hash exists but is different lang, align it to initial lang
     if(location.hash){
       syncHashToLang(initial);
     }
