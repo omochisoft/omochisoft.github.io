@@ -180,23 +180,7 @@
     </p>
 
     <h3 id="tocHeading">目次</h3>
-    <div class="toc" id="toc">
-      <div><a href="#t1">第1条（適用）</a></div>
-      <div><a href="#t2">第2条（利用環境・アカウント）</a></div>
-      <div><a href="#t3">第3条（データの取り扱い）</a></div>
-      <div><a href="#t4">第4条（禁止事項）</a></div>
-      <div><a href="#t5">第5条（提供の停止・中断）</a></div>
-      <div><a href="#t6">第6条（有料機能・課金）</a></div>
-      <div><a href="#t7">第7条（広告）</a></div>
-      <div><a href="#t8">第8条（知的財産権）</a></div>
-      <div><a href="#t9">第9条（ユーザーデータの責任）</a></div>
-      <div><a href="#t10">第10条（外部サービス）</a></div>
-      <div><a href="#t11">第11条（免責）</a></div>
-      <div><a href="#t12">第12条（変更・終了）</a></div>
-      <div><a href="#t13">第13条（規約変更）</a></div>
-      <div><a href="#t14">第14条（連絡）</a></div>
-      <div><a href="#t15">第15条（準拠法・管轄）</a></div>
-    </div>
+<div class="toc" id="toc"></div>
     <p class="smallnote" id="privacyNote">
       プライバシーに関する取り扱いは、別ページの「Privacy Policy」をご確認ください。
     </p>
@@ -621,6 +605,61 @@
     "zh-hans":"隐私相关请查看隐私政策（Privacy Policy）页面。",
     "zh-hant":"隱私相關請查看隱私政策（Privacy Policy）頁面。"
   };
+
+    // --- TOC labels per language ---
+  const tocItemsByLang = {
+    "ja": [
+      ["#t1","第1条（適用）"],
+      ["#t2","第2条（利用環境・アカウント）"],
+      ["#t3","第3条（データの取り扱い）"],
+      ["#t4","第4条（禁止事項）"],
+      ["#t5","第5条（提供の停止・中断）"],
+      ["#t6","第6条（有料機能・課金）"],
+      ["#t7","第7条（広告）"],
+      ["#t8","第8条（知的財産権）"],
+      ["#t9","第9条（ユーザーデータの責任）"],
+      ["#t10","第10条（外部サービス）"],
+      ["#t11","第11条（免責）"],
+      ["#t12","第12条（変更・終了）"],
+      ["#t13","第13条（規約変更）"],
+      ["#t14","第14条（連絡）"],
+      ["#t15","第15条（準拠法・管轄）"]
+    ],
+    "en": [
+      ["#t1","1. Scope"],
+      ["#t2","2. Environment / No Account"],
+      ["#t3","3. Data Handling"],
+      ["#t4","4. Prohibited Conduct"],
+      ["#t5","5. Suspension / Interruption"],
+      ["#t6","6. Paid Features / In-App Purchases"],
+      ["#t7","7. Ads"],
+      ["#t8","8. Intellectual Property"],
+      ["#t9","9. User Data Responsibility"],
+      ["#t10","10. External Services"],
+      ["#t11","11. Disclaimer"],
+      ["#t12","12. Changes / Termination"],
+      ["#t13","13. Amendments"],
+      ["#t14","14. Contact"],
+      ["#t15","15. Governing Law / Jurisdiction"]
+    ],
+    // ※他言語も同じ要領で増やせます（必要なら全部こちらで埋めます）
+  };
+
+  function renderTOC(lang){
+    const toc = document.getElementById("toc");
+    if(!toc) return;
+    toc.innerHTML = "";
+
+    const items = tocItemsByLang[lang] || tocItemsByLang["en"] || [];
+    items.forEach(([href, label])=>{
+      const div = document.createElement("div");
+      const a = document.createElement("a");
+      a.href = href;
+      a.textContent = label;
+      div.appendChild(a);
+      toc.appendChild(div);
+    });
+  }
 
   function setLanguage(lang){
     // blocks
