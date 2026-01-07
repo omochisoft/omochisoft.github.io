@@ -1,313 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Fridge Inventory: Grocery Cost | Support & Privacy Policy | Omochi Soft</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-            background: #f8f4eb; /* ivory */
-            color: #333;
-        }
-        header {
-            padding: 24px 16px 12px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0 0 4px;
-            font-size: 22px;
-        }
-        header p {
-            margin: 0;
-            font-size: 13px;
-            color: #666;
-        }
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 16px 40px;
-        }
-        h2 {
-            margin-top: 28px;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 6px;
-            font-size: 15px;
-        }
-        p {
-            margin-top: 4px;
-            margin-bottom: 8px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        ul {
-            margin-top: 4px;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        a {
-            color: #ba9a45;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 18px 16px 16px;
-            margin-top: 16px;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-        footer {
-            text-align: center;
-            padding: 12px 16px 24px;
-            font-size: 12px;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Fridge Inventory: Grocery Cost | Privacy Policy | Omochi Soft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #f8f4eb; /* ivory */
+      color: #333;
+    }
+    header {
+      padding: 22px 16px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 4px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    header p {
+      margin: 0;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .langbar {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .langbar button {
+      border: 1px solid rgba(0,0,0,0.10);
+      background: #fff;
+      color: #333;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    }
+    .langbar button.active {
+      border-color: rgba(186,154,69,0.65);
+      box-shadow: 0 10px 18px rgba(186,154,69,0.16);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px 40px;
+    }
+    h2 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+    p {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    ul {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    a { color: #ba9a45; }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      margin-top: 16px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    footer {
+      text-align: center;
+      padding: 12px 16px 24px;
+      font-size: 12px;
+      color: #888;
+    }
+    .muted {
+      color: #666;
+      font-size: 13px;
+    }
+    .hidden { display: none; }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Fridge Inventory: Grocery Cost</h1>
-        <p>Support Information &amp; Privacy Policy</p>
-    </header>
+  <header>
+    <h1 id="pageTitle">Fridge Inventory: Grocery Cost</h1>
+    <p id="pageSubtitle">Support Information &amp; Privacy Policy</p>
+  </header>
 
-    <main>
-        <!-- App short description -->
-        <section class="card">
-            <h2>About Fridge Inventory: Grocery Cost</h2>
-            <p>
-                Fridge Inventory: Grocery Cost is a simple app that helps you
-                <strong>log groceries</strong> and <strong>visualize what’s in your fridge</strong>.
-                You can record items with details such as ingredients, quantity, price, purchase date,
-                and store, then review your fridge inventory and shopping history anytime.
-            </p>
-            <p>
-                When you log ingredients used for cooking, the app can update your remaining inventory
-                and automatically calculate the <strong>ingredient cost per meal</strong>.
-                You can also review spending trends with easy-to-read charts.
-            </p>
-            <p>
-                The app is designed to work without creating an account. By default, your records are
-                stored locally on your device. A premium upgrade removes ads and unlocks additional
-                features such as category editing, CSV export, and iCloud backup/restore.
-            </p>
-        </section>
+  <!-- Language Switcher -->
+  <div class="langbar" aria-label="Language selector">
+    <button data-lang="en">English</button>
+    <button data-lang="ja">日本語</button>
+    <button data-lang="es">Español</button>
+    <button data-lang="de">Deutsch</button>
+    <button data-lang="fr">Français</button>
+    <button data-lang="ko">한국어</button>
+    <button data-lang="zh-hans">简体中文</button>
+    <button data-lang="zh-hant">繁體中文</button>
+  </div>
 
-        <!-- Contact -->
-        <section class="card">
-            <h2>Contact / Support</h2>
-            <p>
-                If you have any questions, issues, or feature requests regarding
-                Fridge Inventory: Grocery Cost, please contact the developer by email:
-            </p>
-            <p>
-                Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-            </p>
-        </section>
+  <main>
+    <!-- EN -->
+    <section class="lang card" data-lang="en">
+      <h2>About <span class="appname">Fridge Inventory: Grocery Cost</span></h2>
+      <p>
+        <span class="appname">Fridge Inventory: Grocery Cost</span> is a simple app that helps you
+        <strong>log groceries</strong> and <strong>visualize what’s in your fridge</strong>.
+        You can record items with details such as ingredients, quantity, price, purchase date,
+        and store, then review your fridge inventory and shopping history anytime.
+      </p>
+      <p>
+        When you log ingredients used for cooking, the app can update your remaining inventory
+        and automatically calculate the <strong>ingredient cost per meal</strong>.
+        You can also review spending trends with easy-to-read charts.
+      </p>
+      <p class="muted">
+        The app is designed to work without creating an account. Your records are stored locally on your device by default.
+        If you enable iCloud backup/restore, your data is saved to your iCloud account using Apple CloudKit (private database).
+      </p>
 
-        <!-- Privacy Policy -->
-        <section class="card">
-            <h2>Privacy Policy</h2>
+      <h2>Contact / Support</h2>
+      <p>If you have any questions, issues, or feature requests, please contact the developer:</p>
+      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
 
-            <h3>1. Introduction</h3>
-            <p>
-                Fridge Inventory: Grocery Cost is an application for recording and reviewing grocery
-                items, fridge inventory, and ingredient costs. The app is designed to work without any
-                user account, and the data you enter is stored locally on your device by default.
-            </p>
+      <h2>Privacy Policy</h2>
+      <p class="muted"><strong>Last Updated:</strong> 2026-01-07</p>
 
-            <h3>2. Information We Collect</h3>
-            <p>
-                The app itself does <strong>not</strong> collect, store, or transmit any personally
-                identifiable information on external servers operated by the developer.
-                In particular, the app does not send the following data outside your device:
-            </p>
-            <ul>
-                <li>Grocery items you enter (ingredient names, quantities, and units)</li>
-                <li>Prices, purchase dates, and store names</li>
-                <li>Cooking logs (meal info, used ingredients, calculated costs)</li>
-                <li>Notes, memos, and custom category names</li>
-                <li>Charts and totals derived from your records</li>
-                <li>Any other records you create within the app</li>
-            </ul>
-            <p>
-                All records you create remain on your device unless you choose to export or back up.
-                The developer cannot view or access your local data.
-            </p>
+      <h3>1. Introduction</h3>
+      <p>
+        <span class="appname">Fridge Inventory: Grocery Cost</span> is an application for recording and reviewing grocery
+        items, fridge inventory, and ingredient costs. The app is designed to work without any user account,
+        and the data you enter is stored locally on your device by default.
+      </p>
 
-            <h3>3. Exception: Google AdMob (Free Version Only)</h3>
-            <p>
-                The free version of Fridge Inventory: Grocery Cost uses Google AdMob to display
-                advertisements. AdMob may automatically process certain data for purposes such as ad
-                delivery, frequency capping, fraud prevention, and measurement. This can include
-                example data such as:
-            </p>
-            <ul>
-                <li>Advertising Identifier (IDFA) or other device identifiers (depending on your settings)</li>
-                <li>Approximate location (for example, inferred from IP address)</li>
-                <li>Basic ad interaction data (such as impressions or clicks)</li>
-                <li>Device information (model, OS version, language, etc.)</li>
-            </ul>
-            <p>
-                These data are processed by Google or its partners, not directly by the developer of
-                this app. For details, please see Google’s Privacy Policy:
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-                    https://policies.google.com/privacy
-                </a>
-            </p>
-            <p>
-                If you upgrade to the premium version, in-app ads are removed from the app UI.
-                However, Google’s SDK may still be present in the app binary.
-            </p>
+      <h3>2. Information We Collect</h3>
+      <p>
+        The app itself does <strong>not</strong> collect, store, or transmit any personally identifiable information on
+        external servers operated by the developer. In particular, the app does not send the following data outside your device
+        unless you explicitly enable iCloud backup:
+      </p>
+      <ul>
+        <li>Grocery items you enter (ingredient names, quantities, and units)</li>
+        <li>Prices, purchase dates, and store names</li>
+        <li>Cooking logs (meal info, used ingredients, calculated costs)</li>
+        <li>Notes, memos, and custom category names</li>
+        <li>Charts and totals derived from your records</li>
+        <li>Any other records you create within the app</li>
+      </ul>
+      <p>
+        The developer cannot view or access your local data. If you use iCloud backup/restore, your data is stored in your own iCloud account.
+      </p>
 
-            <h3>4. Your Data and Local Storage</h3>
-            <p>
-                All data you enter in the app — including:
-            </p>
-            <ul>
-                <li>Shopping logs (items, quantities/units, prices, dates, store names)</li>
-                <li>Fridge inventory and remaining quantities</li>
-                <li>Cooking logs and calculated ingredient costs</li>
-                <li>Notes, photos you attach to records (if applicable), and settings</li>
-                <li>Categories (default or customized)</li>
-            </ul>
-            <p>
-                is stored only on your device’s local storage by default.
-                This information is not automatically uploaded to any server operated by the developer.
-            </p>
+      <h3>3. Exception: Google AdMob (Free Version Only)</h3>
+      <p>
+        The free version uses Google AdMob to display advertisements. AdMob may automatically process certain data for ad delivery,
+        fraud prevention, measurement, and related purposes. This can include:
+      </p>
+      <ul>
+        <li>Advertising Identifier (IDFA) or other device identifiers (depending on your settings)</li>
+        <li>Approximate location (for example, inferred from IP address)</li>
+        <li>Basic ad interaction data (such as impressions or clicks)</li>
+        <li>Device information (model, OS version, language, etc.)</li>
+      </ul>
+      <p>
+        This data is processed by Google or its partners, not directly by the developer. See Google’s Privacy Policy:
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+      </p>
+      <p class="muted">
+        If you upgrade to premium, in-app ads are removed from the app UI. However, the Google SDK may still be included in the app binary.
+      </p>
 
-            <h3>5. Backups and Restore (iCloud / Files)</h3>
-            <p>
-                Fridge Inventory: Grocery Cost provides a backup feature that allows you to create
-                backup files and save them using the system Files interface (for example, iCloud Drive
-                or other storage locations).
-            </p>
-            <ul>
-                <li>
-                    Backup files are created on your device and saved to the location you choose
-                    via Apple’s Files app.
-                </li>
-                <li>
-                    Backup files may contain your app data (shopping logs, cooking logs, settings, etc.).
-                </li>
-                <li>
-                    The developer does not operate any server for backups and cannot access your backup files.
-                </li>
-            </ul>
-            <p>
-                When you restore from a backup, existing data in the app may be overwritten.
-                This operation is performed locally on your device.
-            </p>
+      <h3>4. Your Data and Local Storage</h3>
+      <p>
+        All data you enter — including shopping logs, inventory, cooking logs, notes, photos you attach (if applicable),
+        settings, and categories — is stored only on your device by default.
+      </p>
 
-            <h3>6. CSV Export</h3>
-            <p>
-                The app may allow you to export your records (for example, cooking logs and costs) as a
-                CSV file so you can analyze the data in tools like Excel.
-            </p>
-            <ul>
-                <li>CSV files are generated on your device.</li>
-                <li>You choose where to save or share the exported file via the iOS share sheet.</li>
-                <li>The developer does not receive your exported data.</li>
-            </ul>
+      <h3>5. iCloud Backup and Restore (CloudKit)</h3>
+      <p>
+        <span class="appname">Fridge Inventory: Grocery Cost</span> provides an optional iCloud backup/restore feature.
+        When enabled, your app data is saved to your own iCloud account using Apple CloudKit (private database).
+      </p>
+      <ul>
+        <li>Backups are stored in your iCloud account (CloudKit private database) and are associated with your Apple ID.</li>
+        <li>The developer does not operate a backup server and cannot access your CloudKit private database.</li>
+        <li>To use this feature, you must be signed in to iCloud and have available iCloud storage.</li>
+        <li>You can disable iCloud backup at any time in the app settings (if provided).</li>
+      </ul>
+      <p>
+        When you restore from iCloud, existing data in the app may be overwritten. This operation is initiated by you and performed
+        through Apple’s iCloud/CloudKit services.
+      </p>
 
-            <h3>7. Photos and Photo Library Permissions</h3>
-            <p>
-                Depending on your usage, the app may allow you to save cooking photos to your photo
-                library. If you use this feature, iOS may ask for permission to add photos to your
-                library (Photo Library Add access).
-            </p>
-            <ul>
-                <li>
-                    <strong>Photo Library (Add Only)</strong> – used only to save images you choose to
-                    export to your photo library.
-                </li>
-            </ul>
-            <p>
-                The app does not upload your photos to any server operated by the developer.
-            </p>
+      <h3>6. CSV Export</h3>
+      <p>
+        The app may allow you to export your records as a CSV file so you can analyze the data in tools like Excel.
+        CSV files are generated on your device, and you choose where to save or share them via the iOS share sheet.
+        The developer does not receive your exported data.
+      </p>
 
-            <h3>8. Permissions</h3>
-            <p>
-                Depending on your usage, Fridge Inventory: Grocery Cost may request access to:
-            </p>
-            <ul>
-                <li>
-                    <strong>Files / iCloud Drive</strong> – when you choose to create or restore a backup,
-                    or export data via the system file picker.
-                </li>
-                <li>
-                    <strong>Photo Library (Add Only)</strong> – when you choose to save cooking photos to
-                    your photo library.
-                </li>
-            </ul>
-            <p>
-                These permissions are used only for the intended features within the app.
-                The app does not upload your records to any external server operated by the developer.
-            </p>
+      <h3>7. Photos and Photo Library Permissions</h3>
+      <p>
+        Depending on your usage, the app may allow you to save cooking photos to your photo library.
+        If you use this feature, iOS may ask for permission to add photos to your library (Add Only).
+      </p>
+      <ul>
+        <li><strong>Photo Library (Add Only)</strong> – used only to save images you choose to export to your photo library.</li>
+      </ul>
+      <p>The app does not upload your photos to any server operated by the developer.</p>
 
-            <h3>9. In-App Purchases</h3>
-            <p>
-                Fridge Inventory: Grocery Cost may offer premium features via in-app purchases.
-                All purchase processing is handled entirely by Apple’s App Store via StoreKit.
-                The app does not access or store payment information such as credit card numbers.
-            </p>
+      <h3>8. Permissions</h3>
+      <ul>
+        <li><strong>iCloud / CloudKit</strong> – when you enable iCloud backup/restore.</li>
+        <li><strong>Photo Library (Add Only)</strong> – when you choose to save photos.</li>
+      </ul>
 
-            <h3>10. Third-Party Services</h3>
-            <p>The following third-party services may be used by the app:</p>
-            <ul>
-                <li><strong>Google AdMob</strong> – for displaying advertisements in the free version.</li>
-                <li><strong>Apple StoreKit</strong> – for processing in-app purchases.</li>
-                <li>
-                    <strong>Apple iCloud / Files</strong> – when you choose to save or restore backup files
-                    using iCloud Drive or other locations via the Files app.
-                </li>
-                <li>
-                    <strong>Apple Photos</strong> – when you choose to save images to your photo library.
-                </li>
-            </ul>
-            <p>
-                These services may collect technical or advertising-related data under their own privacy
-                policies. Please refer to each provider’s official documentation for detailed information.
-            </p>
+      <h3>9. In-App Purchases</h3>
+      <p>
+        Premium features may be offered via in-app purchases. All purchase processing is handled by Apple’s App Store via StoreKit.
+        The app does not access or store payment information.
+      </p>
 
-            <h3>11. Data Sharing</h3>
-            <p>The app does not:</p>
-            <ul>
-                <li>Sell user data to third parties</li>
-                <li>Share user-entered records outside the device (unless you choose to export/share)</li>
-                <li>Transfer your app data to external servers managed by the developer</li>
-            </ul>
+      <h3>10. Third-Party Services</h3>
+      <ul>
+        <li><strong>Google AdMob</strong> – ads in the free version.</li>
+        <li><strong>Apple StoreKit</strong> – in-app purchase processing.</li>
+        <li><strong>Apple iCloud / CloudKit</strong> – iCloud backup/restore when enabled by you.</li>
+        <li><strong>Apple Photos</strong> – saving images you choose.</li>
+      </ul>
 
-            <h3>12. Children’s Privacy</h3>
-            <p>
-                This app is not specifically directed at children under the age of 13.
-                AdMob is configured as “Not designed for children.”
-            </p>
+      <h3>11. Data Sharing</h3>
+      <ul>
+        <li>The app does not sell user data.</li>
+        <li>The app does not share your records with the developer’s external servers.</li>
+        <li>If iCloud backup is enabled, data is stored in your iCloud account via Apple CloudKit.</li>
+      </ul>
 
-            <h3>13. Changes to This Policy</h3>
-            <p>
-                This Privacy Policy may be updated from time to time.
-                Any changes will be posted on this page with an updated “Last Updated” date.
-                You are encouraged to review this page periodically for any changes.
-            </p>
+      <h3>12. Children’s Privacy</h3>
+      <p>This app is not specifically directed at children under the age of 13. AdMob is configured as “Not designed for children.”</p>
 
-            <h3>14. Developer</h3>
-            <p>
-                Developer: <strong>Kotaro Omori (Omochi Soft)</strong><br />
-                Contact: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-            </p>
-        </section>
-    </main>
+      <h3>13. Changes to This Policy</h3>
+      <p>This Privacy Policy may be updated from time to time. Updates will be posted on this page with a revised “Last Updated” date.</p>
 
-    <footer>
-        Last Updated: 2026-01-05<br />
-        &copy; 2026 Omochi Soft
-    </footer>
+      <h3>14. Developer</h3>
+      <p>
+        Developer: <strong>Kotaro Omori (Omochi Soft)</strong><br />
+        Contact: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- JA -->
+    <section class="lang card hidden" data-lang="ja">
+      <h2><span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>について</h2>
+      <p>
+        <span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>は、食材の記録と冷蔵庫の在庫を「見える化」するためのシンプルなアプリです。
+        食材名・数量・価格・購入日・購入店などを登録し、在庫や買い物履歴をいつでも確認できます。
+      </p>
+      <p>
+        料理で使った食材を記録すると、残量を更新しながら<strong>1食あたりの食材費</strong>を自動計算できます。
+        さらに、グラフで支出傾向も分かりやすく確認できます。
+      </p>
+      <p class="muted">
+        アカウント作成は不要で、入力したデータは基本的に端末内に保存されます。
+        iCloudバックアップ/復元を有効にすると、AppleのCloudKit（プライベートデータベース）を使用して、あなたのiCloudアカウント内にデータが保存されます。
+      </p>
+
+      <h2>お問い合わせ / サポート</h2>
+      <p>ご質問・不具合・ご要望は、下記メールまでご連絡ください。</p>
+      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>プライバシーポリシー</h2>
+      <p class="muted"><strong>最終更新日:</strong> 2026-01-07</p>
+
+      <h3>1. はじめに</h3>
+      <p>
+        <span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>は、食材・在庫・食材費の記録/確認を行うアプリです。
+        アカウント登録は不要で、入力したデータは基本的に端末内に保存されます。
+      </p>
+
+      <h3>2. 収集する情報</h3>
+      <p>
+        本アプリは、開発者が運営する外部サーバーへ個人を特定できる情報を収集・保存・送信しません。
+        ただし、ユーザーがiCloudバックアップを有効にした場合、バックアップのためにAppleのiCloud（CloudKit）へデータが保存されます。
+      </p>
+      <ul>
+        <li>入力した食材・数量・単位</li>
+        <li>価格、購入日、購入店名</li>
+        <li>料理記録（食事情報、使用食材、計算された食材費）</li>
+        <li>メモ、カテゴリ名など</li>
+        <li>グラフや集計値</li>
+        <li>その他アプリ内で作成した記録</li>
+      </ul>
+      <p>
+        開発者は端末内データにアクセスできません。iCloudバックアップを有効にした場合も、データはあなたのiCloudアカウント（CloudKitプライベートDB）に保存され、
+        開発者が閲覧・取得することはできません。
+      </p>
+
+      <h3>3. 例外：Google AdMob（無料版のみ）</h3>
+      <p>
+        無料版では広告表示のためにGoogle AdMobを使用します。AdMobは広告配信・不正防止・計測などの目的で、
+        端末情報等を自動的に処理する場合があります。
+      </p>
+      <ul>
+        <li>広告ID（IDFA）またはその他の端末識別子（設定により異なります）</li>
+        <li>おおよその位置情報（例：IPアドレスから推定）</li>
+        <li>広告の表示/クリックなどの反応データ</li>
+        <li>端末情報（機種、OS、言語など）</li>
+      </ul>
+      <p>
+        これらはGoogleまたはそのパートナーにより処理され、開発者が直接取得するものではありません。
+        詳細はGoogleのプライバシーポリシーをご確認ください：
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+      </p>
+      <p class="muted">
+        プレミアムにアップグレードするとアプリ上の広告は非表示になりますが、SDK自体はアプリに含まれる場合があります。
+      </p>
+
+      <h3>4. 端末内保存</h3>
+      <p>食材・在庫・料理記録・メモ・（該当する場合）添付写真・設定・カテゴリ等のデータは、基本的に端末内に保存されます。</p>
+
+      <h3>5. iCloudバックアップ/復元（CloudKit）</h3>
+      <p>
+        本アプリは、任意でiCloudバックアップ/復元機能を提供します。有効にすると、AppleのCloudKit（プライベートデータベース）を利用して、
+        あなたのiCloudアカウント内にアプリデータが保存されます。
+      </p>
+      <ul>
+        <li>バックアップはあなたのiCloudアカウント（CloudKitプライベートDB）に保存され、Apple IDに紐づきます。</li>
+        <li>開発者はバックアップ用のサーバーを運用しておらず、CloudKitプライベートDBへアクセスできません。</li>
+        <li>利用にはiCloudへのサインインと、iCloud容量の空きが必要です。</li>
+        <li>（アプリ内に設定がある場合）iCloudバックアップはいつでも無効化できます。</li>
+      </ul>
+      <p>
+        iCloudから復元すると、アプリ内の既存データが上書きされる場合があります。復元はユーザーの操作により開始され、
+        AppleのiCloud/CloudKitサービスを通じて行われます。
+      </p>
+
+      <h3>6. CSV出力</h3>
+      <p>CSVは端末上で生成され、共有シートからユーザーが保存/共有します。開発者がCSV内容を受け取ることはありません。</p>
+
+      <h3>7. 写真と写真ライブラリ権限</h3>
+      <p>必要に応じて、画像を写真ライブラリへ保存する機能を提供する場合があります。この場合、iOSが「追加のみ」権限を求めることがあります。</p>
+      <ul>
+        <li><strong>写真（追加のみ）</strong>：ユーザーが選択した画像を保存するためにのみ使用します。</li>
+      </ul>
+      <p>開発者が運営する外部サーバーへ写真をアップロードしません。</p>
+
+      <h3>8. 権限</h3>
+      <ul>
+        <li><strong>iCloud / CloudKit</strong>：iCloudバックアップ/復元を有効にした場合に使用します。</li>
+        <li><strong>写真（追加のみ）</strong>：写真保存を行う場合に使用します。</li>
+      </ul>
+
+      <h3>9. アプリ内課金</h3>
+      <p>課金処理はAppleのApp Store（StoreKit）により行われます。アプリがクレジットカード情報等へアクセス/保存することはありません。</p>
+
+      <h3>10. 外部サービス</h3>
+      <ul>
+        <li><strong>Google AdMob</strong>：無料版の広告表示</li>
+        <li><strong>Apple StoreKit</strong>：アプリ内課金</li>
+        <li><strong>Apple iCloud / CloudKit</strong>：iCloudバックアップ/復元（ユーザーが有効にした場合）</li>
+        <li><strong>Apple 写真</strong>：ユーザー選択による写真保存</li>
+      </ul>
+
+      <h3>11. データ共有</h3>
+      <ul>
+        <li>ユーザーデータの販売はしません。</li>
+        <li>開発者が運営する外部サーバーへアプリデータを保存しません。</li>
+        <li>iCloudバックアップを有効にした場合、データはAppleのCloudKitを通じてあなたのiCloudアカウント内に保存されます。</li>
+      </ul>
+
+      <h3>12. 子どものプライバシー</h3>
+      <p>本アプリは13歳未満の子ども向けに設計されたものではありません。AdMobは「子ども向けではない」設定で運用します。</p>
+
+      <h3>13. 本ポリシーの変更</h3>
+      <p>内容は必要に応じて更新されます。更新時は本ページに反映し、最終更新日を更新します。</p>
+
+      <h3>14. 開発者</h3>
+      <p>
+        開発者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
+        連絡先：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- ES -->
+    <section class="lang card hidden" data-lang="es">
+      <h2>Acerca de <span class="appname">Inventario de Nevera y Costos</span></h2>
+      <p>
+        <span class="appname">Inventario de Nevera y Costos</span> es una app sencilla para
+        <strong>registrar alimentos</strong> y <strong>visualizar lo que hay en tu nevera</strong>.
+      </p>
+      <p class="muted">
+        No requiere cuenta. Por defecto, los datos se guardan localmente en tu dispositivo.
+        Si activas la copia/restauración en iCloud, los datos se guardan en tu cuenta de iCloud usando Apple CloudKit (base de datos privada).
+      </p>
+
+      <h2>Contacto / Soporte</h2>
+      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>Política de Privacidad</h2>
+      <p class="muted"><strong>Última actualización:</strong> 2026-01-07</p>
+
+      <h3>iCloud (CloudKit)</h3>
+      <p>
+        La copia de seguridad en iCloud es opcional. Si la activas, tus datos se almacenan en tu propia cuenta de iCloud mediante Apple CloudKit (base de datos privada).
+        El desarrollador no opera un servidor de respaldo y no puede acceder a tu base de datos privada de CloudKit.
+      </p>
+
+      <h3>Anuncios (solo versión gratuita)</h3>
+      <p>La versión gratuita usa Google AdMob. Consulta: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>Desarrollador</h3>
+      <p>
+        Desarrollador: <strong>Kotaro Omori (Omochi Soft)</strong><br />
+        Contacto: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- DE -->
+    <section class="lang card hidden" data-lang="de">
+      <h2>Über <span class="appname">Kühlschrank Inventar &amp; Kosten</span></h2>
+      <p class="muted">
+        Keine Kontoerstellung nötig. Standardmäßig werden Daten lokal gespeichert.
+        Wenn iCloud-Backup/Wiederherstellung aktiviert ist, werden Daten in deinem iCloud-Account über Apple CloudKit (Private Database) gespeichert.
+      </p>
+
+      <h2>Kontakt / Support</h2>
+      <p>E-Mail: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>Datenschutzerklärung</h2>
+      <p class="muted"><strong>Zuletzt aktualisiert:</strong> 2026-01-07</p>
+
+      <h3>iCloud (CloudKit)</h3>
+      <p>
+        iCloud-Backup ist optional. Bei Aktivierung werden Daten in deinem iCloud-Account über Apple CloudKit (Private Database) gespeichert.
+        Der Entwickler betreibt keinen Backup-Server und kann nicht auf deine CloudKit-Private-Datenbank zugreifen.
+      </p>
+
+      <h3>Werbung (nur kostenlose Version)</h3>
+      <p>Die kostenlose Version nutzt Google AdMob. Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>Entwickler</h3>
+      <p>
+        Entwickler: <strong>Kotaro Omori (Omochi Soft)</strong><br />
+        Kontakt: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- FR -->
+    <section class="lang card hidden" data-lang="fr">
+      <h2>À propos de <span class="appname">Inventaire Frigo et Coût</span></h2>
+      <p class="muted">
+        Aucun compte requis. Par défaut, les données sont stockées localement sur l’appareil.
+        Si vous activez la sauvegarde/restauration iCloud, les données sont enregistrées dans votre compte iCloud via Apple CloudKit (base privée).
+      </p>
+
+      <h2>Contact / Support</h2>
+      <p>Email : <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>Politique de Confidentialité</h2>
+      <p class="muted"><strong>Dernière mise à jour :</strong> 2026-01-07</p>
+
+      <h3>iCloud (CloudKit)</h3>
+      <p>
+        La sauvegarde iCloud est optionnelle. Si vous l’activez, vos données sont stockées dans votre compte iCloud via Apple CloudKit (base de données privée).
+        Le développeur n’exploite pas de serveur de sauvegarde et ne peut pas accéder à votre base privée CloudKit.
+      </p>
+
+      <h3>Publicités (version gratuite uniquement)</h3>
+      <p>La version gratuite utilise Google AdMob. Détails : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>Développeur</h3>
+      <p>
+        Développeur : <strong>Kotaro Omori (Omochi Soft)</strong><br />
+        Contact : <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- KO -->
+    <section class="lang card hidden" data-lang="ko">
+      <h2><span class="appname">냉장고 재고·식비 관리</span> 소개</h2>
+      <p class="muted">
+        계정 없이 사용 가능하며, 기본적으로 데이터는 기기 내에 저장됩니다.
+        iCloud 백업/복원을 활성화하면 Apple CloudKit(프라이빗 데이터베이스)을 통해 사용자의 iCloud 계정에 데이터가 저장됩니다.
+      </p>
+
+      <h2>문의 / 지원</h2>
+      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>개인정보 처리방침</h2>
+      <p class="muted"><strong>최종 업데이트:</strong> 2026-01-07</p>
+
+      <h3>iCloud(CloudKit)</h3>
+      <p>
+        iCloud 백업은 선택 기능입니다. 활성화 시 데이터는 사용자의 iCloud 계정(CloudKit 프라이빗 DB)에 저장됩니다.
+        개발자는 백업 서버를 운영하지 않으며 CloudKit 프라이빗 DB에 접근할 수 없습니다.
+      </p>
+
+      <h3>광고(무료 버전)</h3>
+      <p>무료 버전은 Google AdMob을 사용합니다: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>개발자</h3>
+      <p>
+        개발자: <strong>Kotaro Omori (Omochi Soft)</strong><br />
+        문의: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- ZH-HANS -->
+    <section class="lang card hidden" data-lang="zh-hans">
+      <h2>关于<span class="appname">冰箱库存与食材费用</span></h2>
+      <p class="muted">
+        无需账号。默认情况下，数据保存在设备本地。
+        若你启用iCloud备份/恢复，数据将通过Apple CloudKit（私有数据库）保存到你的iCloud账户中。
+      </p>
+
+      <h2>联系 / 支持</h2>
+      <p>Email：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>隐私政策</h2>
+      <p class="muted"><strong>更新日期：</strong>2026-01-07</p>
+
+      <h3>iCloud（CloudKit）</h3>
+      <p>
+        iCloud备份为可选功能。启用后，数据会存储在你的iCloud账户（CloudKit私有数据库）中。
+        开发者不运营备份服务器，也无法访问你的CloudKit私有数据库。
+      </p>
+
+      <h3>广告（仅免费版）</h3>
+      <p>免费版使用Google AdMob：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>开发者</h3>
+      <p>
+        开发者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
+        联系方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+
+    <!-- ZH-HANT -->
+    <section class="lang card hidden" data-lang="zh-hant">
+      <h2>關於<span class="appname">冰箱庫存與食材費</span></h2>
+      <p class="muted">
+        無需帳號。預設情況下，資料保存在裝置本機。
+        若你啟用iCloud備份/還原，資料將透過Apple CloudKit（私有資料庫）儲存在你的iCloud帳戶中。
+      </p>
+
+      <h2>聯絡 / 支援</h2>
+      <p>Email：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+
+      <h2>隱私權政策</h2>
+      <p class="muted"><strong>更新日期：</strong>2026-01-07</p>
+
+      <h3>iCloud（CloudKit）</h3>
+      <p>
+        iCloud備份為選用功能。啟用後，資料會儲存在你的iCloud帳戶（CloudKit私有資料庫）中。
+        開發者不營運備份伺服器，也無法存取你的CloudKit私有資料庫。
+      </p>
+
+      <h3>廣告（僅免費版）</h3>
+      <p>免費版使用Google AdMob：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+      <h3>開發者</h3>
+      <p>
+        開發者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
+        聯絡方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Last Updated: 2026-01-07<br />
+    &copy; 2026 Omochi Soft
+  </footer>
+
+  <script>
+    const APP_NAMES = {
+      "ja": "見える化　冷蔵庫の在庫管理と食材費",
+      "es": "Inventario de Nevera y Costos",
+      "de": "Kühlschrank Inventar & Kosten",
+      "fr": "Inventaire Frigo et Coût",
+      "ko": "냉장고 재고·식비 관리",
+      "zh-hans": "冰箱库存与食材费用",
+      "zh-hant": "冰箱庫存與食材費",
+      "en": "Fridge Inventory: Grocery Cost"
+    };
+
+    function normalizeLang(raw) {
+      const l = (raw || "").toLowerCase();
+      if (l.startsWith("ja")) return "ja";
+      if (l.startsWith("es")) return "es";
+      if (l.startsWith("de")) return "de";
+      if (l.startsWith("fr")) return "fr";
+      if (l.startsWith("ko")) return "ko";
+      if (l.startsWith("zh")) {
+        if (l.includes("hant") || l.includes("tw") || l.includes("hk") || l.includes("mo")) return "zh-hant";
+        return "zh-hans";
+      }
+      return "en";
+    }
+
+    function setLang(lang) {
+      document.querySelectorAll(".lang[data-lang]").forEach(sec => {
+        sec.classList.toggle("hidden", sec.getAttribute("data-lang") !== lang);
+      });
+
+      document.querySelectorAll(".langbar button[data-lang]").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+      });
+
+      const appName = APP_NAMES[lang] || APP_NAMES["en"];
+      document.getElementById("pageTitle").textContent = appName;
+      document.title = `${appName} | Privacy Policy | Omochi Soft`;
+
+      // update appname spans inside visible section
+      const visible = document.querySelector(`.lang[data-lang="${lang}"]`);
+      if (visible) {
+        visible.querySelectorAll(".appname").forEach(el => el.textContent = appName);
+      }
+
+      try { localStorage.setItem("pp_lang", lang); } catch (_) {}
+    }
+
+    (function init() {
+      let lang = "en";
+      try {
+        const saved = localStorage.getItem("pp_lang");
+        if (saved && APP_NAMES[saved]) lang = saved;
+      } catch (_) {}
+
+      if (lang === "en") {
+        const nav = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language;
+        const n = normalizeLang(nav);
+        if (APP_NAMES[n]) lang = n;
+      }
+
+      document.querySelectorAll(".langbar button[data-lang]").forEach(btn => {
+        btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang")));
+      });
+
+      setLang(lang);
+    })();
+  </script>
 </body>
 </html>
