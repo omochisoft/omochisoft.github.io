@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">https://github.com/omochisoft/omochisoft.github.io/tree/main
+<head>
+  <meta charset="UTF-8" />
+  <title>HOMU+ | Support & Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    :root {
+      --primary-color: #5E5CE6; /* Purple based */
+      --accent-color: #FF9F0A; /* Orange */
+      --text-main: #1C1C1E;
+      --text-sub: #8E8E93;
+      --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(240,240,255,1) 50%, rgba(255,245,230,1) 100%);
+    }
+
+    /* Dark Mode Support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-main: #F2F2F7;
+        --text-sub: #AEAEB2;
+        --bg-gradient: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 50%, #1A1A1A 100%);
+      }
+      body { background: #000; }
+      .card { background: #1C1C1E !important; border: 1px solid #333 !important; }
+      a { color: #BF5AF2 !important; }
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Aurora Background Effect */
+    .aurora-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(94, 92, 230, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 159, 10, 0.1) 0%, transparent 40%);
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    /* Icon Placeholder */
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #5E5CE6, #FF2D55);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(94, 92, 230, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      opacity: 0; /* JSで表示するまで隠す */
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: none; /* デフォルト非表示 */
+    }
+
+    .card.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+      border-bottom: 2px solid rgba(94, 92, 230, 0.1);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: var(--primary-color);
+    }
+
+    p, ul {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #5E5CE6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .muted {
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+
+    /* Button for Simplified Languages */
+    .btn-english {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #5E5CE6, #BF5AF2);
+      color: white !important;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(94, 92, 230, 0.3);
+      transition: transform 0.2s;
+    }
+    .btn-english:active {
+      transform: scale(0.96);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aurora-bg"></div>
+
+  <header>
+    <div class="app-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            <path d="M13 2L13 22" stroke="white" stroke-width="0" fill="white" />
+        </svg>
+    </div>
+    <h1 id="app-title">HOMU+</h1>
+    <p>Support Information & Privacy Policy</p>
+  </header>
+
+  <main id="content-area">
+    
+    <section class="card" id="lang-en">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last Updated: February 2026</p>
+
+      <h3>1. Introduction</h3>
+      <p>
+        <strong>HOMU+</strong> ("the App") respects your privacy. The App is designed to help you manage your screen time and improve focus using local processing. We do not collect your personal data on our servers.
+      </p>
+
+      <h3>2. Data Handling & Security</h3>
+      <p>
+        <strong>Local Processing:</strong> All sensitive data, including your screen time usage, location settings (geofences), and focus schedules, are processed and stored locally on your device.
+      </p>
+      <p>
+        <strong>Screen Time API:</strong> The App uses Apple's Screen Time API to restrict app usage. Apple imposes strict privacy controls on this API. The App cannot "see" which specific websites you visit or read your messages. It strictly manages blocking based on the rules you set.
+      </p>
+      <p>
+        <strong>Location Data:</strong> The App uses location services solely to determine if you are "at home" or "away" to switch focus modes automatically. Precise location data never leaves your device.
+      </p>
+
+      <h3>3. iCloud Sync</h3>
+      <p>
+        If you are a Premium user, the App may sync your settings (presets, schedules) across your devices using <strong>Apple iCloud (CloudKit)</strong>. This data is stored in your private iCloud container, accessible only by you. The developer cannot access this data.
+      </p>
+
+      <h3>4. Subscriptions</h3>
+      <p>
+        Payments and subscriptions are handled entirely by Apple via the App Store. The App does not process or store your credit card information.
+      </p>
+
+      <h3>5. Analytics</h3>
+      <p>
+        We may use anonymous, aggregated analytics (e.g., Apple App Analytics) to improve stability and performance. No personally identifiable information is collected.
+      </p>
+
+      <h3>6. Contact</h3>
+      <p>If you have any questions or need support, please contact us.</p>
+      <p><strong>Support:</strong> <a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-ja">
+      <h2>プライバシーポリシー</h2>
+      <p class="muted">最終更新日: 2026年2月</p>
+
+      <h3>1. はじめに</h3>
+      <p>
+        <strong>HOMU+</strong>（以下「本アプリ」）は、ユーザーのプライバシーを最優先に考え設計されています。本アプリは、スクリーンタイム管理と集中力向上のための機能を提供しますが、お客様の個人情報を開発者のサーバーへ送信・収集することはありません。
+      </p>
+
+      <h3>2. データの取り扱いとセキュリティ</h3>
+      <p>
+        <strong>端末内処理（ローカル）:</strong> スクリーンタイムの使用状況、位置情報設定（ジオフェンス）、集中モードのスケジュールなど、すべての機密データはお客様の端末内でのみ処理・保存されます。
+      </p>
+      <p>
+        <strong>スクリーンタイムAPI:</strong> 本アプリはAppleが提供するScreen Time APIを使用してアプリの利用制限を行います。このAPIはAppleによって厳格に管理されており、本アプリがお客様の閲覧履歴やメッセージの内容を読み取ることは技術的に不可能です。
+      </p>
+      <p>
+        <strong>位置情報:</strong> 本アプリは「在宅」か「外出」かを判定し、自動でモードを切り替えるためだけに位置情報を使用します。詳細な位置情報履歴が外部へ送信されることはありません。
+      </p>
+
+      <h3>3. iCloud同期</h3>
+      <p>
+        プレミアム機能をご利用の場合、設定内容（プリセットやスケジュール）を複数のデバイス間で同期するために <strong>Apple iCloud (CloudKit)</strong> を使用します。データはお客様個人のiCloud領域に保存され、開発者がその内容を閲覧することはできません。
+      </p>
+
+      <h3>4. サブスクリプション</h3>
+      <p>
+        お支払いはすべてApple（App Store）を通じて行われます。本アプリがお客様のクレジットカード情報を保持・処理することはありません。
+      </p>
+
+      <h3>5. 解析データ</h3>
+      <p>
+        アプリの安定性向上のため、個人を特定しない形での統計データ（Apple App Analyticsなど）を使用する場合があります。
+      </p>
+
+      <h3>6. お問い合わせ</h3>
+      <p>ご質問やサポートが必要な場合は、下記までご連絡ください。</p>
+      <p><strong>サポート窓口:</strong> <a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-de">
+      <h2>Datenschutzerklärung (Zusammenfassung)</h2>
+      <p>
+        <strong>HOMU+</strong> respektiert Ihre Privatsphäre. Alle sensiblen Daten (Bildschirmzeit, Standort) werden lokal auf Ihrem Gerät verarbeitet.
+      </p>
+      <ul>
+        <li><strong>Lokal gespeichert:</strong> Keine persönlichen Daten werden an unsere Server gesendet.</li>
+        <li><strong>Bildschirmzeit-API:</strong> Wir nutzen die Apple-API strikt zur App-Blockierung, ohne Zugriff auf Ihre Inhalte.</li>
+        <li><strong>iCloud:</strong> Synchronisierung erfolgt über Ihr privates iCloud-Konto.</li>
+      </ul>
+      <p>Für die vollständigen rechtlichen Details lesen Sie bitte die englische Version.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+      
+      <h3>Kontakt</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-fr">
+      <h2>Politique de Confidentialité (Résumé)</h2>
+      <p>
+        <strong>HOMU+</strong> respecte votre vie privée. Toutes les données sensibles (Temps d'écran, Localisation) sont traitées localement sur votre appareil.
+      </p>
+      <ul>
+        <li><strong>Traitement local :</strong> Aucune donnée personnelle n'est envoyée à nos serveurs.</li>
+        <li><strong>API Temps d'écran :</strong> Utilisée uniquement pour le blocage, sans accès à votre historique.</li>
+        <li><strong>iCloud :</strong> La synchronisation passe par votre compte iCloud privé.</li>
+      </ul>
+      <p>Pour les détails juridiques complets, veuillez consulter la version anglaise.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+
+      <h3>Contact</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-es">
+      <h2>Política de Privacidad (Resumen)</h2>
+      <p>
+        <strong>HOMU+</strong> respeta su privacidad. Todos los datos sensibles (Tiempo en pantalla, Ubicación) se procesan localmente en su dispositivo.
+      </p>
+      <ul>
+        <li><strong>Procesamiento local:</strong> No enviamos datos personales a nuestros servidores.</li>
+        <li><strong>API de Tiempo en pantalla:</strong> Se usa estrictamente para bloquear apps, sin acceso a su contenido.</li>
+        <li><strong>iCloud:</strong> La sincronización se realiza a través de su cuenta privada de iCloud.</li>
+      </ul>
+      <p>Para ver los detalles legales completos, consulte la versión en inglés.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+
+      <h3>Contacto</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-ko">
+      <h2>개인정보 처리방침 (요약)</h2>
+      <p>
+        <strong>HOMU+</strong>는 사용자의 개인정보를 소중하게 생각합니다. 스크린 타임, 위치 정보 등 모든 민감한 데이터는 사용자의 기기 내에서만 처리됩니다.
+      </p>
+      <ul>
+        <li><strong>로컬 처리:</strong> 개발자의 서버로 개인정보를 전송하지 않습니다.</li>
+        <li><strong>스크린 타임 API:</strong> 앱 차단 목적으로만 사용되며, 사용자의 활동 내역을 조회하지 않습니다.</li>
+        <li><strong>iCloud:</strong> 데이터 동기화는 Apple의 보안된 iCloud를 통해서만 이루어집니다.</li>
+      </ul>
+      <p>자세한 법적 내용은 영문 버전을 확인해 주십시오.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+
+      <h3>문의</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-zh-hant">
+      <h2>隱私權政策（摘要）</h2>
+      <p>
+        <strong>HOMU+</strong> 重視您的隱私。所有的敏感資料（螢幕使用時間、位置資訊）皆僅在您的裝置上進行本機處理。
+      </p>
+      <ul>
+        <li><strong>本機處理：</strong> 我們不會將您的個人資料傳送至外部伺服器。</li>
+        <li><strong>螢幕使用時間 API：</strong> 僅用於應用程式封鎖功能，無法存取您的瀏覽內容。</li>
+        <li><strong>iCloud：</strong> 資料同步僅透過您個人的 iCloud 帳戶進行。</li>
+      </ul>
+      <p>如需完整的法律條款，請參閱英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+
+      <h3>聯絡方式</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-zh-hans">
+      <h2>隐私政策（摘要）</h2>
+      <p>
+        <strong>HOMU+</strong> 重视您的隐私。所有的敏感数据（屏幕使用时间、位置信息）仅在您的设备上进行本地处理。
+      </p>
+      <ul>
+        <li><strong>本地处理：</strong> 我们不会将您的个人数据发送至外部服务器。</li>
+        <li><strong>屏幕使用时间 API：</strong> 仅用于应用拦截功能，无法访问您的浏览内容。</li>
+        <li><strong>iCloud：</strong> 数据同步仅通过您个人的 iCloud 账户进行。</li>
+      </ul>
+      <p>如需完整的法律条款，请参阅英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
+
+      <h3>联系方式</h3>
+      <p><a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 HOMU+ Team. All rights reserved.
+  </footer>
+
+  <script>
+    function detectLanguage() {
+      // ブラウザの言語設定を取得 (例: 'ja', 'ja-JP', 'en-US')
+      const lang = navigator.language || navigator.userLanguage; 
+      const langCode = lang.toLowerCase();
+
+      // デフォルトは英語
+      let targetId = 'lang-en';
+
+      // 言語判定ロジック
+      if (langCode.startsWith('ja')) {
+        targetId = 'lang-ja';
+      } else if (langCode.startsWith('de')) {
+        targetId = 'lang-de';
+      } else if (langCode.startsWith('fr')) {
+        targetId = 'lang-fr';
+      } else if (langCode.startsWith('es')) {
+        targetId = 'lang-es';
+      } else if (langCode.startsWith('ko')) {
+        targetId = 'lang-ko';
+      } else if (langCode === 'zh-tw' || langCode === 'zh-hk' || langCode === 'zh-hant') {
+        targetId = 'lang-zh-hant'; // 繁体字
+      } else if (langCode.startsWith('zh')) {
+        targetId = 'lang-zh-hans'; // その他中国語は簡体字へ
+      }
+
+      // すべてのセクションを非表示にして、対象のみアクティブ化
+      document.querySelectorAll('.card').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.classList.add('active');
+      } else {
+        // フォールバック（万が一IDが見つからない場合）
+        document.getElementById('lang-en').classList.add('active');
+      }
+    }
+
+    // 英語全文を表示するボタン用関数
+    function showEnglish() {
+      document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-en').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 実行
+    document.addEventListener('DOMContentLoaded', detectLanguage);
+  </script>
+</body>
+</html>
