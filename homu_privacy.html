@@ -59,11 +59,11 @@
       margin: 0 auto 16px;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden; /* 画像がはみ出ないように */
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #5E5CE6, #FF2D55); /* 画像がない時の背景色 */
+      background: linear-gradient(135deg, #5E5CE6, #FF2D55);
       color: white;
     }
 
@@ -73,7 +73,6 @@
       object-fit: cover;
     }
 
-    /* Placeholder SVG style */
     .app-icon-container svg {
       width: 40px;
       height: 40px;
@@ -192,7 +191,6 @@
 
   <header>
     <div class="app-icon-container">
-      
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -226,22 +224,17 @@
         <strong>Location Data:</strong> The App uses location services solely to determine if you are "at home" or "away" to switch focus modes automatically. Precise location data never leaves your device.
       </p>
 
-      <h3>3. iCloud Sync</h3>
-      <p>
-        If you are a Premium user, the App may sync your settings (presets, schedules) across your devices using <strong>Apple iCloud (CloudKit)</strong>. This data is stored in your private iCloud container, accessible only by you. The developer cannot access this data.
-      </p>
-
-      <h3>4. Subscriptions</h3>
+      <h3>3. Subscriptions</h3>
       <p>
         Payments and subscriptions are handled entirely by Apple via the App Store. The App does not process or store your credit card information.
       </p>
 
-      <h3>5. Analytics</h3>
+      <h3>4. Analytics</h3>
       <p>
         We may use anonymous, aggregated analytics (e.g., Apple App Analytics) to improve stability and performance. No personally identifiable information is collected.
       </p>
 
-      <h3>6. Contact</h3>
+      <h3>5. Contact</h3>
       <p>If you have any questions or need support, please contact us.</p>
       <p><strong>Support:</strong> <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
@@ -266,22 +259,17 @@
         <strong>位置情報:</strong> 本アプリは「在宅」か「外出」かを判定し、自動でモードを切り替えるためだけに位置情報を使用します。詳細な位置情報履歴が外部へ送信されることはありません。
       </p>
 
-      <h3>3. iCloud同期</h3>
-      <p>
-        プレミアム機能をご利用の場合、設定内容（プリセットやスケジュール）を複数のデバイス間で同期するために <strong>Apple iCloud (CloudKit)</strong> を使用します。データはお客様個人のiCloud領域に保存され、開発者がその内容を閲覧することはできません。
-      </p>
-
-      <h3>4. サブスクリプション</h3>
+      <h3>3. サブスクリプション</h3>
       <p>
         お支払いはすべてApple（App Store）を通じて行われます。本アプリがお客様のクレジットカード情報を保持・処理することはありません。
       </p>
 
-      <h3>5. 解析データ</h3>
+      <h3>4. 解析データ</h3>
       <p>
         アプリの安定性向上のため、個人を特定しない形での統計データ（Apple App Analyticsなど）を使用する場合があります。
       </p>
 
-      <h3>6. お問い合わせ</h3>
+      <h3>5. お問い合わせ</h3>
       <p>ご質問やサポートが必要な場合は、下記までご連絡ください。</p>
       <p><strong>サポート窓口:</strong> <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
@@ -294,7 +282,7 @@
       <ul>
         <li><strong>Lokal gespeichert:</strong> Keine persönlichen Daten werden an unsere Server gesendet.</li>
         <li><strong>Bildschirmzeit-API:</strong> Wir nutzen die Apple-API strikt zur App-Blockierung, ohne Zugriff auf Ihre Inhalte.</li>
-        <li><strong>iCloud:</strong> Synchronisierung erfolgt über Ihr privates iCloud-Konto.</li>
+        <li><strong>Standortdaten:</strong> Werden nur lokal verarbeitet, um den "Zuhause"-Status zu erkennen.</li>
       </ul>
       <p>Für die vollständigen rechtlichen Details lesen Sie bitte die englische Version.</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
@@ -311,7 +299,7 @@
       <ul>
         <li><strong>Traitement local :</strong> Aucune donnée personnelle n'est envoyée à nos serveurs.</li>
         <li><strong>API Temps d'écran :</strong> Utilisée uniquement pour le blocage, sans accès à votre historique.</li>
-        <li><strong>iCloud :</strong> La synchronisation passe par votre compte iCloud privé.</li>
+        <li><strong>Données de localisation :</strong> Traitées localement pour détecter le statut "à la maison".</li>
       </ul>
       <p>Pour les détails juridiques complets, veuillez consulter la version anglaise.</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
@@ -328,7 +316,7 @@
       <ul>
         <li><strong>Procesamiento local:</strong> No enviamos datos personales a nuestros servidores.</li>
         <li><strong>API de Tiempo en pantalla:</strong> Se usa estrictamente para bloquear apps, sin acceso a su contenido.</li>
-        <li><strong>iCloud:</strong> La sincronización se realiza a través de su cuenta privada de iCloud.</li>
+        <li><strong>Ubicación:</strong> Se procesa localmente para detectar si está "en casa".</li>
       </ul>
       <p>Para ver los detalles legales completos, consulte la versión en inglés.</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
@@ -345,7 +333,7 @@
       <ul>
         <li><strong>로컬 처리:</strong> 개발자의 서버로 개인정보를 전송하지 않습니다.</li>
         <li><strong>스크린 타임 API:</strong> 앱 차단 목적으로만 사용되며, 사용자의 활동 내역을 조회하지 않습니다.</li>
-        <li><strong>iCloud:</strong> 데이터 동기화는 Apple의 보안된 iCloud를 통해서만 이루어집니다.</li>
+        <li><strong>위치 정보:</strong> '집' 상태를 감지하기 위해 로컬에서만 처리됩니다.</li>
       </ul>
       <p>자세한 법적 내용은 영문 버전을 확인해 주십시오.</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
@@ -362,7 +350,7 @@
       <ul>
         <li><strong>本機處理：</strong> 我們不會將您的個人資料傳送至外部伺服器。</li>
         <li><strong>螢幕使用時間 API：</strong> 僅用於應用程式封鎖功能，無法存取您的瀏覽內容。</li>
-        <li><strong>iCloud：</strong> 資料同步僅透過您個人的 iCloud 帳戶進行。</li>
+        <li><strong>位置資訊：</strong> 僅在本機處理以偵測「在家」狀態。</li>
       </ul>
       <p>如需完整的法律條款，請參閱英文版本。</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
@@ -379,7 +367,7 @@
       <ul>
         <li><strong>本地处理：</strong> 我们不会将您的个人数据发送至外部服务器。</li>
         <li><strong>屏幕使用时间 API：</strong> 仅用于应用拦截功能，无法访问您的浏览内容。</li>
-        <li><strong>iCloud：</strong> 数据同步仅通过您个人的 iCloud 账户进行。</li>
+        <li><strong>位置信息：</strong> 仅在本地处理以检测“在家”状态。</li>
       </ul>
       <p>如需完整的法律条款，请参阅英文版本。</p>
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Policy (English)</a>
