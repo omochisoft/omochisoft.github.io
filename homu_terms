@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HOMU+ | Terms of Use</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    :root {
+      --primary-color: #5E5CE6; /* Purple based */
+      --accent-color: #FF9F0A; /* Orange */
+      --text-main: #1C1C1E;
+      --text-sub: #8E8E93;
+      --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(240,240,255,1) 50%, rgba(255,245,230,1) 100%);
+    }
+
+    /* Dark Mode Support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-main: #F2F2F7;
+        --text-sub: #AEAEB2;
+        --bg-gradient: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 50%, #1A1A1A 100%);
+      }
+      body { background: #000; }
+      .card { background: #1C1C1E !important; border: 1px solid #333 !important; }
+      a { color: #BF5AF2 !important; }
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Aurora Background Effect */
+    .aurora-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(94, 92, 230, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 159, 10, 0.1) 0%, transparent 40%);
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    /* Icon Placeholder */
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #5E5CE6, #FF2D55);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(94, 92, 230, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: none;
+    }
+
+    .card.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+      border-bottom: 2px solid rgba(94, 92, 230, 0.1);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: var(--primary-color);
+    }
+
+    p, ul, ol {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #5E5CE6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .muted {
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+
+    /* Button for Simplified Languages */
+    .btn-english {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #5E5CE6, #BF5AF2);
+      color: white !important;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(94, 92, 230, 0.3);
+      transition: transform 0.2s;
+    }
+    .btn-english:active {
+      transform: scale(0.96);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aurora-bg"></div>
+
+  <header>
+    <div class="app-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            <path d="M13 2L13 22" stroke="white" stroke-width="0" fill="white" />
+        </svg>
+    </div>
+    <h1 id="app-title">HOMU+</h1>
+    <p>Terms of Use</p>
+  </header>
+
+  <main id="content-area">
+    
+    <section class="card" id="lang-en">
+      <h2>Terms of Use</h2>
+      <p class="muted">Last Updated: February 2026</p>
+
+      <p>
+        These Terms of Use ("Terms") apply to the use of the <strong>HOMU+</strong> app ("the App") provided by Kotaro Omori ("the Developer"). By downloading or using the App, you agree to these Terms.
+      </p>
+
+      <h3>1. No Account Required</h3>
+      <p>
+        The App is designed to work locally on your device without requiring user registration. Your settings, schedules, and usage data are stored on your device or your personal iCloud account (if enabled). The Developer does not manage your user account.
+      </p>
+
+      <h3>2. Use of Screen Time API</h3>
+      <p>
+        The App utilizes Apple's Screen Time API to provide app blocking and focus features.
+      </p>
+      <ul>
+        <li><strong>Functionality:</strong> The App can restrict access to other apps based on the rules you set (schedules, location, or timers).</li>
+        <li><strong>Limitation:</strong> Blocking functionality relies entirely on iOS. If you delete the App, all restrictions will be lifted immediately. The Developer is not responsible if the API fails to block apps due to iOS updates or bugs.</li>
+        <li><strong>Privacy:</strong> The App cannot access the content of your messages or browsing history through this API.</li>
+      </ul>
+
+      <h3>3. Location Services</h3>
+      <p>
+        The App uses location services (geofencing) solely to determine if you are "at home" or "away" for switching focus modes. This processing happens locally on your device.
+      </p>
+
+      <h3>4. Premium Features & Subscriptions</h3>
+      <ul>
+        <li><strong>Payments:</strong> All transactions are processed by Apple via the App Store.</li>
+        <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.</li>
+        <li><strong>Lifetime Purchase:</strong> A one-time purchase grants indefinite access to premium features, subject to the App's lifespan.</li>
+        <li><strong>Refunds:</strong> Refunds are handled exclusively by Apple according to their policy. The Developer cannot process refunds directly.</li>
+      </ul>
+
+      <h3>5. Disclaimer</h3>
+      <p>
+        The App is provided "as is" without warranties of any kind. The App is a tool to assist with self-control and focus but does not guarantee specific results. The Developer is not liable for any damages (e.g., missed notifications, inability to use other apps during a blocking session) arising from the use of the App.
+      </p>
+
+      <h3>6. Changes to Terms</h3>
+      <p>
+        We reserve the right to update these Terms at any time. Continued use of the App constitutes acceptance of the new Terms.
+      </p>
+
+      <h3>Contact</h3>
+      <p><strong>Support:</strong> <a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-ja">
+      <h2>利用規約</h2>
+      <p class="muted">最終更新日: 2026年2月</p>
+
+      <p>
+        この利用規約（以下「本規約」）は、Kotaro Omori（以下「開発者」）が提供するアプリ「<strong>HOMU+</strong>」（以下「本アプリ」）の利用条件を定めるものです。本アプリを利用することで、本規約に同意したものとみなされます。
+      </p>
+
+      <h3>1. アカウントとデータ管理</h3>
+      <p>
+        本アプリはユーザー登録不要で利用できます。設定データ、スケジュール、使用状況などは、お客様の端末内またはiCloud（有効な場合）に保存されます。開発者がこれら個人データを管理・閲覧することはありません。
+      </p>
+
+      <h3>2. Screen Time APIの利用</h3>
+      <p>
+        本アプリは、アプリの利用制限機能を提供するためにAppleのScreen Time APIを使用します。
+      </p>
+      <ul>
+        <li><strong>機能の制限:</strong> 本アプリを削除すると、設定していた全ての制限は即座に解除されます。</li>
+        <li><strong>免責:</strong> iOSの不具合や仕様変更により、制限機能が正常に動作しない場合があります。これにより生じた損害について開発者は責任を負いません。</li>
+        <li><strong>プライバシー:</strong> 本アプリはこのAPIを通じて、お客様の閲覧履歴やメッセージ内容を取得することはできません。</li>
+      </ul>
+
+      <h3>3. 位置情報の利用</h3>
+      <p>
+        本アプリは「在宅」か「外出」かを判定し、自動で集中モードを切り替える目的でのみ位置情報を使用します。この処理は端末内で完結し、位置情報履歴がサーバーへ送信されることはありません。
+      </p>
+
+      <h3>4. 有料プランと課金</h3>
+      <ul>
+        <li><strong>支払い:</strong> 課金処理はすべてApple（App Store）を通じて行われます。</li>
+        <li><strong>自動更新:</strong> サブスクリプションは、期間終了の24時間前までにキャンセルされない限り自動的に更新されます。</li>
+        <li><strong>買い切り:</strong> 一度のお支払いで無期限に機能を利用できます（サービスの存続期間に限り）。</li>
+        <li><strong>返金:</strong> 返金はAppleのポリシーに従い、Appleによって処理されます。開発者が直接返金を行うことはできません。</li>
+      </ul>
+
+      <h3>5. 免責事項</h3>
+      <p>
+        本アプリは現状有姿で提供されます。本アプリの使用（例：重要な連絡の通知を見逃した、緊急時に他アプリが使えなかった等）に起因するいかなる損害についても、開発者は責任を負いません。ブロック設定はご自身の責任において行ってください。
+      </p>
+
+      <h3>6. 規約の変更</h3>
+      <p>
+        開発者は必要に応じて本規約を変更できるものとします。変更後も本アプリの利用を継続した場合、変更後の規約に同意したものとみなされます。
+      </p>
+
+      <h3>お問い合わせ</h3>
+      <p><strong>サポート:</strong> <a href="mailto:support@homia.app">support@homia.app</a></p>
+    </section>
+
+    <section class="card" id="lang-de">
+      <h2>Nutzungsbedingungen (Zusammenfassung)</h2>
+      <p>
+        Durch die Nutzung von <strong>HOMU+</strong> stimmen Sie diesen Bedingungen zu.
+      </p>
+      <ul>
+        <li><strong>Kein Konto:</strong> Daten werden lokal auf Ihrem Gerät gespeichert.</li>
+        <li><strong>Screen Time API:</strong> Die App-Blockierung hängt von iOS ab. Beim Löschen der App werden alle Sperren aufgehoben.</li>
+        <li><strong>Zahlungen:</strong> Abonnements und Käufe werden über den Apple App Store abgewickelt.</li>
+        <li><strong>Haftungsausschluss:</strong> Der Entwickler haftet nicht für verpasste Benachrichtigungen während einer Fokus-Sitzung.</li>
+      </ul>
+      <p>Für die vollständigen rechtlichen Bedingungen lesen Sie bitte die englische Version.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+    <section class="card" id="lang-fr">
+      <h2>Conditions d'utilisation (Résumé)</h2>
+      <p>
+        En utilisant <strong>HOMU+</strong>, vous acceptez ces conditions.
+      </p>
+      <ul>
+        <li><strong>Pas de compte :</strong> Les données sont stockées localement.</li>
+        <li><strong>API Temps d'écran :</strong> Le blocage dépend d'iOS. Si vous supprimez l'application, les restrictions disparaissent.</li>
+        <li><strong>Paiements :</strong> Gérés entièrement par l'App Store d'Apple.</li>
+        <li><strong>Limitation de responsabilité :</strong> Le développeur n'est pas responsable des notifications manquées pendant le blocage.</li>
+      </ul>
+      <p>Pour les conditions complètes, veuillez consulter la version anglaise.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+    <section class="card" id="lang-es">
+      <h2>Términos de Uso (Resumen)</h2>
+      <p>
+        Al usar <strong>HOMU+</strong>, aceptas estos términos.
+      </p>
+      <ul>
+        <li><strong>Sin cuenta:</strong> Los datos se guardan localmente en tu dispositivo.</li>
+        <li><strong>API de Tiempo en pantalla:</strong> El bloqueo depende de iOS. Si eliminas la app, se eliminan las restricciones.</li>
+        <li><strong>Pagos:</strong> Procesados a través de Apple App Store.</li>
+        <li><strong>Descargo de responsabilidad:</strong> El desarrollador no se hace responsable de las notificaciones perdidas durante una sesión de bloqueo.</li>
+      </ul>
+      <p>Para ver los términos legales completos, consulte la versión en inglés.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+    <section class="card" id="lang-ko">
+      <h2>이용약관 (요약)</h2>
+      <p>
+        <strong>HOMU+</strong>를 사용함으로써 귀하는 본 약관에 동의하게 됩니다.
+      </p>
+      <ul>
+        <li><strong>계정 불필요:</strong> 모든 데이터는 기기에 로컬로 저장됩니다.</li>
+        <li><strong>스크린 타임 API:</strong> 앱 차단 기능은 iOS에 의존합니다. 앱을 삭제하면 모든 제한이 해제됩니다.</li>
+        <li><strong>결제:</strong> 모든 결제 및 환불은 Apple App Store를 통해 처리됩니다.</li>
+        <li><strong>면책:</strong> 개발자는 차단 세션 중 놓친 알림 등에 대해 책임을 지지 않습니다.</li>
+      </ul>
+      <p>자세한 법적 내용은 영문 버전을 확인해 주십시오.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+    <section class="card" id="lang-zh-hant">
+      <h2>使用條款 (摘要)</h2>
+      <p>
+        使用 <strong>HOMU+</strong> 即表示您同意本條款。
+      </p>
+      <ul>
+        <li><strong>無需帳號：</strong> 資料皆儲存於您的裝置本機。</li>
+        <li><strong>螢幕使用時間 API：</strong> 封鎖功能依賴 iOS 運作。若刪除 App，所有限制將即時失效。</li>
+        <li><strong>付款：</strong> 所有訂閱與購買皆透過 Apple App Store 處理。</li>
+        <li><strong>免責聲明：</strong> 開發者不對封鎖期間錯過的通知或無法使用 App 負責。</li>
+      </ul>
+      <p>如需完整的法律條款，請參閱英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+    <section class="card" id="lang-zh-hans">
+      <h2>使用条款 (摘要)</h2>
+      <p>
+        使用 <strong>HOMU+</strong> 即表示您同意本条款。
+      </p>
+      <ul>
+        <li><strong>无需账号：</strong> 数据仅保存在您的设备本地。</li>
+        <li><strong>屏幕使用时间 API：</strong> 拦截功能依赖 iOS 运行。若删除应用，所有限制将立即解除。</li>
+        <li><strong>付款：</strong> 所有交易通过 Apple App Store 处理。</li>
+        <li><strong>免责声明：</strong> 开发者不对拦截期间错过的通知或无法使用应用负责。</li>
+      </ul>
+      <p>如需完整的法律条款，请参阅英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Read full Terms (English)</a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 HOMU+ Team. All rights reserved.
+  </footer>
+
+  <script>
+    function detectLanguage() {
+      const lang = navigator.language || navigator.userLanguage; 
+      const langCode = lang.toLowerCase();
+      let targetId = 'lang-en';
+
+      if (langCode.startsWith('ja')) {
+        targetId = 'lang-ja';
+      } else if (langCode.startsWith('de')) {
+        targetId = 'lang-de';
+      } else if (langCode.startsWith('fr')) {
+        targetId = 'lang-fr';
+      } else if (langCode.startsWith('es')) {
+        targetId = 'lang-es';
+      } else if (langCode.startsWith('ko')) {
+        targetId = 'lang-ko';
+      } else if (langCode === 'zh-tw' || langCode === 'zh-hk' || langCode === 'zh-hant') {
+        targetId = 'lang-zh-hant';
+      } else if (langCode.startsWith('zh')) {
+        targetId = 'lang-zh-hans';
+      }
+
+      document.querySelectorAll('.card').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.classList.add('active');
+      } else {
+        document.getElementById('lang-en').classList.add('active');
+      }
+    }
+
+    function showEnglish() {
+      document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-en').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', detectLanguage);
+  </script>
+</body>
+</html>
