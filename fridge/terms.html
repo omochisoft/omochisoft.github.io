@@ -163,7 +163,7 @@
 
   <div class="meta">
     <span class="pill" id="appNamePill">アプリ名：見える化　冷蔵庫の在庫管理と食材費</span>
-    <span class="pill">Last Updated: 2026-01-08</span>
+    <span class="pill">Last Updated: 2026-02-10</span>
     <span class="pill">Contact: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></span>
   </div>
 </header>
@@ -183,7 +183,6 @@
     </p>
   </section>
 
-  <!-- ===================== Japanese (FULL) ===================== -->
   <section class="card langblock active" id="lang-ja" data-lang="ja" lang="ja">
     <h2>利用規約（見える化　冷蔵庫の在庫管理と食材費）</h2>
 
@@ -208,7 +207,7 @@
 
     <h3 id="ja-t3">第3条（データの取り扱い）</h3>
     <ol>
-      <li>本サービスにおけるユーザーの入力データ（食材名、数量、価格、購入日、メモ、カテゴリ等を含みますが、これらに限りません。以下「ユーザーデータ」といいます）の取り扱いは、当方が別途定める「プライバシーポリシー」に従います。</li>
+      <li>本サービスにおけるユーザーの入力データ（食材名、数量、価格、購入日、メモ、カテゴリ、<strong>レシート画像</strong>等を含みますが、これらに限りません。以下「ユーザーデータ」といいます）の取り扱いは、当方が別途定める「プライバシーポリシー」に従います。</li>
       <li>ユーザーデータは、原則としてユーザーの端末内に保存されます。</li>
       <li>ユーザーがiCloud保存（CloudKit）等の機能を有効にした場合、ユーザーデータはユーザー自身のiCloudアカウントに保存される場合があります。なお、当方はユーザーのCloudKit（プライベートデータベース）にアクセスしません。</li>
     </ol>
@@ -222,6 +221,7 @@
       <li>本サービスの不正利用、リバースエンジニアリング、改変、解析、複製等（法令で許容される範囲を除く）</li>
       <li>当方、他のユーザー、第三者になりすます行為</li>
       <li>反社会的勢力に対し、直接または間接に利益を供与する行為</li>
+      <li><strong>レシート解析機能において、他人の個人情報（クレジットカード番号、氏名、住所等）が含まれる画像をアップロードする行為</strong></li>
       <li>その他、当方が不適切と判断する行為</li>
     </ul>
 
@@ -231,7 +231,7 @@
         <ul>
           <li>本サービスにかかるシステムの保守・点検または更新を行う場合</li>
           <li>地震、落雷、火災、停電、天災等の不可抗力により提供が困難となった場合</li>
-          <li>App Store、iOS、CloudKit、広告配信事業者等の仕様変更・障害等により提供が困難となった場合</li>
+          <li>App Store、iOS、CloudKit、<strong>AIプロバイダ（Google Gemini API等）</strong>、広告配信事業者等の仕様変更・障害等により提供が困難となった場合</li>
           <li>その他、当方が提供困難と判断した場合</li>
         </ul>
       </li>
@@ -241,91 +241,93 @@
     <h3 id="ja-t6">第6条（有料機能・課金）</h3>
     <ol>
       <li><strong>有料機能の概要</strong><br>
-        本サービスでは、広告の非表示、カテゴリ編集、CSV出力、iCloud保存（CloudKit）等の追加機能（以下「プレミアム機能」といいます）を、有料で提供する場合があります。
+        本サービスでは、広告の非表示、カテゴリ編集、CSV出力、iCloud保存、<strong>レシートAI自動入力</strong>等の追加機能（以下「プレミアム機能」といいます）を、有料で提供します。
       </li>
       <li><strong>提供形態</strong><br>
-        プレミアム機能は、以下の形態で提供される場合があります。
+        プレミアム機能は、以下の形態で提供されます。
         <ul>
-          <li>自動更新サブスクリプション（以下「サブスクリプション」といいます）</li>
-          <li>買い切り型（非消耗型）購入（以下「買い切り」といいます）</li>
+          <li><strong>自動更新サブスクリプション</strong>：月額プラン、年額プラン等。</li>
+          <li><strong>買い切り型（非消耗型）</strong>：新規の販売は終了している場合があります。</li>
         </ul>
-        ※提供形態・内容はアプリ内表示およびApp Storeの表示に従います。
       </li>
-      <li><strong>購入手続・請求</strong><br>
-        購入、請求、更新、解約、返金等は、AppleのApp Store（StoreKit）により処理されます。ユーザーはApp Storeの案内・規約に従うものとします。
+      <li><strong>既存の買い切りユーザーについて</strong><br>
+        過去に買い切り型（Lifetime）を購入されたユーザーは、新規販売の終了にかかわらず、引き続きプレミアム機能をご利用いただけます。ただし、プラットフォームの仕様変更やサービス自体の終了等により利用できなくなる場合を除きます。
       </li>
-      <li><strong>サブスクリプションの自動更新(1ヶ月ごと)</strong>
+      <li><strong>サブスクリプションの自動更新</strong>
         <ul>
-          <li>ユーザーが解約しない限り、購読は自動更新されます。</li>
+          <li>ユーザーが解約しない限り、購読は選択した期間（1ヶ月または1年）ごとに自動更新されます。</li>
           <li>更新課金のタイミング等は、App Storeの仕様に従います。</li>
           <li>アプリを削除しても解約にはなりません。解約はApp Storeのサブスクリプション管理画面から行ってください。</li>
         </ul>
       </li>
-      <li><strong>買い切り</strong><br>
-        買い切りは、購入が完了した場合、原則として継続的にプレミアム機能の利用権を提供します（ただし第12条の変更・終了、またはプラットフォーム側の仕様変更等の影響を受ける場合があります）。
-      </li>
-      <li><strong>両方購入について</strong><br>
-        ユーザーは、サブスクリプションおよび買い切りを同時に保有する場合があります。その場合でも、プレミアム機能の提供は重複して行われません（機能は同一です）。
-      </li>
-      <li><strong>復元</strong><br>
-        機種変更等の場合、ユーザーはApp Storeの「購入の復元」等により利用権の復元を行える場合があります。
-      </li>
-      <li><strong>返金</strong><br>
-        返金の可否は当方ではなくApp Storeの返金ポリシーに従います。
-      </li>
-      <li><strong>未成年者</strong><br>
-        未成年者が有料機能を利用する場合、法定代理人（親権者等）の同意を得たうえで利用してください。
+      <li><strong>購入手続・請求・返金</strong><br>
+        購入、請求、解約、返金等は、すべてAppleのApp Store（StoreKit）により処理されます。返金の可否はAppleのポリシーに従います。
       </li>
     </ol>
 
-    <h3 id="ja-t7">第7条（広告）</h3>
+    <h3 id="ja-t7">第7条（AI機能・レシート解析）</h3>
+    <ol>
+      <li><strong>外部AIサービスの利用</strong><br>
+        本サービスのレシート自動入力機能は、Google社が提供するGemini API等の外部AIサービスを利用して画像解析を行います。ユーザーは、本機能の利用にあたり、入力した画像データが解析のために外部AIプロバイダへ送信されることに同意するものとします。
+      </li>
+      <li><strong>精度の非保証</strong><br>
+        AIによる解析結果は100%の正確性を保証するものではありません。誤認識や読み取り漏れが発生する可能性があります。ユーザーは、<strong>必ず解析結果をご自身で確認・修正した上で保存してください。</strong>
+      </li>
+      <li><strong>データの非保持・学習利用</strong><br>
+        当方のサーバーおよび外部AIプロバイダは、原則として送信されたレシート画像を永続的に保存せず、AIモデルの学習（トレーニング）にも使用しません（ただし、各プロバイダの規約変更や無料枠の仕様等により例外が生じる可能性については免責とします）。
+      </li>
+      <li><strong>免責</strong><br>
+        AI解析の結果により生じた損害（家計簿の計算間違い、入力ミス等）について、当方は一切の責任を負いません。
+      </li>
+    </ol>
+
+    <h3 id="ja-t8">第8条（広告）</h3>
     <ol>
       <li>無料版では、第三者の広告配信サービス（例：Google AdMob）により広告が表示される場合があります。</li>
-      <li>プレミアム機能により広告が非表示となる場合がありますが、広告SDKがアプリに含まれる場合があります（詳細はプライバシーポリシー参照）。</li>
-      <li>広告の内容、表示頻度、表示可否等は当方が保証するものではありません。</li>
+      <li>プレミアム機能により広告が非表示となる場合がありますが、広告SDK自体はアプリに含まれる場合があります。</li>
     </ol>
 
-    <h3 id="ja-t8">第8条（知的財産権）</h3>
+    <h3 id="ja-t9">第9条（知的財産権）</h3>
     <p>本サービスに関する著作権、商標権、その他一切の知的財産権は、当方または正当な権利を有する第三者に帰属します。ユーザーは、当方の事前承諾なく、これらを複製、転載、改変、頒布、販売等してはなりません。</p>
 
-    <h3 id="ja-t9">第9条（ユーザーデータの責任）</h3>
+    <h3 id="ja-t10">第10条（ユーザーデータの責任）</h3>
     <ol>
       <li>ユーザーデータはユーザーの責任において入力・管理するものとします。</li>
       <li>当方は、ユーザーデータの内容の正確性、完全性、適法性等を保証しません。</li>
-      <li>端末故障、OS更新、CloudKitの障害、ユーザー操作等により、ユーザーデータが消失・破損する可能性があります。当方はこれに関し一切の責任を負いません。重要なデータは、ユーザー自身で適切に管理してください。</li>
+      <li>端末故障、OS更新、CloudKitの障害、ユーザー操作等により、ユーザーデータが消失・破損する可能性があります。当方はこれに関し一切の責任を負いません。重要なデータは、ユーザー自身で適切に管理（CSV出力等によるバックアップ）してください。</li>
     </ol>
 
-    <h3 id="ja-t10">第10条（外部サービスとの連携）</h3>
-    <p>本サービスは、iCloud（CloudKit）、App Store、広告配信等の外部サービスと連携する場合があります。外部サービスの障害、仕様変更、ユーザー設定等により本サービスに支障が生じた場合、当方は一切の責任を負いません。</p>
+    <h3 id="ja-t11">第11条（外部サービスとの連携）</h3>
+    <p>本サービスは、iCloud（CloudKit）、App Store、Google Gemini API、広告配信等の外部サービスと連携する場合があります。外部サービスの障害、仕様変更、利用規約の変更等により本サービスに支障が生じた場合、当方は一切の責任を負いません。</p>
 
-    <h3 id="ja-t11">第11条（免責事項）</h3>
+    <h3 id="ja-t12">第12条（免責事項）</h3>
     <ol>
       <li>当方は、本サービスに関して、ユーザーに生じた損害について、当方の故意または重過失による場合を除き責任を負いません。</li>
       <li>本サービスの利用に関連して、ユーザーと第三者との間で生じた紛争等について、当方は一切責任を負いません。</li>
       <li>本サービスは、家計管理・在庫管理等の補助を目的とするものであり、特定の成果（節約効果等）を保証するものではありません。</li>
     </ol>
 
-    <h3 id="ja-t12">第12条（サービス内容の変更・終了）</h3>
+    <h3 id="ja-t13">第13条（サービス内容の変更・終了）</h3>
     <p>当方は、ユーザーへの通知なく、本サービスの内容を変更し、または提供を中止・終了できるものとし、これによりユーザーに損害が生じた場合でも一切の責任を負いません。</p>
 
-    <h3 id="ja-t13">第13条（規約の変更）</h3>
+    <h3 id="ja-t14">第14条（規約の変更）</h3>
     <p>当方は、必要と判断した場合、ユーザーへの事前通知なく本規約を変更できるものとします。変更後の規約は、当方所定の方法で公表された時点から効力を生じます。</p>
 
-    <h3 id="ja-t14">第14条（連絡）</h3>
+    <h3 id="ja-t15">第15条（連絡）</h3>
     <p>本サービスに関する問い合わせは、当方が別途指定する連絡方法（サポートメール等）により行うものとします。</p>
 
-    <h3 id="ja-t15">第15条（準拠法・管轄）</h3>
+    <h3 id="ja-t16">第16条（準拠法・管轄）</h3>
     <ol>
       <li>本規約の準拠法は日本法とします。</li>
       <li>本サービスに関連して紛争が生じた場合、当方の所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</li>
     </ol>
 
     <p class="smallnote"><strong>施行日：</strong>2026年1月8日<br>
+      <strong>改定日：</strong>2026年2月10日<br>
       <strong>Omochi Soft（開発者：Kotaro Omori）</strong>
     </p>
   </section>
 
-  <!-- ===================== English (FULL) ===================== -->
   <section class="card langblock" id="lang-en" data-lang="en" lang="en">
     <h2>Terms of Use (Fridge Inventory: Grocery Cost)</h2>
     <p>
@@ -350,7 +352,7 @@
 
     <h3 id="en-t3">3. Data Handling</h3>
     <ol>
-      <li>Handling of user-entered data is governed by our Privacy Policy.</li>
+      <li>Handling of user-entered data (including <strong>Receipt Images</strong>) is governed by our Privacy Policy.</li>
       <li>By default, your data is stored locally on your device.</li>
       <li>If you enable iCloud saving (CloudKit), your data may be stored in your own iCloud account.
           We do not access your private CloudKit database.</li>
@@ -360,166 +362,154 @@
     <ul>
       <li>Violating laws or public order/morals</li>
       <li>Criminal-related acts</li>
-      <li>Disrupting or overloading the Service or third-party systems/networks</li>
-      <li>Unauthorized use, reverse engineering, modification, analysis, or reproduction (except as permitted by law)</li>
-      <li>Impersonation</li>
-      <li>Providing benefits to anti-social forces</li>
-      <li>Other conduct we deem inappropriate</li>
+      <li>Disrupting the Service or third-party systems/networks</li>
+      <li>Unauthorized use, reverse engineering, or modification</li>
+      <li><strong>Uploading receipt images containing Personally Identifiable Information (PII), credit card numbers, or other sensitive data.</strong></li>
+      <li>Impersonation or providing benefits to anti-social forces</li>
     </ul>
 
     <h3 id="en-t5">5. Suspension / Interruption</h3>
     <p>
-      We may suspend or interrupt the Service without prior notice for maintenance, force majeure,
-      or changes/outages in App Store/iOS/CloudKit/ad networks, or if we deem it necessary.
-      We are not liable for damages arising therefrom.
+      We may suspend the Service without prior notice for maintenance, force majeure, or issues with App Store, iOS, CloudKit, or <strong>AI providers (e.g., Google Gemini API)</strong>.
     </p>
 
-    <h3 id="en-t6">6. Paid Features / In-App Purchases</h3>
+    <h3 id="en-t6">6. Paid Features / Subscriptions</h3>
     <ol>
-      <li>The Service may offer premium features (e.g., remove ads, edit categories, CSV export, iCloud saving).</li>
-      <li>Premium access may be provided via auto-renewable subscriptions and/or a one-time (non-consumable) purchase, as shown in the App/App Store.</li>
-      <li>Purchases, billing, renewals, cancellations, refunds, and restorations are handled by Apple’s App Store (StoreKit) under Apple’s terms.</li>
-      <li>Subscriptions auto-renew on a monthly basis unless cancelled in your App Store subscription settings. Deleting the app does not cancel the subscription.</li>
-      <li>Users may hold both subscription and lifetime purchase; premium functionality is not duplicated.</li>
-      <li>Refunds follow Apple’s refund policy.</li>
-      <li>Minors must obtain guardian consent before purchasing.</li>
+      <li>The Service offers premium features (e.g., AI Receipt Scanning, iCloud backup, CSV export) for a fee.</li>
+      <li><strong>Plans:</strong> Features are provided via auto-renewable subscriptions (Monthly/Yearly).</li>
+      <li><strong>Legacy Lifetime:</strong> One-time (Lifetime) purchase options may no longer be available for new users. However, existing Lifetime license holders retain access to premium features.</li>
+      <li>Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period via App Store settings.</li>
+      <li>All billing, cancellations, and refunds are handled by Apple’s App Store.</li>
     </ol>
 
-    <h3 id="en-t7">7. Ads</h3>
+    <h3 id="en-t7">7. AI Features (Receipt Scanning)</h3>
+    <ol>
+      <li><strong>Third-Party AI:</strong> The Receipt Scanning feature uses external AI services (e.g., Google Gemini API). By using this feature, you agree that your image data is sent to the AI provider for processing.</li>
+      <li><strong>Accuracy Not Guaranteed:</strong> AI analysis may contain errors. You must verify and correct the data yourself before saving. We do not guarantee 100% accuracy.</li>
+      <li><strong>Data Privacy:</strong> Uploaded images are processed for extraction purposes and are generally not stored permanently by us or the AI provider for training models (subject to provider terms).</li>
+      <li><strong>Limitation of Liability:</strong> We are not responsible for any errors in your inventory or financial records caused by AI analysis.</li>
+    </ol>
+
+    <h3 id="en-t8">8. Ads</h3>
+    <p>The free version may display ads via third-party services. Premium features may remove ads from the UI.</p>
+
+    <h3 id="en-t9">9. Intellectual Property</h3>
+    <p>All IP rights belong to us or rightful third parties. You may not copy or distribute content without permission.</p>
+
+    <h3 id="en-t10">10. User Data Responsibility</h3>
     <p>
-      The free version may display ads via third-party ad services (e.g., Google AdMob).
-      Premium may remove ads from the UI; however, the ad SDK may still be included in the binary.
+      You are responsible for your data. We are not liable for data loss due to device/OS issues. Please maintain backups (e.g., CSV export).
     </p>
 
-    <h3 id="en-t8">8. Intellectual Property</h3>
-    <p>All IP rights related to the Service belong to us or rightful third parties. You may not use them without permission.</p>
+    <h3 id="en-t11">11. External Services</h3>
+    <p>The Service relies on external services (iCloud, App Store, Gemini API). We are not liable for their failures.</p>
 
-    <h3 id="en-t9">9. User Data Responsibility</h3>
-    <p>
-      You are responsible for managing your data. Data loss may occur due to device/OS/iCloud issues or user actions.
-      We are not liable; please keep backups as needed.
-    </p>
+    <h3 id="en-t12">12. Disclaimer</h3>
+    <p>We are not liable for damages except in cases of willful misconduct or gross negligence. The App is a tool and does not guarantee specific savings results.</p>
 
-    <h3 id="en-t10">10. External Services</h3>
-    <p>The Service may rely on iCloud (CloudKit), App Store, and ad networks. We are not responsible for their failures or changes.</p>
+    <h3 id="en-t13">13. Changes / Termination</h3>
+    <p>We may change or discontinue the Service without notice.</p>
 
-    <h3 id="en-t11">11. Disclaimer</h3>
-    <p>We are not liable for damages except in cases of willful misconduct or gross negligence. The App is a tool and does not guarantee outcomes.</p>
+    <h3 id="en-t14">14. Amendments</h3>
+    <p>We may update these Terms. Updates take effect when published.</p>
 
-    <h3 id="en-t12">12. Changes / Termination</h3>
-    <p>We may change or discontinue the Service without notice and are not liable for resulting damages.</p>
+    <h3 id="en-t15">15. Contact</h3>
+    <p>Inquiries: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
 
-    <h3 id="en-t13">13. Amendments</h3>
-    <p>We may update these Terms as needed. Updates take effect when published by us.</p>
+    <h3 id="en-t16">16. Governing Law / Jurisdiction</h3>
+    <p>Governed by Japanese law. Tokyo courts have exclusive jurisdiction.</p>
 
-    <h3 id="en-t14">14. Contact</h3>
-    <p>For inquiries, contact us at: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
-    <h3 id="en-t15">15. Governing Law / Jurisdiction</h3>
-    <p>These Terms are governed by Japanese law. The court having jurisdiction over our location shall have exclusive jurisdiction in the first instance.</p>
-
-    <p class="smallnote"><strong>Effective Date:</strong> 2026-01-08<br>
+    <p class="smallnote"><strong>Updated:</strong> 2026-02-10<br>
       <strong>Omochi Soft (Developer: Kotaro Omori)</strong>
     </p>
   </section>
 
-  <!-- ===================== Español (SHORT) ===================== -->
   <section class="card langblock" id="lang-es" data-lang="es" lang="es">
     <h2>Términos de Uso (Inventario de Nevera y Costos)</h2>
     <p>
       Estos Términos de Uso (“Términos”) establecen las condiciones para usar la aplicación móvil
-      “Inventario de Nevera y Costos” (“App”) y sus funciones (“Servicio”), proporcionados por Omochi Soft
-      (Desarrollador: Kotaro Omori, “nosotros”). Al usar el Servicio, aceptas estos Términos.
+      “Inventario de Nevera y Costos” (“App”) y sus funciones (“Servicio”). Al usar el Servicio, aceptas estos Términos.
     </p>
     <h3 id="es-summary">Resumen</h3>
     <ul>
-      <li>Sin cuenta: por defecto los datos se guardan en tu dispositivo.</li>
-      <li>Si activas iCloud (CloudKit), los datos pueden guardarse en tu propia cuenta de iCloud.</li>
-      <li>Compras dentro de la app: suscripción auto-renovable y/o compra única.</li>
+      <li><strong>IA y Recibos:</strong> El escaneo de recibos usa IA de terceros (Google Gemini). No se garantiza la precisión al 100%. Verifica siempre los datos. No subas información privada sensible.</li>
+      <li><strong>Suscripciones:</strong> Ofrecemos planes mensuales y anuales. La opción de compra única (Lifetime) puede no estar disponible para nuevos usuarios, pero los usuarios existentes mantienen su acceso.</li>
+      <li><strong>Datos:</strong> Los datos se guardan en tu dispositivo o iCloud. Tú eres responsable de tus copias de seguridad.</li>
     </ul>
   </section>
 
-  <!-- ===================== Deutsch (SHORT) ===================== -->
   <section class="card langblock" id="lang-de" data-lang="de" lang="de">
     <h2>Nutzungsbedingungen (Kühlschrank Inventar &amp; Kosten)</h2>
     <p>
-      Diese Nutzungsbedingungen regeln die Nutzung der App „Kühlschrank Inventar &amp; Kosten“ („App“)
-      und der damit verbundenen Funktionen („Dienst“) von Omochi Soft (Entwickler: Kotaro Omori).
+      Diese Nutzungsbedingungen regeln die Nutzung der App „Kühlschrank Inventar &amp; Kosten“ („App“).
       Durch die Nutzung stimmst du diesen Bedingungen zu.
     </p>
     <h3 id="de-summary">Kurzfassung</h3>
     <ul>
-      <li>Kein Konto erforderlich; Daten werden standardmäßig lokal gespeichert.</li>
-      <li>Bei aktivierter iCloud-Speicherung (CloudKit) können Daten in deinem iCloud-Account liegen.</li>
-      <li>In-App-Käufe: Abo (automatisch verlängernd) und/oder Einmalkauf.</li>
+      <li><strong>KI &amp; Belege:</strong> Das Scannen von Belegen nutzt Drittanbieter-KI (Google Gemini). Keine 100%ige Genauigkeitsgarantie. Bitte überprüfe alle Daten. Lade keine sensiblen persönlichen Daten hoch.</li>
+      <li><strong>Abonnements:</strong> Wir bieten monatliche und jährliche Pläne. Der Einmalkauf (Lifetime) ist für neue Nutzer möglicherweise nicht mehr verfügbar, bestehende Nutzer behalten jedoch ihren Zugang.</li>
+      <li><strong>Daten:</strong> Daten werden lokal oder in iCloud gespeichert. Du bist für Backups verantwortlich.</li>
     </ul>
   </section>
 
-  <!-- ===================== Français (SHORT) ===================== -->
   <section class="card langblock" id="lang-fr" data-lang="fr" lang="fr">
     <h2>Conditions d’utilisation (Inventaire Frigo et Coût)</h2>
     <p>
       Les présentes Conditions d’utilisation régissent l’utilisation de l’application « Inventaire Frigo et Coût »
-      (« App ») et de ses fonctionnalités (« Service »), fournies par Omochi Soft (Développeur : Kotaro Omori).
-      En utilisant le Service, vous acceptez ces Conditions.
+      (« App »). En utilisant le Service, vous acceptez ces Conditions.
     </p>
     <h3 id="fr-summary">Résumé</h3>
     <ul>
-      <li>Aucun compte requis ; données stockées localement par défaut.</li>
-      <li>Si iCloud (CloudKit) est activé, les données peuvent être stockées dans votre compte iCloud.</li>
-      <li>Achats intégrés : abonnement auto-renouvelable et/ou achat unique.</li>
+      <li><strong>IA &amp; Reçus :</strong> L'analyse des reçus utilise une IA tierce (Google Gemini). L'exactitude n'est pas garantie à 100 %. Veuillez vérifier les données. Ne téléchargez pas d'informations personnelles sensibles.</li>
+      <li><strong>Abonnements :</strong> Nous proposons des forfaits mensuels et annuels. L'achat unique (Lifetime) peut ne plus être disponible pour les nouveaux utilisateurs, mais les utilisateurs existants conservent leur accès.</li>
+      <li><strong>Données :</strong> Les données sont stockées sur votre appareil ou iCloud. Vous êtes responsable de vos sauvegardes.</li>
     </ul>
   </section>
 
-  <!-- ===================== 한국어 (SHORT) ===================== -->
   <section class="card langblock" id="lang-ko" data-lang="ko" lang="ko">
     <h2>이용약관 (냉장고 재고·식비 관리)</h2>
     <p>
-      본 이용약관은 Omochi Soft(개발자: Kotaro Omori)가 제공하는 앱 “냉장고 재고·식비 관리” 및 관련 기능의 이용 조건을 규정합니다.
+      본 이용약관은 “냉장고 재고·식비 관리” 앱의 이용 조건을 규정합니다.
       서비스를 이용함으로써 사용자는 본 약관에 동의합니다.
     </p>
     <h3 id="ko-summary">요약</h3>
     <ul>
-      <li>계정 없이 사용 가능, 기본적으로 데이터는 기기에 저장됩니다.</li>
-      <li>iCloud(CloudKit) 저장을 활성화하면 데이터가 사용자의 iCloud 계정에 저장될 수 있습니다.</li>
-      <li>인앱 결제: 자동 갱신 구독 및/또는 일회성 구매.</li>
+      <li><strong>AI 및 영수증:</strong> 영수증 스캔 기능은 타사 AI(Google Gemini)를 사용합니다. 100% 정확성을 보장하지 않으므로 데이터를 반드시 확인하세요. 민감한 개인정보가 포함된 이미지는 업로드하지 마십시오.</li>
+      <li><strong>구독:</strong> 월간 및 연간 플랜을 제공합니다. 일회성 구매(Lifetime) 옵션은 신규 사용자에게 더 이상 제공되지 않을 수 있으나, 기존 구매자는 계속 이용 가능합니다.</li>
+      <li><strong>데이터:</strong> 데이터는 기기 또는 iCloud에 저장됩니다. 백업 책임은 사용자에게 있습니다.</li>
     </ul>
   </section>
 
-  <!-- ===================== 简体中文 (SHORT) ===================== -->
   <section class="card langblock" id="lang-zh-hans" data-lang="zh-hans" lang="zh-Hans">
     <h2>使用条款（冰箱库存与食材费用）</h2>
     <p>
-      本使用条款适用于由 Omochi Soft（开发者：Kotaro Omori）提供的应用“冰箱库存与食材费用”及其相关功能的使用。
-      使用本服务即表示你同意本条款。
+      本使用条款适用于应用“冰箱库存与食材费用”的使用。使用本服务即表示你同意本条款。
     </p>
     <h3 id="zh-hans-summary">摘要</h3>
     <ul>
-      <li>无需账号；默认数据仅保存在设备本地。</li>
-      <li>开启 iCloud（CloudKit）后，数据可能保存到你的 iCloud 账户。</li>
-      <li>应用内购买：自动续订订阅和/或一次性购买。</li>
+      <li><strong>AI与收据：</strong> 收据扫描功能使用第三方AI（Google Gemini）。不保证100%准确，请务必核对数据。请勿上传包含敏感个人信息的图片。</li>
+      <li><strong>订阅：</strong> 提供月度和年度计划。一次性购买（永久版）可能不再向新用户提供，但现有用户保留使用权。</li>
+      <li><strong>数据：</strong> 数据保存在设备或iCloud中。请自行负责数据备份。</li>
     </ul>
   </section>
 
-  <!-- ===================== 繁體中文 (SHORT) ===================== -->
   <section class="card langblock" id="lang-zh-hant" data-lang="zh-hant" lang="zh-Hant">
     <h2>使用條款（冰箱庫存與食材費）</h2>
     <p>
-      本使用條款適用於 Omochi Soft（開發者：Kotaro Omori）提供之應用「冰箱庫存與食材費」及其相關功能之使用。
-      使用本服務即表示你同意本條款。
+      本使用條款適用於應用「冰箱庫存與食材費」之使用。使用本服務即表示你同意本條款。
     </p>
     <h3 id="zh-hant-summary">摘要</h3>
     <ul>
-      <li>無需帳號；預設資料僅儲存在裝置本機。</li>
-      <li>啟用 iCloud（CloudKit）後，資料可能儲存在你的 iCloud 帳號中。</li>
-      <li>App 內購：自動續訂訂閱與／或一次性購買。</li>
+      <li><strong>AI與收據：</strong> 收據掃描功能使用第三方AI（Google Gemini）。不保證100%準確，請務必核對資料。請勿上傳包含敏感個人資訊的圖片。</li>
+      <li><strong>訂閱：</strong> 提供月度和年度計畫。一次性購買（永久版）可能不再向新使用者提供，但現有使用者保留使用權。</li>
+      <li><strong>資料：</strong> 資料儲存在裝置或iCloud中。請自行負責資料備份。</li>
     </ul>
   </section>
 
 </main>
 
 <footer>
-  Last Updated: 2026-01-08<br />
+  Last Updated: 2026-02-10<br />
   &copy; 2026 Omochi Soft
 </footer>
 
@@ -583,9 +573,20 @@
     "zh-hant":"隱私相關請查看隱私政策（Privacy Policy）頁面。"
   };
 
+  // 目次ラベル（条数が増えたので更新）
   const tocLabels = {
-    "ja": ["第1条（適用）","第2条（利用環境・アカウント）","第3条（データの取り扱い）","第4条（禁止事項）","第5条（提供の停止・中断）","第6条（有料機能・課金）","第7条（広告）","第8条（知的財産権）","第9条（ユーザーデータの責任）","第10条（外部サービス）","第11条（免責）","第12条（変更・終了）","第13条（規約変更）","第14条（連絡）","第15条（準拠法・管轄）"],
-    "en": ["1. Scope","2. Environment / No Account","3. Data Handling","4. Prohibited Conduct","5. Suspension / Interruption","6. Paid Features / In-App Purchases","7. Ads","8. Intellectual Property","9. User Data Responsibility","10. External Services","11. Disclaimer","12. Changes / Termination","13. Amendments","14. Contact","15. Governing Law / Jurisdiction"]
+    "ja": [
+      "第1条（適用）", "第2条（利用環境・アカウント）", "第3条（データの取り扱い）", "第4条（禁止事項）",
+      "第5条（提供の停止・中断）", "第6条（有料機能・課金）", "第7条（AI機能・レシート解析）", "第8条（広告）",
+      "第9条（知的財産権）", "第10条（ユーザーデータの責任）", "第11条（外部サービス）", "第12条（免責）",
+      "第13条（変更・終了）", "第14条（規約変更）", "第15条（連絡）", "第16条（準拠法・管轄）"
+    ],
+    "en": [
+      "1. Scope", "2. Environment / No Account", "3. Data Handling", "4. Prohibited Conduct",
+      "5. Suspension / Interruption", "6. Paid Features / Subscriptions", "7. AI Features", "8. Ads",
+      "9. Intellectual Property", "10. User Data Responsibility", "11. External Services", "12. Disclaimer",
+      "13. Changes / Termination", "14. Amendments", "15. Contact", "16. Governing Law / Jurisdiction"
+    ]
   };
 
   function anchorId(lang, idx){ return `${lang}-t${idx}`; }
@@ -599,7 +600,8 @@
 
     if(isFull){
       const labels = tocLabels[lang] || tocLabels["en"];
-      for(let i=1; i<=15; i++){
+      // 16条までループ
+      for(let i=1; i<=16; i++){
         const div = document.createElement("div");
         const a = document.createElement("a");
         a.href = `#${anchorId(lang, i)}`;
@@ -610,6 +612,7 @@
       return;
     }
 
+    // Short summary languages
     const summaryAnchor = `${lang}-summary`;
     const summaryTitle =
       lang === "es" ? "Resumen" :
@@ -641,14 +644,14 @@
     return "en";
   }
 
-  // JA/EN のみ：#ja-tX <-> #en-tX を同期（必要な場合だけ）
+  // JA/EN のみ：#ja-tX <-> #en-tX を同期
   function syncHashToLang(lang){
     const h = (location.hash || "").replace("#","");
     const m = h.match(/^(ja|en)-t(\d{1,2})$/);
     if(!m) return;
 
     const num = parseInt(m[2], 10);
-    if(!(num >= 1 && num <= 15)) return;
+    if(!(num >= 1 && num <= 16)) return; // 16まで許可
 
     if(lang !== "ja" && lang !== "en") return;
 
@@ -661,7 +664,6 @@
   }
 
   function setLanguage(lang, {syncHash=true} = {}){
-    // 現在のスクロール位置を保持（言語切替で末尾へ飛ぶのを防止）
     const y = window.scrollY;
 
     document.querySelectorAll(".langblock").forEach(el=>{
@@ -690,7 +692,6 @@
       (lang === "zh-hant") ? "zh-Hant" :
       lang;
 
-    // hash 同期が不要なら scrollY を戻す
     if(syncHash){
       syncHashToLang(lang);
     } else {
@@ -698,11 +699,10 @@
     }
   }
 
-  // --- events: hash を消してから言語切替（スクロール保持） ---
   document.querySelectorAll(".langbtn").forEach(btn=>{
     btn.addEventListener("click", ()=>{
       const y = window.scrollY;
-      history.replaceState(null, "", location.pathname + location.search); // hash削除
+      history.replaceState(null, "", location.pathname + location.search);
       setLanguage(btn.dataset.lang, { syncHash:false });
       window.scrollTo(0, y);
     });
@@ -715,7 +715,6 @@
 
     setLanguage(initial, {syncHash:false});
 
-    // 初回に hash が付いていたら、そのセクションに移動（JA/ENのみ）
     if(location.hash){
       syncHashToLang(initial);
     }
