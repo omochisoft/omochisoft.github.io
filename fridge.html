@@ -108,7 +108,6 @@
     <p id="pageSubtitle">Support Information &amp; Privacy Policy</p>
   </header>
 
-  <!-- Language Switcher -->
   <div class="langbar" aria-label="Language selector">
     <button data-lang="en">English</button>
     <button data-lang="ja">日本語</button>
@@ -121,7 +120,6 @@
   </div>
 
   <main>
-    <!-- EN -->
     <section class="lang card" data-lang="en">
       <h2>About <span class="appname">Fridge Inventory: Grocery Cost</span></h2>
       <p>
@@ -130,14 +128,9 @@
         You can record items with details such as ingredients, quantity, price, purchase date,
         and store, then review your fridge inventory and shopping history anytime.
       </p>
-      <p>
-        When you log ingredients used for cooking, the app can update your remaining inventory
-        and automatically calculate the <strong>ingredient cost per meal</strong>.
-        You can also review spending trends with easy-to-read charts.
-      </p>
       <p class="muted">
         The app is designed to work without creating an account. Your records are stored locally on your device by default.
-        If you enable iCloud backup/restore, your data is saved to your iCloud account using Apple CloudKit (private database).
+        If you enable iCloud backup/restore, your data is saved to your iCloud account using Apple CloudKit.
       </p>
 
       <h2>Contact / Support</h2>
@@ -145,7 +138,7 @@
       <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
 
       <h2>Privacy Policy</h2>
-      <p class="muted"><strong>Last Updated:</strong> 2026-01-07</p>
+      <p class="muted"><strong>Last Updated:</strong> 2026-02-10</p>
 
       <h3>1. Introduction</h3>
       <p>
@@ -158,132 +151,83 @@
       <p>
         The app itself does <strong>not</strong> collect, store, or transmit any personally identifiable information on
         external servers operated by the developer. In particular, the app does not send the following data outside your device
-        unless you explicitly enable iCloud backup:
+        unless you explicitly enable specific features (like iCloud backup or AI Receipt Scanning):
       </p>
       <ul>
-        <li>Grocery items you enter (ingredient names, quantities, and units)</li>
-        <li>Prices, purchase dates, and store names</li>
-        <li>Cooking logs (meal info, used ingredients, calculated costs)</li>
-        <li>Notes, memos, and custom category names</li>
-        <li>Charts and totals derived from your records</li>
-        <li>Any other records you create within the app</li>
+        <li>Grocery items you enter (names, quantities, prices)</li>
+        <li>Cooking logs and charts</li>
+        <li>Notes, memos, and categories</li>
       </ul>
-      <p>
-        The developer cannot view or access your local data. If you use iCloud backup/restore, your data is stored in your own iCloud account.
-      </p>
 
       <h3>3. Exception: Google AdMob (Free Version Only)</h3>
       <p>
-        The free version uses Google AdMob to display advertisements. AdMob may automatically process certain data for ad delivery,
-        fraud prevention, measurement, and related purposes. This can include:
+        The free version uses Google AdMob to display advertisements. AdMob may automatically process certain data
+        (Advertising Identifier, approximate location, device info) for ad delivery and measurement.
       </p>
-      <ul>
-        <li>Advertising Identifier (IDFA) or other device identifiers (depending on your settings)</li>
-        <li>Approximate location (for example, inferred from IP address)</li>
-        <li>Basic ad interaction data (such as impressions or clicks)</li>
-        <li>Device information (model, OS version, language, etc.)</li>
-      </ul>
       <p>
-        This data is processed by Google or its partners, not directly by the developer. See Google’s Privacy Policy:
+        This data is processed by Google, not directly by the developer. See Google’s Privacy Policy:
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
       </p>
-      <p class="muted">
-        If you upgrade to premium, in-app ads are removed from the app UI. However, the Google SDK may still be included in the app binary.
-      </p>
 
-      <h3>4. Your Data and Local Storage</h3>
+      <h3>4. AI Features (Receipt Scanning)</h3>
       <p>
-        All data you enter — including shopping logs, inventory, cooking logs, notes, photos you attach (if applicable),
-        settings, and categories — is stored only on your device by default.
-      </p>
-
-      <h3>5. iCloud Backup and Restore (CloudKit)</h3>
-      <p>
-        <span class="appname">Fridge Inventory: Grocery Cost</span> provides an optional iCloud backup/restore feature.
-        When enabled, your app data is saved to your own iCloud account using Apple CloudKit (private database).
+        The App provides a feature to scan receipts using Artificial Intelligence (AI). This feature utilizes the <strong>Google Gemini API</strong> provided by Google LLC.
       </p>
       <ul>
-        <li>Backups are stored in your iCloud account (CloudKit private database) and are associated with your Apple ID.</li>
-        <li>The developer does not operate a backup server and cannot access your CloudKit private database.</li>
-        <li>To use this feature, you must be signed in to iCloud and have available iCloud storage.</li>
-        <li>You can disable iCloud backup at any time in the app settings (if provided).</li>
+        <li><strong>Data Transmission:</strong> When you use the receipt scanning feature, the image data you capture is transmitted to Google's servers for analysis.</li>
+        <li><strong>No Permanent Storage:</strong> The developer does not permanently store your receipt images on external servers. Images are processed solely to extract item names and prices.</li>
+        <li><strong>Sensitive Information:</strong> Please avoid scanning receipts that contain sensitive personal information (such as credit card numbers, names, or addresses).</li>
       </ul>
+
+      <h3>5. Your Data and Local Storage</h3>
       <p>
-        When you restore from iCloud, existing data in the app may be overwritten. This operation is initiated by you and performed
-        through Apple’s iCloud/CloudKit services.
+        All data you enter is stored only on your device by default.
+        If you enable iCloud backup/restore, your data is saved to your own iCloud account using Apple CloudKit (private database).
+        The developer cannot access your CloudKit data.
       </p>
 
       <h3>6. CSV Export</h3>
       <p>
-        The app may allow you to export your records as a CSV file so you can analyze the data in tools like Excel.
-        CSV files are generated on your device, and you choose where to save or share them via the iOS share sheet.
+        CSV files are generated on your device. You choose where to save or share them via the iOS share sheet.
         The developer does not receive your exported data.
       </p>
 
-      <h3>7. Photos and Photo Library Permissions</h3>
-      <p>
-        Depending on your usage, the app may allow you to save cooking photos to your photo library.
-        If you use this feature, iOS may ask for permission to add photos to your library (Add Only).
-      </p>
+      <h3>7. Permissions</h3>
       <ul>
-        <li><strong>Photo Library (Add Only)</strong> – used only to save images you choose to export to your photo library.</li>
-      </ul>
-      <p>The app does not upload your photos to any server operated by the developer.</p>
-
-      <h3>8. Permissions</h3>
-      <ul>
-        <li><strong>iCloud / CloudKit</strong> – when you enable iCloud backup/restore.</li>
-        <li><strong>Photo Library (Add Only)</strong> – when you choose to save photos.</li>
+        <li><strong>iCloud / CloudKit</strong> – for backup/restore.</li>
+        <li><strong>Camera</strong> – for scanning receipts.</li>
+        <li><strong>Photo Library (Add Only)</strong> – for saving images.</li>
       </ul>
 
-      <h3>9. In-App Purchases</h3>
+      <h3>8. In-App Purchases</h3>
       <p>
-        Premium features may be offered via in-app purchases. All purchase processing is handled by Apple’s App Store via StoreKit.
-        The app does not access or store payment information.
+        Premium features (such as AI scanning, ad removal) are offered via subscriptions (Monthly/Yearly).
+        Billing is handled by Apple’s App Store. The app does not access your payment information.
+        Legacy lifetime licenses remain valid for existing users.
       </p>
 
-      <h3>10. Third-Party Services</h3>
-      <ul>
-        <li><strong>Google AdMob</strong> – ads in the free version.</li>
-        <li><strong>Apple StoreKit</strong> – in-app purchase processing.</li>
-        <li><strong>Apple iCloud / CloudKit</strong> – iCloud backup/restore when enabled by you.</li>
-        <li><strong>Apple Photos</strong> – saving images you choose.</li>
-      </ul>
+      <h3>9. Children’s Privacy</h3>
+      <p>This app is not specifically directed at children under the age of 13.</p>
 
-      <h3>11. Data Sharing</h3>
-      <ul>
-        <li>The app does not sell user data.</li>
-        <li>The app does not share your records with the developer’s external servers.</li>
-        <li>If iCloud backup is enabled, data is stored in your iCloud account via Apple CloudKit.</li>
-      </ul>
+      <h3>10. Changes to This Policy</h3>
+      <p>This Privacy Policy may be updated from time to time. Updates will be posted on this page.</p>
 
-      <h3>12. Children’s Privacy</h3>
-      <p>This app is not specifically directed at children under the age of 13. AdMob is configured as “Not designed for children.”</p>
-
-      <h3>13. Changes to This Policy</h3>
-      <p>This Privacy Policy may be updated from time to time. Updates will be posted on this page with a revised “Last Updated” date.</p>
-
-      <h3>14. Developer</h3>
+      <h3>11. Developer</h3>
       <p>
         Developer: <strong>Kotaro Omori (Omochi Soft)</strong><br />
         Contact: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
       </p>
     </section>
 
-    <!-- JA -->
     <section class="lang card hidden" data-lang="ja">
       <h2><span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>について</h2>
       <p>
         <span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>は、食材の記録と冷蔵庫の在庫を「見える化」するためのアプリです。
         食材名・数量・価格・購入日・購入店などを登録し、在庫や買い物履歴をいつでも確認できます。
       </p>
-      <p>
-        料理で使った食材を記録すると、残量を更新しながら<strong>1食あたりの食材費</strong>を自動計算できます。
-        さらに、グラフで支出傾向も分かりやすく確認できます。
-      </p>
       <p class="muted">
         アカウント作成は不要で、入力したデータは基本的に端末内に保存されます。
-        iCloudバックアップ/復元を有効にすると、AppleのCloudKit（プライベートデータベース）を使用して、あなたのiCloudアカウント内にデータが保存されます。
+        iCloudバックアップを有効にすると、AppleのCloudKitを使用して、あなたのiCloudアカウント内にデータが保存されます。
       </p>
 
       <h2>お問い合わせ / サポート</h2>
@@ -291,305 +235,233 @@
       <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
 
       <h2>プライバシーポリシー</h2>
-      <p class="muted"><strong>最終更新日:</strong> 2026-01-07</p>
+      <p class="muted"><strong>最終更新日:</strong> 2026-02-10</p>
 
       <h3>1. はじめに</h3>
       <p>
-        <span class="appname">見える化　冷蔵庫の在庫管理と食材費</span>は、食材・在庫・食材費の記録/確認を行うアプリです。
-        アカウント登録は不要で、入力したデータは基本的に端末内に保存されます。
+        本アプリは、開発者が運営する外部サーバーへ個人を特定できる情報を収集・保存・送信しません。
+        データは端末内に保存され、ユーザーが有効にした場合のみiCloudや外部AIサービスへ送信されます。
       </p>
 
       <h3>2. 収集する情報</h3>
-      <p>
-        本アプリは、開発者が運営する外部サーバーへ個人を特定できる情報を収集・保存・送信しません。
-        ただし、ユーザーがiCloudバックアップを有効にした場合、バックアップのためにAppleのiCloud（CloudKit）へデータが保存されます。
-      </p>
       <ul>
-        <li>入力した食材・数量・単位</li>
-        <li>価格、購入日、購入店名</li>
-        <li>料理記録（食事情報、使用食材、計算された食材費）</li>
-        <li>メモ、カテゴリ名など</li>
-        <li>グラフや集計値</li>
-        <li>その他アプリ内で作成した記録</li>
+        <li>入力した食材データ（名称、数量、価格等）</li>
+        <li>料理記録、メモ、カテゴリ</li>
+        <li><strong>レシート画像</strong>（AI解析利用時のみ一時的に送信）</li>
       </ul>
-      <p>
-        開発者は端末内データにアクセスできません。iCloudバックアップを有効にした場合も、データはあなたのiCloudアカウント（CloudKitプライベートDB）に保存され、
-        開発者が閲覧・取得することはできません。
-      </p>
 
       <h3>3. 例外：Google AdMob（無料版のみ）</h3>
       <p>
-        無料版では広告表示のためにGoogle AdMobを使用します。AdMobは広告配信・不正防止・計測などの目的で、
-        端末情報等を自動的に処理する場合があります。
-      </p>
-      <ul>
-        <li>広告ID（IDFA）またはその他の端末識別子（設定により異なります）</li>
-        <li>おおよその位置情報（例：IPアドレスから推定）</li>
-        <li>広告の表示/クリックなどの反応データ</li>
-        <li>端末情報（機種、OS、言語など）</li>
-      </ul>
-      <p>
-        これらはGoogleまたはそのパートナーにより処理され、開発者が直接取得するものではありません。
+        無料版では広告表示のためにGoogle AdMobを使用します。AdMobは広告IDや端末情報を処理する場合があります。
         詳細はGoogleのプライバシーポリシーをご確認ください：
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
       </p>
-      <p class="muted">
-        プレミアムにアップグレードするとアプリ上の広告は非表示になりますが、SDK自体はアプリに含まれる場合があります。
-      </p>
 
-      <h3>4. 端末内保存</h3>
-      <p>食材・在庫・料理記録・メモ・（該当する場合）添付写真・設定・カテゴリ等のデータは、基本的に端末内に保存されます。</p>
-
-      <h3>5. iCloudバックアップ/復元（CloudKit）</h3>
+      <h3>4. AI機能（レシート解析）について</h3>
       <p>
-        本アプリは、任意でiCloudバックアップ/復元機能を提供します。有効にすると、AppleのCloudKit（プライベートデータベース）を利用して、
-        あなたのiCloudアカウント内にアプリデータが保存されます。
+        本アプリは、レシートを撮影して食材リストを自動生成する機能において、Google社の<strong>Gemini API</strong>を使用しています。
       </p>
       <ul>
-        <li>バックアップはあなたのiCloudアカウント（CloudKitプライベートDB）に保存され、Apple IDに紐づきます。</li>
-        <li>開発者はバックアップ用のサーバーを運用しておらず、CloudKitプライベートDBへアクセスできません。</li>
-        <li>利用にはiCloudへのサインインと、iCloud容量の空きが必要です。</li>
-        <li>（アプリ内に設定がある場合）iCloudバックアップはいつでも無効化できます。</li>
+        <li><strong>データの送信：</strong>本機能を利用する際、画像データは解析のためにGoogleのサーバーへ送信されます。</li>
+        <li><strong>データの非保持：</strong>開発者は送信されたレシート画像を永続的に保存しません。Googleによるデータ処理はAPI利用規約に基づき行われます。</li>
+        <li><strong>注意点：</strong>クレジットカード番号や個人名など、プライバシーに関わる情報が含まれるレシートの撮影は避けてください。</li>
       </ul>
+
+      <h3>5. 端末内保存とiCloud</h3>
       <p>
-        iCloudから復元すると、アプリ内の既存データが上書きされる場合があります。復元はユーザーの操作により開始され、
-        AppleのiCloud/CloudKitサービスを通じて行われます。
+        ユーザーデータは原則として端末内に保存されます。iCloudバックアップを有効にした場合、データはあなたのiCloudアカウント（CloudKitプライベートDB）に保存され、
+        開発者が閲覧することはできません。
       </p>
 
-      <h3>6. CSV出力</h3>
-      <p>CSVは端末上で生成され、共有シートからユーザーが保存/共有します。開発者がCSV内容を受け取ることはありません。</p>
+      <h3>6. アプリ内課金</h3>
+      <p>
+        プレミアム機能（AI解析、広告非表示など）は、サブスクリプション（月額/年額）として提供されます。
+        課金処理は全てAppleのApp Store（StoreKit）により行われます。
+        なお、過去に提供していた「買い切りプラン」のライセンスをお持ちのユーザーは、引き続き機能を利用可能です。
+      </p>
 
-      <h3>7. 写真と写真ライブラリ権限</h3>
-      <p>必要に応じて、画像を写真ライブラリへ保存する機能を提供する場合があります。この場合、iOSが「追加のみ」権限を求めることがあります。</p>
+      <h3>7. 権限</h3>
       <ul>
-        <li><strong>写真（追加のみ）</strong>：ユーザーが選択した画像を保存するためにのみ使用します。</li>
-      </ul>
-      <p>開発者が運営する外部サーバーへ写真をアップロードしません。</p>
-
-      <h3>8. 権限</h3>
-      <ul>
-        <li><strong>iCloud / CloudKit</strong>：iCloudバックアップ/復元を有効にした場合に使用します。</li>
-        <li><strong>写真（追加のみ）</strong>：写真保存を行う場合に使用します。</li>
+        <li><strong>カメラ</strong>：レシートスキャンに使用</li>
+        <li><strong>写真</strong>：画像の保存に使用</li>
+        <li><strong>iCloud</strong>：バックアップに使用</li>
       </ul>
 
-      <h3>9. アプリ内課金</h3>
-      <p>課金処理はAppleのApp Store（StoreKit）により行われます。アプリがクレジットカード情報等へアクセス/保存することはありません。</p>
+      <h3>8. 改定</h3>
+      <p>本ポリシーは必要に応じて更新されます。</p>
 
-      <h3>10. 外部サービス</h3>
-      <ul>
-        <li><strong>Google AdMob</strong>：無料版の広告表示</li>
-        <li><strong>Apple StoreKit</strong>：アプリ内課金</li>
-        <li><strong>Apple iCloud / CloudKit</strong>：iCloudバックアップ/復元（ユーザーが有効にした場合）</li>
-        <li><strong>Apple 写真</strong>：ユーザー選択による写真保存</li>
-      </ul>
-
-      <h3>11. データ共有</h3>
-      <ul>
-        <li>ユーザーデータの販売はしません。</li>
-        <li>開発者が運営する外部サーバーへアプリデータを保存しません。</li>
-        <li>iCloudバックアップを有効にした場合、データはAppleのCloudKitを通じてあなたのiCloudアカウント内に保存されます。</li>
-      </ul>
-
-      <h3>12. 子どものプライバシー</h3>
-      <p>本アプリは13歳未満の子ども向けに設計されたものではありません。AdMobは「子ども向けではない」設定で運用します。</p>
-
-      <h3>13. 本ポリシーの変更</h3>
-      <p>内容は必要に応じて更新されます。更新時は本ページに反映し、最終更新日を更新します。</p>
-
-      <h3>14. 開発者</h3>
+      <h3>9. 開発者</h3>
       <p>
         開発者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
         連絡先：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
       </p>
     </section>
 
-    <!-- ES -->
     <section class="lang card hidden" data-lang="es">
       <h2>Acerca de <span class="appname">Inventario de Nevera y Costos</span></h2>
-      <p>
-        <span class="appname">Inventario de Nevera y Costos</span> es una app sencilla para
-        <strong>registrar alimentos</strong> y <strong>visualizar lo que hay en tu nevera</strong>.
-      </p>
-      <p class="muted">
-        No requiere cuenta. Por defecto, los datos se guardan localmente en tu dispositivo.
-        Si activas la copia/restauración en iCloud, los datos se guardan en tu cuenta de iCloud usando Apple CloudKit (base de datos privada).
-      </p>
-
-      <h2>Contacto / Soporte</h2>
-      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">No requiere cuenta. Los datos se guardan localmente o en iCloud.</p>
       <h2>Política de Privacidad</h2>
-      <p class="muted"><strong>Última actualización:</strong> 2026-01-07</p>
-
-      <h3>iCloud (CloudKit)</h3>
+      <p class="muted"><strong>Última actualización:</strong> 2026-02-10</p>
+      
+      <h3>IA y Escaneo de Recibos</h3>
       <p>
-        La copia de seguridad en iCloud es opcional. Si la activas, tus datos se almacenan en tu propia cuenta de iCloud mediante Apple CloudKit (base de datos privada).
-        El desarrollador no opera un servidor de respaldo y no puede acceder a tu base de datos privada de CloudKit.
+        La función de escaneo de recibos utiliza la <strong>API Google Gemini</strong>.
+        Las imágenes se envían a Google para su análisis, pero el desarrollador no las almacena permanentemente.
+        Por favor, evite escanear información personal sensible.
       </p>
 
-      <h3>Anuncios (solo versión gratuita)</h3>
-      <p>La versión gratuita usa Google AdMob. Consulta: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud y AdMob</h3>
+      <p>
+        El respaldo en iCloud es opcional (CloudKit). La versión gratuita utiliza Google AdMob para anuncios.
+      </p>
+
+      <h3>Suscripciones</h3>
+      <p>
+        Las funciones Premium se ofrecen mediante suscripción mensual o anual a través de App Store.
+      </p>
 
       <h3>Desarrollador</h3>
-      <p>
-        Desarrollador: <strong>Kotaro Omori (Omochi Soft)</strong><br />
-        Contacto: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>Contacto: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
 
-    <!-- DE -->
     <section class="lang card hidden" data-lang="de">
       <h2>Über <span class="appname">Kühlschrank Inventar &amp; Kosten</span></h2>
-      <p class="muted">
-        Keine Kontoerstellung nötig. Standardmäßig werden Daten lokal gespeichert.
-        Wenn iCloud-Backup/Wiederherstellung aktiviert ist, werden Daten in deinem iCloud-Account über Apple CloudKit (Private Database) gespeichert.
-      </p>
-
-      <h2>Kontakt / Support</h2>
-      <p>E-Mail: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">Kein Konto erforderlich. Daten werden lokal oder in iCloud gespeichert.</p>
       <h2>Datenschutzerklärung</h2>
-      <p class="muted"><strong>Zuletzt aktualisiert:</strong> 2026-01-07</p>
+      <p class="muted"><strong>Zuletzt aktualisiert:</strong> 2026-02-10</p>
 
-      <h3>iCloud (CloudKit)</h3>
+      <h3>KI-Funktionen (Belegscan)</h3>
       <p>
-        iCloud-Backup ist optional. Bei Aktivierung werden Daten in deinem iCloud-Account über Apple CloudKit (Private Database) gespeichert.
-        Der Entwickler betreibt keinen Backup-Server und kann nicht auf deine CloudKit-Private-Datenbank zugreifen.
+        Die Funktion zum Scannen von Belegen nutzt die <strong>Google Gemini API</strong>.
+        Bilder werden zur Analyse an Google gesendet, aber vom Entwickler nicht dauerhaft gespeichert.
+        Bitte scannen Sie keine sensiblen persönlichen Daten.
       </p>
 
-      <h3>Werbung (nur kostenlose Version)</h3>
-      <p>Die kostenlose Version nutzt Google AdMob. Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud und Werbung</h3>
+      <p>
+        iCloud-Backup ist optional. Die kostenlose Version nutzt Google AdMob.
+      </p>
+
+      <h3>Abonnements</h3>
+      <p>
+        Premium-Funktionen sind als monatliches oder jährliches Abonnement über den App Store erhältlich.
+      </p>
 
       <h3>Entwickler</h3>
-      <p>
-        Entwickler: <strong>Kotaro Omori (Omochi Soft)</strong><br />
-        Kontakt: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>Kontakt: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
 
-    <!-- FR -->
     <section class="lang card hidden" data-lang="fr">
       <h2>À propos de <span class="appname">Inventaire Frigo et Coût</span></h2>
-      <p class="muted">
-        Aucun compte requis. Par défaut, les données sont stockées localement sur l’appareil.
-        Si vous activez la sauvegarde/restauration iCloud, les données sont enregistrées dans votre compte iCloud via Apple CloudKit (base privée).
-      </p>
-
-      <h2>Contact / Support</h2>
-      <p>Email : <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">Aucun compte requis. Données stockées localement ou sur iCloud.</p>
       <h2>Politique de Confidentialité</h2>
-      <p class="muted"><strong>Dernière mise à jour :</strong> 2026-01-07</p>
+      <p class="muted"><strong>Dernière mise à jour :</strong> 2026-02-10</p>
 
-      <h3>iCloud (CloudKit)</h3>
+      <h3>Fonctionnalités IA (Scan de reçus)</h3>
       <p>
-        La sauvegarde iCloud est optionnelle. Si vous l’activez, vos données sont stockées dans votre compte iCloud via Apple CloudKit (base de données privée).
-        Le développeur n’exploite pas de serveur de sauvegarde et ne peut pas accéder à votre base privée CloudKit.
+        La fonction de scan de reçus utilise l'<strong>API Google Gemini</strong>.
+        Les images sont envoyées à Google pour analyse mais ne sont pas stockées de manière permanente par le développeur.
+        Veuillez ne pas scanner d'informations personnelles sensibles.
       </p>
 
-      <h3>Publicités (version gratuite uniquement)</h3>
-      <p>La version gratuite utilise Google AdMob. Détails : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud et Publicités</h3>
+      <p>
+        La sauvegarde iCloud est optionnelle. La version gratuite utilise Google AdMob.
+      </p>
+
+      <h3>Abonnements</h3>
+      <p>
+        Les fonctionnalités Premium sont disponibles via un abonnement mensuel ou annuel.
+      </p>
 
       <h3>Développeur</h3>
-      <p>
-        Développeur : <strong>Kotaro Omori (Omochi Soft)</strong><br />
-        Contact : <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>Contact : <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
 
-    <!-- KO -->
     <section class="lang card hidden" data-lang="ko">
       <h2><span class="appname">냉장고 재고·식비 관리</span> 소개</h2>
-      <p class="muted">
-        계정 없이 사용 가능하며, 기본적으로 데이터는 기기 내에 저장됩니다.
-        iCloud 백업/복원을 활성화하면 Apple CloudKit(프라이빗 데이터베이스)을 통해 사용자의 iCloud 계정에 데이터가 저장됩니다.
-      </p>
-
-      <h2>문의 / 지원</h2>
-      <p>Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">계정 없이 사용 가능. 데이터는 기기 또는 iCloud에 저장.</p>
       <h2>개인정보 처리방침</h2>
-      <p class="muted"><strong>최종 업데이트:</strong> 2026-01-07</p>
+      <p class="muted"><strong>최종 업데이트:</strong> 2026-02-10</p>
 
-      <h3>iCloud(CloudKit)</h3>
+      <h3>AI 기능 (영수증 스캔)</h3>
       <p>
-        iCloud 백업은 선택 기능입니다. 활성화 시 데이터는 사용자의 iCloud 계정(CloudKit 프라이빗 DB)에 저장됩니다.
-        개발자는 백업 서버를 운영하지 않으며 CloudKit 프라이빗 DB에 접근할 수 없습니다.
+        영수증 스캔 기능은 <strong>Google Gemini API</strong>를 사용합니다.
+        이미지는 분석을 위해 Google로 전송되지만, 개발자는 이를 영구 저장하지 않습니다.
+        민감한 개인정보가 포함된 영수증은 스캔하지 마십시오.
       </p>
 
-      <h3>광고(무료 버전)</h3>
-      <p>무료 버전은 Google AdMob을 사용합니다: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud 및 광고</h3>
+      <p>
+        iCloud 백업은 선택 사항입니다. 무료 버전은 Google AdMob을 사용합니다.
+      </p>
+
+      <h3>구독</h3>
+      <p>
+        프리미엄 기능은 월간 또는 연간 구독으로 제공됩니다.
+      </p>
 
       <h3>개발자</h3>
-      <p>
-        개발자: <strong>Kotaro Omori (Omochi Soft)</strong><br />
-        문의: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>문의: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
 
-    <!-- ZH-HANS -->
     <section class="lang card hidden" data-lang="zh-hans">
       <h2>关于<span class="appname">冰箱库存与食材费用</span></h2>
-      <p class="muted">
-        无需账号。默认情况下，数据保存在设备本地。
-        若你启用iCloud备份/恢复，数据将通过Apple CloudKit（私有数据库）保存到你的iCloud账户中。
-      </p>
-
-      <h2>联系 / 支持</h2>
-      <p>Email：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">无需账号。数据保存在本地或iCloud。</p>
       <h2>隐私政策</h2>
-      <p class="muted"><strong>更新日期：</strong>2026-01-07</p>
+      <p class="muted"><strong>更新日期：</strong>2026-02-10</p>
 
-      <h3>iCloud（CloudKit）</h3>
+      <h3>AI功能（收据扫描）</h3>
       <p>
-        iCloud备份为可选功能。启用后，数据会存储在你的iCloud账户（CloudKit私有数据库）中。
-        开发者不运营备份服务器，也无法访问你的CloudKit私有数据库。
+        收据扫描功能使用 <strong>Google Gemini API</strong>。
+        图像将被发送至Google进行分析，但开发者不会永久存储这些图像。
+        请勿扫描包含敏感个人信息的收据。
       </p>
 
-      <h3>广告（仅免费版）</h3>
-      <p>免费版使用Google AdMob：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud与广告</h3>
+      <p>
+        iCloud备份为可选功能。免费版使用Google AdMob。
+      </p>
+
+      <h3>订阅</h3>
+      <p>
+        高级功能通过月度或年度订阅提供。
+      </p>
 
       <h3>开发者</h3>
-      <p>
-        开发者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
-        联系方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>联系方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
 
-    <!-- ZH-HANT -->
     <section class="lang card hidden" data-lang="zh-hant">
       <h2>關於<span class="appname">冰箱庫存與食材費</span></h2>
-      <p class="muted">
-        無需帳號。預設情況下，資料保存在裝置本機。
-        若你啟用iCloud備份/還原，資料將透過Apple CloudKit（私有資料庫）儲存在你的iCloud帳戶中。
-      </p>
-
-      <h2>聯絡 / 支援</h2>
-      <p>Email：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
-
+      <p class="muted">無需帳號。資料保存在本機或iCloud。</p>
       <h2>隱私權政策</h2>
-      <p class="muted"><strong>更新日期：</strong>2026-01-07</p>
+      <p class="muted"><strong>更新日期：</strong>2026-02-10</p>
 
-      <h3>iCloud（CloudKit）</h3>
+      <h3>AI功能（收據掃描）</h3>
       <p>
-        iCloud備份為選用功能。啟用後，資料會儲存在你的iCloud帳戶（CloudKit私有資料庫）中。
-        開發者不營運備份伺服器，也無法存取你的CloudKit私有資料庫。
+        收據掃描功能使用 <strong>Google Gemini API</strong>。
+        影像將傳送至Google進行分析，但開發者不會永久儲存這些影像。
+        請勿掃描包含敏感個人資訊的收據。
       </p>
 
-      <h3>廣告（僅免費版）</h3>
-      <p>免費版使用Google AdMob：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h3>iCloud與廣告</h3>
+      <p>
+        iCloud備份為選用功能。免費版使用Google AdMob。
+      </p>
+
+      <h3>訂閱</h3>
+      <p>
+        進階功能透過月度或年度訂閱提供。
+      </p>
 
       <h3>開發者</h3>
-      <p>
-        開發者：<strong>Kotaro Omori（Omochi Soft）</strong><br />
-        聯絡方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a>
-      </p>
+      <p>聯絡方式：<a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
     </section>
   </main>
 
   <footer>
-    Last Updated: 2026-01-07<br />
+    Last Updated: 2026-02-10<br />
     &copy; 2026 Omochi Soft
   </footer>
 
