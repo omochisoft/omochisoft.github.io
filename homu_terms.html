@@ -63,6 +63,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* アイコン画像に透過部分がある場合、この背景色が透けて見えます */
       background: linear-gradient(135deg, #5E5CE6, #FF2D55);
       color: white;
     }
@@ -71,11 +72,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .app-icon-container svg {
-      width: 40px;
-      height: 40px;
     }
 
     header h1 {
@@ -191,11 +187,7 @@
 
   <header>
     <div class="app-icon-container">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          <path d="M13 2L13 22" stroke="white" stroke-width="0" fill="white" />
-      </svg>
+      <img src="homu_icon.png" alt="HOMU+ App Icon" />
     </div>
 
     <h1 id="app-title">HOMU+</h1>
@@ -269,7 +261,7 @@
 
       <h3>2. Screen Time APIの利用</h3>
       <p>
-        本アプリは、アプリの利用制限機能を提供するためにAppleが提供するScreen Time APIを使用します。
+        本アプリは、アプリの利用制限機能を提供するためにAppleが提供するScreen Time APIを使用してアプリの利用制限を行います。
       </p>
       <ul>
         <li><strong>機能の制限:</strong> 本アプリを削除すると、設定していた全ての制限は即座に解除されます。</li>
