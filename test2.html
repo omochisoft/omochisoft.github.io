@@ -11,20 +11,22 @@
 
   <style>
     :root {
-      /* カラーパレット: 洗練された柔らかいトーン */
-      --bg-body: #f8f9fc; /* 非常に淡い青みグレー */
-      --text-primary: #2c3e50; /* 深いネイビーグレー（黒より柔らかい） */
-      --text-secondary: #64748b; /* 落ち着いたグレー */
-      --accent-color: #6366f1; /* インテリジェントな印象のパープルブルー */
+      /* カラーパレット */
+      --bg-body: #f8f9fc;
+      --text-primary: #2c3e50;
+      --text-secondary: #64748b;
+      --accent-color: #6366f1; /* メインアクセント（パープル系） */
       
-      /* グラデーション設定（お餅のような柔らかい光） */
+      /* グラデーション設定 */
       --hero-gradient-1: #a5b4fc;
       --hero-gradient-2: #f0abfc;
+      --logo-gradient-start: #6366f1;
+      --logo-gradient-end: #ec4899;
       
       /* カードデザイン変数 */
-      --card-bg: rgba(255, 255, 255, 0.8); /* 半透明の白（グラスモーフィズム用） */
+      --card-bg: rgba(255, 255, 255, 0.8);
       --card-border: 1px solid rgba(255, 255, 255, 0.4);
-      --card-shadow: 0 8px 32px rgba(31, 38, 135, 0.07); /* 柔らかく深い影 */
+      --card-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
       --card-radius: 24px;
     }
 
@@ -36,26 +38,26 @@
       background-color: var(--bg-body);
       color: var(--text-primary);
       line-height: 1.6;
-      overflow-x: hidden; /*横スクロール防止*/
+      overflow-x: hidden;
     }
 
     /* === プロフェッショナルなヘッダーエリア === */
     header {
       position: relative;
-      padding: 120px 24px 80px; /* 上下に広い余白を取る */
+      padding: 100px 24px 60px;
       text-align: center;
       overflow: hidden;
       background: linear-gradient(to bottom, #ffffff, var(--bg-body));
     }
 
-    /* 背景の動く光のオーブ（お餅感の演出） */
+    /* 背景の動く光のオーブ */
     header::before, header::after {
       content: '';
       position: absolute;
       width: 60vw;
       height: 60vw;
       border-radius: 50%;
-      filter: blur(80px); /* 強くぼかす */
+      filter: blur(80px);
       opacity: 0.4;
       z-index: 0;
       animation: floatOrb 15s infinite alternate ease-in-out;
@@ -77,22 +79,41 @@
     /* ロゴとコピーのコンテナ */
     .header-content {
       position: relative;
-      z-index: 1; /* 背景より手前に表示 */
+      z-index: 1;
       max-width: 800px;
       margin: 0 auto;
-      animation: fadeUp 1s ease-out forwards; /* 読み込み時のアニメーション */
+      animation: fadeUp 1s ease-out forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    /* ロゴ風のチーム名 */
+    /* ロゴマークとタイトルのラッパー */
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px; /* ロゴと文字の間隔 */
+      margin-bottom: 8px;
+    }
+
+    /* SVGロゴマークのスタイル */
+    .logo-svg {
+      width: 64px; /* ロゴのサイズ */
+      height: 64px;
+      filter: drop-shadow(0 4px 6px rgba(99, 102, 241, 0.3)); /* 柔らかい影 */
+    }
+
+    /* チーム名テキスト */
     .logo-title {
       font-size: 3.5rem;
       font-weight: 700;
       margin: 0;
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-color) 100%);
+      background: linear-gradient(135deg, var(--text-primary) 20%, var(--accent-color) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: 1.1;
+      line-height: 1;
     }
 
     /* コピーフレーズ */
@@ -100,7 +121,7 @@
       font-size: 1.25rem;
       font-weight: 300;
       color: var(--text-secondary);
-      margin-top: 16px;
+      margin-top: 0;
       letter-spacing: 0.05em;
     }
 
@@ -125,17 +146,17 @@
       opacity: 0.8;
     }
 
-    /* カードのグリッドレイアウト（PCは2列、スマホは1列） */
+    /* グリッドレイアウト */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
       gap: 24px;
     }
 
-    /* === アプリカードのデザイン（グラスモーフィズム） === */
+    /* === アプリカードのデザイン === */
     .app-card {
       background: var(--card-bg);
-      backdrop-filter: blur(12px); /* すりガラス効果 */
+      backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: var(--card-border);
       border-radius: var(--card-radius);
@@ -144,15 +165,13 @@
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* 滑らかな動き */
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
       
-      /* スクロール時のアニメーション用初期値 */
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUpCard 0.6s ease-out forwards;
     }
 
-    /* カードが順番に出現するように遅延を設定 */
     .app-card:nth-child(1) { animation-delay: 0.1s; }
     .app-card:nth-child(2) { animation-delay: 0.2s; }
     .app-card:nth-child(3) { animation-delay: 0.3s; }
@@ -161,10 +180,9 @@
     .app-card:nth-child(6) { animation-delay: 0.6s; }
     .app-card:nth-child(7) { animation-delay: 0.7s; }
 
-    /* ホバー時のアクション */
     .app-card:hover {
-      transform: translateY(-8px) scale(1.01); /* 少し浮いて大きくなる */
-      box-shadow: 0 20px 40px rgba(31, 38, 135, 0.12); /* 影を濃く */
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 20px 40px rgba(31, 38, 135, 0.12);
       border-color: rgba(255, 255, 255, 0.8);
     }
 
@@ -187,7 +205,6 @@
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-    /* カードホバー時にアイコンも少し動かす */
     .app-card:hover .app-icon-wrapper img {
       transform: scale(1.1);
     }
@@ -197,13 +214,12 @@
       flex: 1;
     }
 
-    /* バッジデザイン */
     .app-badge {
       display: inline-block;
       font-size: 0.75rem;
       font-weight: 600;
       color: var(--accent-color);
-      background: rgba(99, 102, 241, 0.1); /* アクセントカラーの薄い背景 */
+      background: rgba(99, 102, 241, 0.1);
       border-radius: 100px;
       padding: 4px 12px;
       margin-bottom: 10px;
@@ -229,7 +245,7 @@
       font-size: 0.85rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 20px; /* 上下左右の隙間 */
+      gap: 12px 20px;
     }
 
     .app-links a {
@@ -240,7 +256,6 @@
       transition: color 0.3s ease;
     }
 
-    /* リンクの下線アニメーション */
     .app-links a::after {
       content: '';
       position: absolute;
@@ -275,17 +290,14 @@
     }
 
     /* === アニメーション定義 === */
-    /* ヘッダー背景の浮遊アニメーション */
     @keyframes floatOrb {
       0% { transform: translate(0, 0) rotate(0deg); }
       100% { transform: translate(5%, 10%) rotate(5deg); }
     }
-    /* ヘッダーテキストの出現 */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* カードの出現（少し遅れて出る） */
     @keyframes fadeUpCard {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
@@ -293,10 +305,12 @@
 
     /* スマホ向け調整 */
     @media (max-width: 600px) {
+      .logo-wrapper { flex-direction: column; gap: 8px; } /* スマホではロゴを上にする */
+      .logo-svg { width: 56px; height: 56px; }
       .logo-title { font-size: 2.5rem; }
       .tagline { font-size: 1rem; }
-      .apps-grid { grid-template-columns: 1fr; } /* 1列にする */
-      .app-card { padding: 20px; flex-direction: column; /* アイコンを上にする */ }
+      .apps-grid { grid-template-columns: 1fr; }
+      .app-card { padding: 20px; flex-direction: column; }
       .app-icon-wrapper { margin-bottom: 16px; }
     }
   </style>
@@ -306,7 +320,22 @@
 
 <header>
   <div class="header-content">
-    <h1 class="logo-title">Omochi Soft</h1>
+    <div class="logo-wrapper">
+      <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:var(--logo-gradient-start);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:var(--logo-gradient-end);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <g fill="url(#logo-gradient)">
+          <path d="M93.1,-101.2C116.8,-85.3,128.4,-52,134.1,-19.2C139.9,13.6,139.8,45.8,123.4,70.7C107,95.6,74.3,113.1,40.3,125.8C6.3,138.5,-29.1,146.3,-61.2,136.3C-93.2,126.3,-121.9,98.4,-139.7,65.1C-157.6,31.7,-164.5,-7.1,-154.6,-41.5C-144.8,-75.9,-118.2,-106,-86.7,-120.5C-55.3,-135,-19.1,-133.9,11.7,-126.5C42.5,-119.1,85,-105.5,93.1,-101.2Z" transform="translate(100 100) scale(0.6)" opacity="0.7" />
+          <path d="M76.9,-87.2C96.6,-74,107.3,-45.6,112.8,-17.1C118.3,11.3,118.7,39.8,104.3,61.5C89.9,83.3,60.7,98.3,30.6,108.8C0.6,119.4,-30.4,125.5,-58.2,116.3C-86,107.1,-110.7,82.7,-126.2,52.8C-141.7,22.9,-148.2,-12.5,-137.3,-42C-126.5,-71.5,-98.3,-95.1,-69.7,-109.3C-41.2,-123.5,-12.2,-128.3,14.8,-121.9C41.8,-115.5,76.5,-102.6,76.9,-87.2Z" transform="translate(100 100) scale(0.55)" />
+        </g>
+      </svg>
+      
+      <h1 class="logo-title">Omochi Soft</h1>
+    </div>
     <p class="tagline">Soft Technology for Your Day.</p>
   </div>
 </header>
