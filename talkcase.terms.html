@@ -1,1 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TalkCase | Terms of Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
 
+  <style>
+    :root {
+      --primary-color: #5E5CE6; /* Purple based */
+      --accent-color: #FF9F0A; /* Orange */
+      --text-main: #1C1C1E;
+      --text-sub: #8E8E93;
+      --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(240,240,255,1) 50%, rgba(255,245,230,1) 100%);
+    }
+
+    /* Dark Mode Support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-main: #F2F2F7;
+        --text-sub: #AEAEB2;
+        --bg-gradient: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 50%, #1A1A1A 100%);
+      }
+      body { background: #000; }
+      .card { background: #1C1C1E !important; border: 1px solid #333 !important; }
+      a { color: #BF5AF2 !important; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Aurora Background Effect */
+    .aurora-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(94, 92, 230, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 159, 10, 0.1) 0%, transparent 40%);
+    }
+
+    header {
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    /* Icon Placeholder */
+    .app-icon-container {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #5E5CE6, #FF2D55);
+      color: white;
+    }
+
+    .app-icon-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 32px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: none;
+    }
+
+    .card.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+      border-bottom: 2px solid rgba(94, 92, 230, 0.1);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: var(--primary-color);
+    }
+
+    p, ul {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #5E5CE6;
+      text-decoration: none;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    .muted {
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+
+    /* Button for Simplified Languages */
+    .btn-english {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #5E5CE6, #BF5AF2);
+      color: white !important;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(94, 92, 230, 0.3);
+      transition: transform 0.2s;
+    }
+    .btn-english:active {
+      transform: scale(0.96);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aurora-bg"></div>
+
+  <header>
+    <div class="app-icon-container">
+      <img src="talkcase_icon.png" alt="TalkCase App Icon" />
+    </div>
+
+    <h1 id="app-title">TalkCase</h1>
+    <p>Terms of Service / 利用規約</p>
+  </header>
+
+  <main id="content-area">
+    
+    <section class="card" id="lang-en">
+      <h2>TalkCase Terms of Service</h2>
+      <p class="muted">Last updated: February 25, 2026</p>
+
+      <p>These Terms of Service ("Terms") govern your use of TalkCase (the "App"), operated by Kotaro Omori ("Developer," "we," "us," or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+
+      <h3>1. Eligibility</h3>
+      <p>You must be at least 13 years of age to use this App. By using the App, you represent and warrant that you are 13 years of age or older. If you are under the age of majority in your jurisdiction, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+
+      <h3>2. Description of Service</h3>
+      <p>TalkCase is an AI-powered companion chat application that allows users to create and interact with customizable avatar characters. The App uses generative AI technology to produce conversational responses. All characters and conversations within the App are entirely fictional.</p>
+
+      <h3>3. User Accounts and Data</h3>
+      <p>The App stores avatar and conversation data locally on your device using Apple's SwiftData framework. No user account registration is required. You are solely responsible for maintaining the confidentiality of your device and the data stored on it.</p>
+
+      <h3>4. Subscriptions and In-App Purchases</h3>
+      <p><strong>4.1 Premium Subscription</strong><br>
+      The App offers the following auto-renewable subscription plans:</p>
+      <ul>
+        <li>Monthly Plan: billed monthly</li>
+        <li>Annual Plan: billed once per year</li>
+      </ul>
+      <p>Subscriptions are charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You may manage or cancel your subscription at any time through your Apple ID account settings in the App Store. No refund is provided for the unused portion of a subscription period, except as required by applicable law or Apple's refund policy.</p>
+
+      <p><strong>4.2 Consumable Purchases ("Drops")</strong><br>
+      The App offers consumable in-app purchases ("Drops") that provide a temporary increase in daily message allowances. Drops are non-refundable and have no cash value. Unused Drops may expire or be forfeited upon termination of your access to the App.</p>
+
+      <p><strong>4.3 Free Tier</strong><br>
+      The App is available with limited functionality at no charge. The Developer reserves the right to modify the features available under the free tier at any time.</p>
+
+      <p><strong>4.4 Price Changes</strong><br>
+      The Developer reserves the right to modify subscription pricing at any time. You will be notified of any price changes in accordance with Apple's policies, and your continued subscription after a price change constitutes acceptance of the new pricing.</p>
+
+      <p><strong>4.5 Refund Policy</strong><br>
+      All purchases are made through Apple's App Store. Refund requests are handled exclusively by Apple in accordance with Apple's refund policies. The Developer has no ability to issue refunds directly.</p>
+
+      <h3>5. User-Provided Content and Portrait Rights</h3>
+      <p><strong>5.1 User Responsibility</strong><br>
+      The App allows you to upload photographs and images to create avatar characters ("User Content"). By uploading any image, you represent and warrant that:</p>
+      <ul>
+        <li>You own the image or have obtained all necessary rights, licenses, consents, and permissions to upload and use it within the App;</li>
+        <li>If the image contains a likeness of a real person (including yourself or any third party), you have obtained that person's explicit consent to use their likeness within the App;</li>
+        <li>Your use of the image does not violate any applicable law, including but not limited to laws governing privacy, publicity rights, portrait rights (肖像権), or personality rights (パーソナリティ権) under Japanese law or the laws of any other applicable jurisdiction;</li>
+        <li>The image does not infringe any third-party intellectual property rights, including copyright.</li>
+      </ul>
+
+      <p><strong>5.2 AI Analysis of Images</strong><br>
+      When you upload an image, the App may use AI technology to analyze the visual appearance of the subject and suggest avatar traits based solely on physical appearance and atmosphere. The App is designed to avoid identifying real individuals by name. However, you acknowledge that AI analysis is not infallible, and you are solely responsible for reviewing and editing any AI-generated suggestions before use.</p>
+
+      <p><strong>5.3 Developer Disclaimer</strong><br>
+      The Developer does not review User Content prior to use and is not responsible for any violation of portrait rights, publicity rights, copyright, or any other rights arising from your upload of images. You agree to indemnify and hold harmless the Developer from any claim, damage, or liability arising out of your User Content.</p>
+
+      <h3>6. AI-Generated Content</h3>
+      <p><strong>6.1 Nature of AI Outputs</strong><br>
+      The App generates conversational text using third-party AI services (including but not limited to Google Gemini). All AI-generated responses are fictional and do not represent the views, opinions, or statements of the Developer.</p>
+
+      <p><strong>6.2 No Guarantee of Accuracy</strong><br>
+      AI-generated content may be inaccurate, incomplete, offensive, or otherwise objectionable. The Developer makes no representations or warranties regarding the accuracy, reliability, or suitability of any AI-generated content.</p>
+
+      <p><strong>6.3 Intellectual Property of AI Outputs</strong><br>
+      To the extent permitted by applicable law, you acknowledge that AI-generated content may not be protected by copyright. You may use AI-generated content produced within the App for personal, non-commercial purposes only. Commercial use of AI-generated content from the App is prohibited without prior written consent from the Developer.</p>
+
+      <p><strong>6.4 Emotional Reliance Disclaimer</strong><br>
+      The App is intended for entertainment purposes only. Avatar characters are entirely fictional. The Developer is not responsible for any emotional dependency, psychological impact, or decisions made based on interactions with AI-generated characters. If you are experiencing emotional distress, please seek support from a qualified professional.</p>
+
+      <h3>7. Intellectual Property</h3>
+      <p><strong>7.1 App Ownership</strong><br>
+      The App, including its design, code, graphics, user interface, and all content created by the Developer, is owned by Kotaro Omori and is protected by applicable intellectual property laws, including copyright law. You are granted a limited, non-exclusive, non-transferable, revocable license to use the App solely for personal, non-commercial purposes in accordance with these Terms.</p>
+
+      <p><strong>7.2 Restrictions</strong><br>
+      You may not:</p>
+      <ul>
+        <li>Copy, modify, distribute, sell, or sublicense any part of the App;</li>
+        <li>Reverse engineer, decompile, or disassemble the App;</li>
+        <li>Use the App to develop a competing product or service;</li>
+        <li>Remove or alter any proprietary notices in the App.</li>
+      </ul>
+
+      <h3>8. Prohibited Conduct</h3>
+      <p>You agree not to use the App to:</p>
+      <ul>
+        <li>Upload images of individuals without their consent;</li>
+        <li>Create avatars intended to impersonate, defame, harass, or harm any real person;</li>
+        <li>Generate, store, or distribute content that is unlawful, obscene, defamatory, or infringing;</li>
+        <li>Attempt to circumvent any technical measures or usage limitations in the App;</li>
+        <li>Use automated means to access or interact with the App;</li>
+        <li>Violate any applicable local, national, or international law or regulation.</li>
+      </ul>
+
+      <h3>9. Third-Party Services</h3>
+      <p>The App integrates third-party services including Google Firebase, Google Gemini AI, Google AdMob, and Apple StoreKit. Your use of such services is subject to their respective terms of service and privacy policies. The Developer is not responsible for the availability, accuracy, or conduct of any third-party service.</p>
+
+      <h3>10. Privacy</h3>
+      <p>Your use of the App is also governed by our Privacy Policy, available at [https://omochisoft.github.io/talkcase.privacy.html]. By using the App, you consent to the data practices described in the Privacy Policy.</p>
+
+      <h3>11. Disclaimer of Warranties</h3>
+      <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE DEVELOPER DOES NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+
+      <h3>12. Limitation of Liability</h3>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR EMOTIONAL HARM, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+      <p>THE DEVELOPER'S TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED TO THE APP SHALL NOT EXCEED THE AMOUNT YOU PAID TO THE DEVELOPER IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+
+      <h3>13. Indemnification</h3>
+      <p>You agree to indemnify, defend, and hold harmless the Developer from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with: (a) your use of the App; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party rights.</p>
+
+      <h3>14. Termination</h3>
+      <p>The Developer reserves the right to suspend or terminate your access to the App at any time, with or without notice, for any reason, including violation of these Terms. Upon termination, your license to use the App ceases immediately. Provisions that by their nature should survive termination shall survive, including Sections 5, 6, 7, 11, 12, 13, and 15.</p>
+
+      <h3>15. Governing Law and Dispute Resolution</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Japan, without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the Tokyo District Court as the court of first instance.</p>
+
+      <h3>16. Changes to These Terms</h3>
+      <p>The Developer reserves the right to modify these Terms at any time. If changes are material, the Developer will provide notice within the App or by updating the "Last updated" date above. Your continued use of the App after any changes constitutes your acceptance of the revised Terms.</p>
+
+      <h3>17. Severability</h3>
+      <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+      <h3>18. Entire Agreement</h3>
+      <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Developer with respect to the App and supersede all prior agreements, representations, and understandings.</p>
+
+      <h3>19. Contact</h3>
+      <p>For any questions or legal inquiries regarding these Terms, please contact:</p>
+      <p>Kotaro Omori<br>
+      Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-ja">
+      <h2>TalkCase 利用規約</h2>
+      <p class="muted">最終更新日: 2026年2月25日</p>
+
+      <p>本利用規約（以下「本規約」）は、Kotaro Omori（以下「開発者」または「当社」）が提供する「TalkCase」（以下「本アプリ」）の利用条件を定めるものです。本アプリをダウンロード、インストール、または利用することにより、お客様は本規約に拘束されることに同意したものとみなされます。同意されない場合は、本アプリをご利用にならないでください。</p>
+
+      <h3>1. 利用資格</h3>
+      <p>本アプリを利用するには、13歳以上である必要があります。本アプリを利用することにより、お客様は13歳以上であることを表明し、保証するものとします。お客様がお住まいの地域の成人年齢に達していない場合、お客様の親または法定代理人がお客様に代わって本規約を確認し、同意したことを表明するものとします。</p>
+
+      <h3>2. サービスの内容</h3>
+      <p>TalkCaseは、ユーザーがカスタマイズ可能なアバターキャラクターを作成し、対話できるAI搭載のコンパニオンチャットアプリです。本アプリは生成AI技術を使用して会話の応答を生成します。本アプリ内のすべてのキャラクターおよび会話は完全にフィクションです。</p>
+
+      <h3>3. ユーザーアカウントとデータ</h3>
+      <p>本アプリは、AppleのSwiftDataフレームワークを使用して、アバターおよび会話データをお客様のデバイス上にローカルに保存します。ユーザーアカウントの登録は不要です。お客様は、ご自身のデバイスおよびそこに保存されているデータの機密性を維持する全責任を負うものとします。</p>
+
+      <h3>4. サブスクリプションおよびアプリ内課金</h3>
+      <p><strong>4.1 プレミアムサブスクリプション</strong><br>
+      本アプリでは、以下の自動更新サブスクリプションプランを提供しています：</p>
+      <ul>
+        <li>月額プラン：月ごとの請求</li>
+        <li>年額プラン：年1回の請求</li>
+      </ul>
+      <p>サブスクリプションの料金は、購入確認時にお客様のApple IDアカウントに請求されます。現在の期間が終了する少なくとも24時間前にキャンセルされない限り、サブスクリプションは自動的に更新されます。お客様は、App StoreのApple IDアカウント設定からいつでもサブスクリプションを管理またはキャンセルできます。適用される法律またはAppleの返金ポリシーで義務付けられている場合を除き、サブスクリプション期間の未使用部分に対する返金は行われません。</p>
+
+      <p><strong>4.2 消費型課金（「Drop」）</strong><br>
+      本アプリでは、1日のメッセージ許容量を一時的に増やすための消費型アプリ内課金（「Drop」）を提供しています。Dropは返金不可であり、現金としての価値はありません。未使用のDropは、本アプリへのアクセスが終了した時点で有効期限が切れるか、没収される場合があります。</p>
+
+      <p><strong>4.3 無料枠</strong><br>
+      本アプリは、機能を制限した状態で無料で利用できます。開発者は、無料枠で利用できる機能をいつでも変更する権利を留保します。</p>
+
+      <p><strong>4.4 価格の変更</strong><br>
+      開発者は、サブスクリプションの価格をいつでも変更する権利を留保します。価格変更はAppleのポリシーに従ってお客様に通知され、価格変更後もサブスクリプションを継続した場合は、新しい価格に同意したものとみなされます。</p>
+
+      <p><strong>4.5 返金ポリシー</strong><br>
+      すべての購入はAppleのApp Storeを通じて行われます。返金リクエストは、Appleの返金ポリシーに従い、Appleが専権的に処理します。開発者が直接返金を行うことはできません。</p>
+
+      <h3>5. ユーザー提供コンテンツと肖像権</h3>
+      <p><strong>5.1 ユーザーの責任</strong><br>
+      本アプリでは、写真や画像をアップロードしてアバターキャラクターを作成すること（以下「ユーザーコンテンツ」）ができます。画像をアップロードすることにより、お客様は以下の事項を表明し、保証するものとします：</p>
+      <ul>
+        <li>お客様が当該画像を所有しているか、本アプリ内でアップロードおよび使用するために必要なすべての権利、ライセンス、同意、および許可を取得していること。</li>
+        <li>画像に実在の人物（お客様自身または第三者を含む）の肖像が含まれている場合、本アプリ内でその肖像を使用することについて、当該人物から明示的な同意を得ていること。</li>
+        <li>画像の使用が、プライバシー、パブリシティ権、日本法またはその他の適用される管轄地域の法律に基づく肖像権やパーソナリティ権を含むがこれらに限定されない、適用されるいかなる法律にも違反しないこと。</li>
+        <li>画像が、著作権を含む第三者の知的財産権を侵害していないこと。</li>
+      </ul>
+
+      <p><strong>5.2 画像のAI解析</strong><br>
+      画像をアップロードすると、本アプリはAI技術を使用して被写体の視覚的な外観を解析し、身体的特徴や雰囲気のみに基づいてアバターの特性を提案する場合があります。本アプリは、実在の個人を名前で特定しないように設計されています。ただし、お客様はAIによる解析が完全ではないことを認識し、AIが生成した提案を使用する前に確認および編集する全責任を負うものとします。</p>
+
+      <p><strong>5.3 開発者の免責事項</strong><br>
+      開発者は、使用前にユーザーコンテンツの審査を行わず、画像のアップロードに起因する肖像権、パブリシティ権、著作権、またはその他の権利の侵害について一切の責任を負いません。お客様は、ご自身のユーザーコンテンツに起因して生じたあらゆる請求、損害、または責任について、開発者を免責し、損害を与えないことに同意するものとします。</p>
+
+      <h3>6. AI生成コンテンツ</h3>
+      <p><strong>6.1 AI出力の性質</strong><br>
+      本アプリは、サードパーティのAIサービス（Google Geminiを含みますがこれに限定されません）を使用して会話テキストを生成します。AIが生成した応答はすべてフィクションであり、開発者の見解、意見、または声明を代弁するものではありません。</p>
+
+      <p><strong>6.2 正確性の非保証</strong><br>
+      AIが生成したコンテンツは、不正確、不完全、不快、またはその他不適切な場合があります。開発者は、AI生成コンテンツの正確性、信頼性、または適合性に関して、いかなる表明も保証も行いません。</p>
+
+      <p><strong>6.3 AI出力の知的財産権</strong><br>
+      適用される法律で認められる範囲において、お客様はAI生成コンテンツが著作権によって保護されない可能性があることを認識するものとします。お客様は、本アプリ内で生成されたAIコンテンツを個人的かつ非営利目的でのみ使用することができます。開発者の事前の書面による同意なしに、本アプリのAI生成コンテンツを商業目的で使用することは禁止されています。</p>
+
+      <p><strong>6.4 感情的依存に関する免責事項</strong><br>
+      本アプリは娯楽目的のみを意図しています。アバターキャラクターは完全にフィクションです。開発者は、AIが生成したキャラクターとの対話に基づいて生じた感情的依存、心理的影響、または下された決定について一切の責任を負いません。精神的な苦痛を感じている場合は、資格のある専門家のサポートを受けてください。</p>
+
+      <h3>7. 知的財産権</h3>
+      <p><strong>7.1 アプリの所有権</strong><br>
+      本アプリ（デザイン、コード、グラフィック、ユーザーインターフェース、および開発者が作成したすべてのコンテンツを含む）はKotaro Omoriが所有しており、著作権法を含む適用される知的財産法によって保護されています。お客様には、本規約に従って個人的かつ非営利目的でのみ本アプリを使用するための、限定的、非独占的、譲渡不可、取り消し可能なライセンスが付与されます。</p>
+
+      <p><strong>7.2 制限事項</strong><br>
+      お客様は以下の行為を行ってはなりません：</p>
+      <ul>
+        <li>本アプリのいかなる部分の複製、変更、配布、販売、またはサブライセンス。</li>
+        <li>本アプリのリバースエンジニアリング、逆コンパイル、または逆アセンブル。</li>
+        <li>競合する製品やサービスを開発するための本アプリの使用。</li>
+        <li>本アプリ内の所有権表示の削除または変更。</li>
+      </ul>
+
+      <h3>8. 禁止事項</h3>
+      <p>お客様は、本アプリを以下の目的で使用しないことに同意します：</p>
+      <ul>
+        <li>同意なしに個人の画像をアップロードすること。</li>
+        <li>実在の人物へのなりすまし、名誉毀損、嫌がらせ、または危害を加えることを目的としたアバターの作成。</li>
+        <li>違法、わいせつ、名誉毀損的、または権利を侵害するコンテンツの生成、保存、または配布。</li>
+        <li>本アプリの技術的保護手段または使用制限を回避しようとする試み。</li>
+        <li>自動化された手段を使用して本アプリにアクセスまたは操作すること。</li>
+        <li>適用される地域、国、または国際的な法律や規制への違反。</li>
+      </ul>
+
+      <h3>9. サードパーティサービス</h3>
+      <p>本アプリは、Google Firebase、Google Gemini AI、Google AdMob、Apple StoreKitなどのサードパーティサービスを統合しています。これらのサービスの使用には、それぞれの利用規約とプライバシーポリシーが適用されます。開発者は、サードパーティサービスの可用性、正確性、または動作について責任を負いません。</p>
+
+      <h3>10. プライバシー</h3>
+      <p>本アプリのご利用には、[https://omochisoft.github.io/talkcase.privacy.html] で公開されているプライバシーポリシーも適用されます。本アプリを利用することにより、お客様はプライバシーポリシーに記載されたデータ慣行に同意したものとみなされます。</p>
+
+      <h3>11. 免責事項</h3>
+      <p>本アプリは「現状有姿」および「提供可能な範囲」で提供され、商品性、特定目的への適合性、および非侵害の黙示の保証を含むがこれらに限定されない、明示または黙示を問わずいかなる種類の保証も行いません。開発者は、本アプリが中断されないこと、エラーがないこと、またはウイルスやその他の有害なコンポーネントが含まれていないことを保証しません。</p>
+
+      <h3>12. 責任の制限</h3>
+      <p>適用される法律で認められる最大限の範囲において、いかなる場合も開発者は、データの喪失、利益の喪失、または精神的苦痛を含むがこれらに限定されない、間接的、偶発的、特別、結果的、または懲罰的損害について、たとえ当該損害の可能性について知らされていたとしても、お客様の本アプリの使用に起因または関連して責任を負わないものとします。</p>
+      <p>本アプリに起因または関連するすべての請求に対する、お客様に対する開発者の賠償責任の総額は、請求が行われる前の12ヶ月間にお客様が開発者に支払った金額を超えないものとします。</p>
+
+      <h3>13. 補償</h3>
+      <p>お客様は、(a) 本アプリの使用、(b) ユーザーコンテンツ、(c) 本規約の違反、または (d) 第三者の権利の侵害に起因または関連して生じたあらゆる請求、責任、損害、損失、および費用（合理的な弁護士費用を含む）について、開発者を免責し、防御し、損害を与えないことに同意するものとします。</p>
+
+      <h3>14. 利用停止および解除</h3>
+      <p>開発者は、本規約の違反を含むいかなる理由であれ、通知の有無にかかわらず、いつでも本アプリへのアクセスを一時停止または終了する権利を留保します。終了に伴い、お客様の本アプリを使用するライセンスは直ちに消滅します。第5条、第6条、第7条、第11条、第12条、第13条、および第15条を含む、その性質上終了後も存続すべき条項は、終了後も存続するものとします。</p>
+
+      <h3>15. 準拠法および紛争解決</h3>
+      <p>本規約は、法の抵触に関する規定にかかわらず、日本法に準拠し、これに従って解釈されるものとします。本規約または本アプリに起因または関連するあらゆる紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+      <h3>16. 本規約の変更</h3>
+      <p>開発者は、本規約をいつでも変更する権利を留保します。重要な変更がある場合、開発者は本アプリ内で通知を行うか、上部の「最終更新日」を更新します。変更後も本アプリを継続して使用することにより、お客様は改定された本規約に同意したものとみなされます。</p>
+
+      <h3>17. 分離可能性</h3>
+      <p>本規約のいずれかの条項が執行不能または無効と判断された場合、当該条項は必要最小限の範囲で制限または削除され、残りの条項は引き続き完全に有効に存続するものとします。</p>
+
+      <h3>18. 完全合意</h3>
+      <p>本規約およびプライバシーポリシーは、本アプリに関するお客様と開発者との間の完全な合意を構成し、以前のすべての合意、表明、および了解事項に優先します。</p>
+
+      <h3>19. お問い合わせ</h3>
+      <p>本規約に関するご質問や法的なお問い合わせについては、以下までご連絡ください：</p>
+      <p>Kotaro Omori<br>
+      Email: <a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-ko">
+      <h2>이용약관 (요약)</h2>
+      <p><strong>TalkCase</strong>를 사용함으로써 귀하는 본 약관에 동의하게 됩니다. 다음은 주요 약관의 요약입니다.</p>
+      <ul>
+        <li><strong>연령 제한:</strong> 본 앱은 13세 이상부터 사용 가능합니다.</li>
+        <li><strong>계정 및 데이터:</strong> 계정 가입이 필요 없습니다. 모든 설정과 대화 데이터는 사용자의 기기에만 로컬로 저장됩니다.</li>
+        <li><strong>AI 및 콘텐츠:</strong> AI가 생성한 모든 대화와 캐릭터는 허구입니다. 사용자가 업로드한 이미지의 저작권 및 초상권에 대한 책임은 전적으로 사용자에게 있습니다.</li>
+        <li><strong>결제 및 환불:</strong> 모든 결제 및 환불은 Apple(App Store)을 통해 처리됩니다. 개발자는 직접 환불을 처리할 수 없습니다.</li>
+      </ul>
+      <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">전체 약관 보기 (Read full Terms)</a>
+      
+      <h3>문의</h3>
+      <p><a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-zh-hant">
+      <h2>使用條款 (摘要)</h2>
+      <p>使用 <strong>TalkCase</strong> 即表示您同意本條款。以下為主要條款摘要：</p>
+      <ul>
+        <li><strong>年齡限制：</strong> 必須年滿 13 歲方可使用本 App。</li>
+        <li><strong>帳號與資料：</strong> 無需註冊帳號。所有設定與對話資料皆僅儲存於您的裝置本機。</li>
+        <li><strong>AI 與內容：</strong> AI 產生的對話與角色純屬虛構。使用者須自行對上傳圖片的版權與肖像權負完全責任。</li>
+        <li><strong>付款與退款：</strong> 所有訂閱、購買與退款皆透過 Apple (App Store) 處理。開發者無法直接處理退款。</li>
+      </ul>
+      <p>如需具備法律效力的完整條款，請參閱英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">閱讀完整條款 (Read full Terms)</a>
+      
+      <h3>聯絡方式</h3>
+      <p><a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-zh-hans">
+      <h2>使用条款 (摘要)</h2>
+      <p>使用 <strong>TalkCase</strong> 即表示您同意本条款。以下为主要条款摘要：</p>
+      <ul>
+        <li><strong>年龄限制：</strong> 必须年满 13 岁方可使用本应用。</li>
+        <li><strong>账号与数据：</strong> 无需注册账号。所有设置与对话数据皆仅保存在您的设备本地。</li>
+        <li><strong>AI 与内容：</strong> AI 生成的对话与角色纯属虚构。用户须自行对上传图片的版权与肖像权负完全责任。</li>
+        <li><strong>付款与退款：</strong> 所有订阅、购买与退款皆通过 Apple (App Store) 处理。开发者无法直接处理退款。</li>
+      </ul>
+      <p>如需具备法律效力的完整条款，请参阅英文版本。</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">阅读完整条款 (Read full Terms)</a>
+
+      <h3>联系方式</h3>
+      <p><a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 KOTARO OMORI. All rights reserved.
+  </footer>
+
+  <script>
+    function detectLanguage() {
+      // ブラウザの言語設定を取得
+      const lang = navigator.language || navigator.userLanguage; 
+      const langCode = lang.toLowerCase();
+
+      // デフォルトは英語
+      let targetId = 'lang-en';
+
+      // 言語判定ロジック
+      if (langCode.startsWith('ja')) {
+        targetId = 'lang-ja';
+      } else if (langCode.startsWith('ko')) {
+        targetId = 'lang-ko';
+      } else if (langCode === 'zh-tw' || langCode === 'zh-hk' || langCode === 'zh-hant') {
+        targetId = 'lang-zh-hant'; // 繁体字
+      } else if (langCode.startsWith('zh')) {
+        targetId = 'lang-zh-hans'; // その他中国語は簡体字へ
+      }
+
+      // すべてのセクションを非表示にして、対象のみアクティブ化
+      document.querySelectorAll('.card').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.classList.add('active');
+      } else {
+        // フォールバック
+        document.getElementById('lang-en').classList.add('active');
+      }
+    }
+
+    // 英語全文を表示するボタン用関数
+    function showEnglish() {
+      document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-en').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 実行
+    document.addEventListener('DOMContentLoaded', detectLanguage);
+  </script>
+</body>
+</html>
