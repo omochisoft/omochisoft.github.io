@@ -276,7 +276,7 @@
       The App uses Google Firebase, which may collect certain technical information such as crash reports, app performance data, and general usage statistics. This information is used solely to maintain and improve the App. Firebase App Check is used to verify that requests to AI services originate from the legitimate App and not unauthorized sources.</p>
 
       <p><strong>Advertising Data</strong><br>
-      The App displays rewarded video advertisements through Google AdMob. AdMob may collect device identifiers and usage data to serve advertisements in accordance with Google's privacy policies. You may limit ad tracking through your device's privacy settings (Settings → Privacy & Security → Tracking on iOS).</p>
+      The App displays rewarded video advertisements through Google AdMob. AdMob serves advertisements in accordance with Google's privacy policies. Because the App does not request App Tracking Transparency (ATT) permission, AdMob operates in non-personalized ads mode. Device identifiers (IDFA) are not used for advertising purposes.</p>
 
       <p><strong>2.3 Purchase Information</strong><br>
       Subscription and in-app purchase transactions are processed exclusively by Apple through the App Store. The Developer does not collect or store your payment information. Purchase status (e.g., whether you have an active subscription) is verified locally via Apple's StoreKit framework.</p>
@@ -306,7 +306,7 @@
             </tr>
             <tr>
               <td>Google LLC (AdMob)</td>
-              <td>Device identifiers, ad interaction data</td>
+              <td>Ad interaction data (non-personalized)</td>
               <td>Serving rewarded advertisements</td>
             </tr>
             <tr>
@@ -354,9 +354,6 @@
 
       <p><strong>Photo Library Permission</strong><br>
       You may revoke photo library access at any time through your device's settings. Revoking this permission disables the ability to upload new photos but does not affect previously saved avatars.</p>
-
-      <p><strong>Advertising</strong><br>
-      You may opt out of personalized advertising by enabling "Limit Ad Tracking" in your iOS device settings (Settings → Privacy & Security → Tracking).</p>
 
       <h3>7. Security</h3>
       <p>We implement reasonable technical measures to protect information transmitted through the App, including the use of Firebase App Check to authenticate API requests. However, no method of electronic transmission or storage is 100% secure. We cannot guarantee the absolute security of data transmitted to or processed by third-party services.</p>
@@ -408,7 +405,7 @@
       本アプリはGoogle Firebaseを使用しており、クラッシュレポート、アプリのパフォーマンスデータ、一般的な使用統計などの特定の技術情報を収集する場合があります。これらの情報は、本アプリの維持・改善の目的でのみ使用されます。また、AIサービスへのリクエストが不正なソースからではなく、正規のアプリからのものであることを確認するためにFirebase App Checkを使用しています。</p>
 
       <p><strong>広告データ</strong><br>
-      本アプリはGoogle AdMobを通じてリワード動画広告を表示します。AdMobは、Googleのプライバシーポリシーに従って広告を配信するため、デバイス識別子および使用データを収集する場合があります。お客様は、デバイスのプライバシー設定（iOSの「設定」→「プライバシーとセキュリティ」→「トラッキング」）を通じて、広告トラッキングを制限することができます。</p>
+      本アプリはGoogle AdMobを通じてリワード動画広告を表示します。AdMobは、Googleのプライバシーポリシーに従って広告を配信します。本アプリはトラッキング許可（ATT）を要求しないため、AdMobは非パーソナライズ広告モードで動作します。デバイス識別子（IDFA）は広告目的で使用されません。</p>
 
       <p><strong>2.3 購入情報</strong><br>
       サブスクリプションおよびアプリ内課金の取引は、App Storeを通じてAppleによって専権的に処理されます。開発者がお客様の支払い情報を収集または保存することはありません。購入状況（アクティブなサブスクリプションがあるか等）は、AppleのStoreKitフレームワークを介してローカルで確認されます。</p>
@@ -438,7 +435,7 @@
             </tr>
             <tr>
               <td>Google LLC (AdMob)</td>
-              <td>デバイス識別子、広告のインタラクションデータ</td>
+              <td>広告のインタラクションデータ（非パーソナライズ）</td>
               <td>リワード広告の配信</td>
             </tr>
             <tr>
@@ -487,9 +484,6 @@
       <p><strong>写真ライブラリの許可</strong><br>
       お客様は、デバイスの設定からいつでも写真ライブラリへのアクセス許可を取り消すことができます。これを取り消すと新しい画像のアップロードはできなくなりますが、以前に保存したアバターには影響しません。</p>
 
-      <p><strong>広告</strong><br>
-      お客様は、iOSデバイスの設定（「設定」→「プライバシーとセキュリティ」→「トラッキング」）で「トラッキングの制限」を有効にすることで、パーソナライズされた広告をオプトアウトできます。</p>
-
       <h3>7. セキュリティ</h3>
       <p>当社は、APIリクエストを認証するためのFirebase App Checkの使用を含め、本アプリを通じて送信される情報を保護するために合理的な技術的対策を講じています。ただし、電子的な送信または保存方法で100%安全なものはありません。サードパーティサービスに送信、または処理されるデータの絶対的なセキュリティを保証することはできません。</p>
 
@@ -515,7 +509,7 @@
       <p><strong>TalkCase</strong>는 사용자의 개인정보를 소중하게 생각합니다.</p>
       <ul>
         <li><strong>계정 불필요 및 로컬 저장:</strong> 계정 생성이 필요 없으며, 아바타 및 채팅 내역은 모두 사용자의 기기에만 로컬로 저장됩니다.</li>
-        <li><strong>AI 및 제3자 서비스:</strong> 대화 생성 및 이미지 분석을 위해 데이터가 Google Gemini AI로 전송됩니다. 또한 앱 안정성 및 광고 제공을 위해 Firebase 및 AdMob이 사용됩니다.</li>
+        <li><strong>AI 및 제3자 서비스:</strong> 대화 생성 및 이미지 분석을 위해 데이터가 Google Gemini AI로 전송됩니다. 앱 안정성 및 광고 제공을 위해 Firebase 및 AdMob이 사용되며, 광고는 기기 식별자(IDFA)를 사용하지 않는 비개인화 방식으로 제공됩니다.</li>
         <li><strong>결제 데이터:</strong> 모든 결제는 Apple을 통해 처리되며, 개발자는 신용카드 정보를 수집하거나 저장하지 않습니다.</li>
       </ul>
       <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
@@ -534,7 +528,7 @@
       <p><strong>TalkCase</strong> 非常重視您的隱私。</p>
       <ul>
         <li><strong>無需帳號與本機儲存：</strong> 無需建立帳號，所有的角色與對話紀錄皆僅儲存於您的裝置本機。</li>
-        <li><strong>AI 與第三方服務：</strong> 您的對話與上傳圖片會傳送至 Google Gemini AI 以生成回應。應用程式亦使用 Firebase 與 AdMob 確保穩定性與提供廣告。</li>
+        <li><strong>AI 與第三方服務：</strong> 您的對話與上傳圖片會傳送至 Google Gemini AI 以生成回應。應用程式亦使用 Firebase 與 AdMob 確保穩定性與提供廣告（廣告以非個人化模式運行，不使用設備識別碼 IDFA）。</li>
         <li><strong>付款資訊：</strong> 所有付款皆由 Apple 處理，開發者不會收集或儲存您的信用卡資訊。</li>
       </ul>
       <p>如需完整的法律條款，請參閱英文版本。</p>
@@ -553,7 +547,7 @@
       <p><strong>TalkCase</strong> 非常重视您的隐私。</p>
       <ul>
         <li><strong>无需账号与本地存储：</strong> 无需建立账号，所有的角色与对话记录皆仅保存在您的设备本地。</li>
-        <li><strong>AI 与第三方服务：</strong> 您的对话与上传图片会发送至 Google Gemini AI 以生成回应。应用亦使用 Firebase 与 AdMob 确保稳定性与提供广告。</li>
+        <li><strong>AI 与第三方服务：</strong> 您的对话与上传图片会发送至 Google Gemini AI 以生成回应。应用亦使用 Firebase 与 AdMob 确保稳定性与提供广告（广告以非个性化模式运行，不使用设备标识符 IDFA）。</li>
         <li><strong>付款信息：</strong> 所有付款皆由 Apple 处理，开发者不会收集或存储您的信用卡信息。</li>
       </ul>
       <p>如需完整的法律条款，请参阅英文版本。</p>
