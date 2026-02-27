@@ -272,8 +272,8 @@
       <p><strong>Location Data</strong><br>
       With your permission, the App accesses your approximate location to retrieve local weather information from Open-Meteo (open-meteo.com), a third-party weather service. Your location data is transmitted directly to Open-Meteo and is not retained by the Developer. Location access is optional; declining location permission does not affect core App functionality.</p>
 
-      <p><strong>App Usage and Diagnostics</strong><br>
-      The App uses Google Firebase, which may collect certain technical information such as crash reports, app performance data, and general usage statistics. This information is used solely to maintain and improve the App. Firebase App Check is used to verify that requests to AI services originate from the legitimate App and not unauthorized sources.</p>
+      <p><strong>Firebase Usage</strong><br>
+      The App uses Google Firebase for two specific purposes: Firebase App Check verifies that requests to AI services originate from the legitimate App and not unauthorized sources. Firebase AI is used to route Gemini AI API requests. The App does not use Firebase Analytics, Crashlytics, or Performance Monitoring, and does not collect crash reports, performance data, or usage statistics through Firebase.</p>
 
       <p><strong>Advertising Data</strong><br>
       The App displays rewarded video advertisements through Google AdMob. AdMob serves advertisements in accordance with Google's privacy policies. Because the App does not request App Tracking Transparency (ATT) permission, AdMob operates in non-personalized ads mode. Device identifiers (IDFA) are not used for advertising purposes.</p>
@@ -301,8 +301,8 @@
             </tr>
             <tr>
               <td>Google LLC (Firebase)</td>
-              <td>Crash logs, app performance data, App Check tokens</td>
-              <td>App stability and security</td>
+              <td>App Check tokens</td>
+              <td>Verifying that requests originate from the legitimate App</td>
             </tr>
             <tr>
               <td>Google LLC (AdMob)</td>
@@ -401,8 +401,8 @@
       <p><strong>位置情報</strong><br>
       お客様の許可を得た上で、本アプリはサードパーティの気象情報サービスであるOpen-Meteo（open-meteo.com）から地域の天気情報を取得するため、おおよその位置情報にアクセスします。位置情報データはOpen-Meteoに直接送信され、開発者が保持することはありません。位置情報へのアクセスは任意であり、許可を拒否しても本アプリの主要な機能には影響しません。</p>
 
-      <p><strong>アプリの使用状況と診断</strong><br>
-      本アプリはGoogle Firebaseを使用しており、クラッシュレポート、アプリのパフォーマンスデータ、一般的な使用統計などの特定の技術情報を収集する場合があります。これらの情報は、本アプリの維持・改善の目的でのみ使用されます。また、AIサービスへのリクエストが不正なソースからではなく、正規のアプリからのものであることを確認するためにFirebase App Checkを使用しています。</p>
+      <p><strong>Firebaseの利用について</strong><br>
+      本アプリはGoogle Firebaseを2つの目的で使用しています。Firebase App Checkは、AIサービスへのリクエストが正規のアプリからのものであることを確認するために使用します。Firebase AIはGemini AI APIへのリクエストのルーティングに使用します。本アプリはFirebase Analytics、Crashlytics、またはPerformance Monitoringを使用しておらず、Firebaseを通じたクラッシュレポート、パフォーマンスデータ、使用統計の収集は行っていません。</p>
 
       <p><strong>広告データ</strong><br>
       本アプリはGoogle AdMobを通じてリワード動画広告を表示します。AdMobは、Googleのプライバシーポリシーに従って広告を配信します。本アプリはトラッキング許可（ATT）を要求しないため、AdMobは非パーソナライズ広告モードで動作します。デバイス識別子（IDFA）は広告目的で使用されません。</p>
@@ -430,8 +430,8 @@
             </tr>
             <tr>
               <td>Google LLC (Firebase)</td>
-              <td>クラッシュログ、アプリパフォーマンスデータ、App Checkトークン</td>
-              <td>アプリの安定性とセキュリティの向上</td>
+              <td>App Checkトークン</td>
+              <td>AIサービスへのリクエストが正規のアプリからであることを確認</td>
             </tr>
             <tr>
               <td>Google LLC (AdMob)</td>
@@ -509,7 +509,7 @@
       <p><strong>TalkCase</strong>는 사용자의 개인정보를 소중하게 생각합니다.</p>
       <ul>
         <li><strong>계정 불필요 및 로컬 저장:</strong> 계정 생성이 필요 없으며, 아바타 및 채팅 내역은 모두 사용자의 기기에만 로컬로 저장됩니다.</li>
-        <li><strong>AI 및 제3자 서비스:</strong> 대화 생성 및 이미지 분석을 위해 데이터가 Google Gemini AI로 전송됩니다. 앱 안정성 및 광고 제공을 위해 Firebase 및 AdMob이 사용되며, 광고는 기기 식별자(IDFA)를 사용하지 않는 비개인화 방식으로 제공됩니다.</li>
+        <li><strong>AI 및 제3자 서비스:</strong> 대화 생성 및 이미지 분석을 위해 데이터가 Google Gemini AI로 전송됩니다. API 보안(App Check) 및 광고 제공을 위해 Firebase 및 AdMob이 사용되며, 광고는 기기 식별자(IDFA)를 사용하지 않는 비개인화 방식으로 제공됩니다.</li>
         <li><strong>결제 데이터:</strong> 모든 결제는 Apple을 통해 처리되며, 개발자는 신용카드 정보를 수집하거나 저장하지 않습니다.</li>
       </ul>
       <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
@@ -528,7 +528,7 @@
       <p><strong>TalkCase</strong> 非常重視您的隱私。</p>
       <ul>
         <li><strong>無需帳號與本機儲存：</strong> 無需建立帳號，所有的角色與對話紀錄皆僅儲存於您的裝置本機。</li>
-        <li><strong>AI 與第三方服務：</strong> 您的對話與上傳圖片會傳送至 Google Gemini AI 以生成回應。應用程式亦使用 Firebase 與 AdMob 確保穩定性與提供廣告（廣告以非個人化模式運行，不使用設備識別碼 IDFA）。</li>
+        <li><strong>AI 與第三方服務：</strong> 您的對話與上傳圖片會傳送至 Google Gemini AI 以生成回應。應用程式亦使用 Firebase 與 AdMob 確保 API 安全性與提供廣告（廣告以非個人化模式運行，不使用設備識別碼 IDFA）。</li>
         <li><strong>付款資訊：</strong> 所有付款皆由 Apple 處理，開發者不會收集或儲存您的信用卡資訊。</li>
       </ul>
       <p>如需完整的法律條款，請參閱英文版本。</p>
@@ -547,7 +547,7 @@
       <p><strong>TalkCase</strong> 非常重视您的隐私。</p>
       <ul>
         <li><strong>无需账号与本地存储：</strong> 无需建立账号，所有的角色与对话记录皆仅保存在您的设备本地。</li>
-        <li><strong>AI 与第三方服务：</strong> 您的对话与上传图片会发送至 Google Gemini AI 以生成回应。应用亦使用 Firebase 与 AdMob 确保稳定性与提供广告（广告以非个性化模式运行，不使用设备标识符 IDFA）。</li>
+        <li><strong>AI 与第三方服务：</strong> 您的对话与上传图片会发送至 Google Gemini AI 以生成回应。应用亦使用 Firebase 与 AdMob 确保 API 安全性与提供广告（广告以非个性化模式运行，不使用设备标识符 IDFA）。</li>
         <li><strong>付款信息：</strong> 所有付款皆由 Apple 处理，开发者不会收集或存储您的信用卡信息。</li>
       </ul>
       <p>如需完整的法律条款，请参阅英文版本。</p>
