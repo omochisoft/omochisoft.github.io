@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayWay | Privacy Policy</title>
+    <style>
+        :root {
+            --primary-color: #5856D6;
+            --accent-color: #AF52DE;
+            --text-main: #1C1C1E;
+            --text-sub: #8E8E93;
+            --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%,
+                rgba(240,240,255,1) 50%, rgba(245,240,255,1) 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-main: #F2F2F7;
+                --text-sub: #AEAEB2;
+                --bg-gradient: linear-gradient(135deg, #1C1C1E 0%,
+                    #2C2C2E 50%, #1A1A1A 100%);
+            }
+            body {
+                background: #000;
+            }
+            .card {
+                background: #1C1C1E !important;
+                border: 1px solid #333 !important;
+            }
+            a {
+                color: #BF5AF2 !important;
+            }
+            table {
+                border-color: #444 !important;
+            }
+            th {
+                background: #2C2C2E !important;
+            }
+            td, th {
+                border-color: #444 !important;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(88, 86, 214, 0.1) 0%,
+                    transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(175, 82, 222, 0.1) 0%,
+                    transparent 40%);
+        }
+
+        header {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .app-icon-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+            color: white;
+        }
+
+        .app-icon-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 32px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            display: none;
+        }
+
+        .card.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 20px;
+            border-bottom: 2px solid rgba(88, 86, 214, 0.1);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        p, ul {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #5856D6;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .muted {
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f5f5f7;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .btn-english {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+            color: white !important;
+            border-radius: 99px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(88, 86, 214, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-english:active {
+            transform: scale(0.96);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg"></div>
+
+    <header>
+        <div class="app-icon-container">
+            <img src="sayway_icon.png" alt="SayWay App Icon">
+        </div>
+        <h1>SayWay</h1>
+        <p>Privacy Policy / プライバシーポリシー</p>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- English Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-en" class="card">
+            <h2>SayWay Privacy Policy</h2>
+            <p class="muted">Last updated: March 6, 2026</p>
+
+            <p>This Privacy Policy describes how Kotaro Omori ("Developer," "we," "us," or "our") handles information in connection with the SayWay mobile application (the "App"). We are committed to protecting your privacy and being transparent about our data practices.</p>
+
+            <h3>Contact / Support</h3>
+            <p>If you have any questions, need support, or have requests regarding this Privacy Policy, please contact:<br>
+            Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+
+            <h3>1. Overview</h3>
+            <p>SayWay is designed with privacy in mind. The App does not require account creation or the provision of personally identifiable information for its core features. Most data generated by your use of the App is stored locally on your device and is not transmitted to the Developer.</p>
+
+            <h3>2. Information We Collect and How We Use It</h3>
+
+            <p><strong>2.1 Information You Provide</strong></p>
+
+            <p><strong>Translation Text Input:</strong> When you enter text for translation, the text is sent to our cloud service (Firebase Cloud Functions) which forwards it to OpenAI's API for AI-powered translation. The Developer does not permanently store your translation text on its servers. Translation history is stored locally on your device via Apple's SwiftData framework.</p>
+
+            <p><strong>Voice Input:</strong> When you use voice input, your speech is processed through Apple's SFSpeechRecognizer framework. Voice data may be transmitted to Apple's servers in accordance with Apple's privacy policy. The Developer does not access or store raw voice audio data.</p>
+
+            <p><strong>Camera Input:</strong> When you use the camera translation feature, images are processed on-device using Apple's Vision framework for text recognition (OCR). Images are not transmitted to external servers. Only the recognized text is sent for translation.</p>
+
+            <p><strong>Translation Settings:</strong> Your custom translation settings (situation, tone, emotion preferences) are stored locally on your device via UserDefaults. These contextual settings are sent along with your translation text to improve translation quality but are not stored on the Developer's servers.</p>
+
+            <p><strong>2.2 Information Collected Automatically</strong></p>
+
+            <p><strong>Firebase Usage:</strong> The App uses Firebase Anonymous Authentication to verify legitimate app requests and Firebase Cloud Functions to route translation and text-to-speech requests. The App does not use Firebase Analytics, Crashlytics, or Performance Monitoring. No personally identifiable information is collected through Firebase.</p>
+
+            <p><strong>2.3 Purchase Information</strong></p>
+
+            <p>All subscriptions and in-app purchases are processed exclusively by Apple through the App Store. The Developer does not collect, process, or store any payment information. Purchase status is verified locally on your device using Apple's StoreKit framework.</p>
+
+            <h3>3. How We Share Your Information</h3>
+            <p>We do not sell your personal information. Information may be shared only in the following limited circumstances to provide the App's functionality:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recipient</th>
+                        <th>Data Shared</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OpenAI (via Firebase)</td>
+                        <td>Translation text, context settings</td>
+                        <td>AI translation generation</td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI (via Firebase)</td>
+                        <td>Translated text</td>
+                        <td>Text-to-speech audio generation (Premium)</td>
+                    </tr>
+                    <tr>
+                        <td>Google LLC (Firebase)</td>
+                        <td>Anonymous auth tokens</td>
+                        <td>Request authentication</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc. (Speech)</td>
+                        <td>Voice audio</td>
+                        <td>Speech-to-text conversion</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc. (Translation)</td>
+                        <td>Source text</td>
+                        <td>On-device offline translation</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc. (StoreKit)</td>
+                        <td>Purchase transactions</td>
+                        <td>Payment processing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. Data Storage and Retention</h3>
+
+            <p><strong>Local Storage:</strong> Translation history, favorites, and user preferences are stored locally on your device using Apple's SwiftData framework and UserDefaults. This data remains on your device until you delete it within the App or uninstall the App.</p>
+
+            <p><strong>Audio Cache:</strong> Text-to-speech audio files are cached locally on your device with a maximum cache size of 300 MB. Audio files associated with favorites are protected from automatic cache eviction. Cached audio is deleted when you uninstall the App.</p>
+
+            <p><strong>Third-Party Processing:</strong> Translation text and context sent to OpenAI via Firebase Cloud Functions is processed in accordance with OpenAI's data usage policies. The Developer does not control the retention practices of third-party service providers.</p>
+
+            <p><strong>iCloud Backup:</strong> If you have iCloud Backup enabled, app data stored on your device may be included in your iCloud backup, subject to Apple's terms and conditions.</p>
+
+            <h3>5. Age Requirement</h3>
+            <p>The App is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe that a child under 13 has provided us with personal information, please contact us so that we can take appropriate action.</p>
+
+            <h3>6. Your Privacy Rights and Choices</h3>
+
+            <p><strong>Access and Deletion:</strong> You can view and delete your translation history and favorites directly within the App. To delete all App data, you may uninstall the App from your device.</p>
+
+            <p><strong>Microphone / Speech Recognition Permission:</strong> You may revoke microphone and speech recognition permissions at any time through your device's Settings. This will disable the voice input feature but will not affect other functionality.</p>
+
+            <p><strong>Camera Permission:</strong> You may revoke camera permission at any time through your device's Settings. This will disable the camera translation feature but will not affect other functionality.</p>
+
+            <p><strong>Offline Mode:</strong> You may use the App's offline translation feature (with downloaded language packs) to avoid sending translation data to external servers. Offline translations are processed entirely on your device using Apple's Translation framework.</p>
+
+            <h3>7. Security</h3>
+            <p>We implement reasonable technical measures to protect your information, including Firebase Anonymous Authentication to verify legitimate app requests. However, no method of electronic transmission or storage is 100% secure. We cannot guarantee the absolute security of data processed by third-party services.</p>
+
+            <h3>8. Third-Party Links and Services</h3>
+            <p>The App may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review the privacy policies of any third-party services you access through the App.</p>
+
+            <h3>9. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you by updating the "Last updated" date at the top of this policy or by providing notice within the App. Your continued use of the App after any changes constitutes your acceptance of the revised Privacy Policy.</p>
+
+            <h3>10. Governing Law</h3>
+            <p>This Privacy Policy is governed by the laws of Japan. Any dispute arising from or relating to this Privacy Policy shall be subject to the exclusive jurisdiction of the Tokyo District Court.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Japanese Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-ja" class="card">
+            <h2>SayWay プライバシーポリシー</h2>
+            <p class="muted">最終更新日: 2026年3月6日</p>
+
+            <p>本プライバシーポリシーは、Kotaro Omori（以下「開発者」または「当社」）がSayWayモバイルアプリケーション（以下「本アプリ」）に関連して情報をどのように取り扱うかを説明するものです。当社は、お客様のプライバシーを保護し、データの取り扱いについて透明性を確保することに努めています。</p>
+
+            <h3>サポート・お問い合わせ</h3>
+            <p>本プライバシーポリシーに関するご質問、サポートのご依頼、またはご要望がございましたら、下記までご連絡ください：<br>
+            Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+
+            <h3>1. 概要</h3>
+            <p>SayWayはプライバシーに配慮して設計されています。本アプリの主要機能を利用するために、アカウントの作成や個人を特定できる情報の提供は不要です。本アプリの利用により生成されるデータの大部分は、お客様のデバイス上にローカルに保存され、開発者に送信されることはありません。</p>
+
+            <h3>2. 収集する情報と利用目的</h3>
+
+            <p><strong>2.1 お客様が提供する情報</strong></p>
+
+            <p><strong>翻訳テキスト入力：</strong>翻訳のためにテキストを入力すると、そのテキストは当社のクラウドサービス（Firebase Cloud Functions）に送信され、OpenAIのAPIに転送されてAI翻訳が生成されます。開発者はお客様の翻訳テキストをサーバー上に永続的に保存しません。翻訳履歴は、AppleのSwiftDataフレームワークを使用してお客様のデバイス上にローカルに保存されます。</p>
+
+            <p><strong>音声入力：</strong>音声入力を使用すると、お客様の音声はAppleのSFSpeechRecognizerフレームワークを通じて処理されます。音声データは、Appleのプライバシーポリシーに従ってAppleのサーバーに送信される場合があります。開発者は、生の音声データにアクセスしたり保存したりすることはありません。</p>
+
+            <p><strong>カメラ入力：</strong>カメラ翻訳機能を使用すると、画像はAppleのVisionフレームワークを使用してデバイス上でテキスト認識（OCR）処理されます。画像は外部サーバーに送信されません。認識されたテキストのみが翻訳のために送信されます。</p>
+
+            <p><strong>翻訳設定：</strong>お客様のカスタム翻訳設定（シチュエーション、伝え方、感情の設定）は、UserDefaultsを使用してデバイス上にローカルに保存されます。これらの文脈設定は翻訳品質の向上のために翻訳テキストと共に送信されますが、開発者のサーバーには保存されません。</p>
+
+            <p><strong>2.2 自動的に収集される情報</strong></p>
+
+            <p><strong>Firebaseの利用：</strong>本アプリは、正当なアプリリクエストの検証にFirebase匿名認証を使用し、翻訳および音声読み上げリクエストのルーティングにFirebase Cloud Functionsを使用しています。本アプリはFirebase Analytics、Crashlytics、またはPerformance Monitoringを使用しません。Firebaseを通じて個人を特定できる情報は収集されません。</p>
+
+            <p><strong>2.3 購入情報</strong></p>
+
+            <p>すべてのサブスクリプションおよびアプリ内課金は、App Storeを通じてAppleが専権的に処理します。開発者は、いかなる支払い情報も収集、処理、または保存しません。購入状況は、AppleのStoreKitフレームワークを使用してデバイス上でローカルに検証されます。</p>
+
+            <h3>3. 情報の共有について</h3>
+            <p>当社はお客様の個人情報を販売しません。本アプリの機能を提供するために、以下の限られた場合にのみ情報が共有されます：</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>共有先</th>
+                        <th>共有データ</th>
+                        <th>目的</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OpenAI（Firebase経由）</td>
+                        <td>翻訳テキスト、文脈設定</td>
+                        <td>AI翻訳の生成</td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI（Firebase経由）</td>
+                        <td>翻訳済みテキスト</td>
+                        <td>音声読み上げの生成（Premium）</td>
+                    </tr>
+                    <tr>
+                        <td>Google LLC（Firebase）</td>
+                        <td>匿名認証トークン</td>
+                        <td>リクエストの認証</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.（Speech）</td>
+                        <td>音声データ</td>
+                        <td>音声テキスト変換</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.（Translation）</td>
+                        <td>原文テキスト</td>
+                        <td>デバイス上オフライン翻訳</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.（StoreKit）</td>
+                        <td>購入トランザクション</td>
+                        <td>決済処理</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4. データの保存と保持</h3>
+
+            <p><strong>ローカル保存：</strong>翻訳履歴、お気に入り、およびユーザー設定は、AppleのSwiftDataフレームワークとUserDefaultsを使用してお客様のデバイス上にローカルに保存されます。このデータは、お客様がアプリ内で削除するか、アプリをアンインストールするまでデバイス上に保持されます。</p>
+
+            <p><strong>音声キャッシュ：</strong>音声読み上げの音声ファイルは、最大300MBのキャッシュサイズでデバイス上にローカルにキャッシュされます。お気に入りに関連する音声ファイルは、自動キャッシュ削除から保護されます。キャッシュされた音声は、アプリをアンインストールすると削除されます。</p>
+
+            <p><strong>サードパーティでの処理：</strong>Firebase Cloud Functions経由でOpenAIに送信された翻訳テキストおよび文脈設定は、OpenAIのデータ利用ポリシーに従って処理されます。開発者は、サードパーティサービスプロバイダーのデータ保持慣行を管理することはできません。</p>
+
+            <p><strong>iCloudバックアップ：</strong>iCloudバックアップが有効になっている場合、デバイス上に保存されたアプリデータがiCloudバックアップに含まれる場合があります。これはAppleの利用規約に従います。</p>
+
+            <h3>5. 年齢要件</h3>
+            <p>本アプリは13歳未満の方を対象としていません。当社は13歳未満のお子様から意図的に個人情報を収集することはありません。13歳未満のお子様が当社に個人情報を提供したと思われる場合は、適切な措置を講じることができるよう、当社までご連絡ください。</p>
+
+            <h3>6. プライバシー権と選択肢</h3>
+
+            <p><strong>アクセスと削除：</strong>翻訳履歴とお気に入りは、アプリ内で直接閲覧および削除できます。すべてのアプリデータを削除するには、デバイスからアプリをアンインストールしてください。</p>
+
+            <p><strong>マイク・音声認識の許可：</strong>デバイスの設定からマイクおよび音声認識の許可をいつでも取り消すことができます。これにより音声入力機能は無効になりますが、その他の機能には影響しません。</p>
+
+            <p><strong>カメラの許可：</strong>デバイスの設定からカメラの許可をいつでも取り消すことができます。これによりカメラ翻訳機能は無効になりますが、その他の機能には影響しません。</p>
+
+            <p><strong>オフラインモード：</strong>言語パックをダウンロードすることで、本アプリのオフライン翻訳機能を使用し、翻訳データを外部サーバーに送信することを回避できます。オフライン翻訳は、AppleのTranslationフレームワークを使用してデバイス上で完全に処理されます。</p>
+
+            <h3>7. セキュリティ</h3>
+            <p>当社は、Firebase匿名認証によるリクエストの正当性検証を含む、合理的な技術的措置を講じてお客様の情報を保護しています。ただし、電子的な送信や保存の方法で100%安全なものはありません。サードパーティサービスで処理されるデータの絶対的なセキュリティを保証することはできません。</p>
+
+            <h3>8. サードパーティのリンクおよびサービス</h3>
+            <p>本アプリには、サードパーティのウェブサイトまたはサービスへのリンクが含まれる場合があります。当社は、これらの第三者のプライバシー慣行について責任を負いません。本アプリを通じてアクセスするサードパーティサービスのプライバシーポリシーをご確認いただくことを推奨します。</p>
+
+            <h3>9. 本プライバシーポリシーの変更</h3>
+            <p>当社は、本プライバシーポリシーを随時更新する場合があります。重要な変更を行う場合は、本ポリシー上部の「最終更新日」を更新するか、アプリ内で通知を行います。変更後も本アプリを継続して使用することにより、お客様は改定されたプライバシーポリシーに同意したものとみなされます。</p>
+
+            <h3>10. 準拠法</h3>
+            <p>本プライバシーポリシーは日本法に準拠します。本プライバシーポリシーに起因または関連するあらゆる紛争については、東京地方裁判所を専属的合意管轄裁判所とします。</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Korean Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-ko" class="card">
+            <h2>개인정보 처리방침 (요약)</h2>
+            <p><strong>SayWay</strong>를 사용함으로써 귀하는 본 방침에 동의하게 됩니다. 다음은 주요 사항의 요약입니다.</p>
+            <ul>
+                <li><strong>데이터 저장:</strong> 번역 기록과 즐겨찾기는 사용자의 기기에만 로컬로 저장됩니다. 계정 가입이 필요 없습니다.</li>
+                <li><strong>AI 번역:</strong> 번역 텍스트는 Firebase를 통해 OpenAI API로 전송됩니다. 개발자는 서버에 번역 텍스트를 영구적으로 저장하지 않습니다.</li>
+                <li><strong>음성 입력:</strong> Apple의 음성 인식 프레임워크를 통해 처리됩니다. 개발자는 음성 데이터에 접근하지 않습니다.</li>
+                <li><strong>카메라:</strong> 이미지는 기기에서 처리되며 외부 서버로 전송되지 않습니다.</li>
+                <li><strong>결제:</strong> 모든 결제는 Apple(App Store)을 통해 처리됩니다. 개발자는 결제 정보를 수집하지 않습니다.</li>
+                <li><strong>개인정보 판매 금지:</strong> 귀하의 개인정보는 판매되지 않습니다.</li>
+            </ul>
+            <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
+            <a href="javascript:showEnglish();" class="btn-english">전체 방침 보기 (Read full Policy)</a>
+            <h3>문의</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Spanish Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-es" class="card">
+            <h2>Política de Privacidad (Resumen)</h2>
+            <p>Al utilizar <strong>SayWay</strong>, usted acepta esta política. A continuación se presenta un resumen de los puntos principales.</p>
+            <ul>
+                <li><strong>Almacenamiento de datos:</strong> El historial de traducciones y los favoritos se almacenan localmente en su dispositivo. No se requiere registro de cuenta.</li>
+                <li><strong>Traducción por IA:</strong> El texto de traducción se envía a la API de OpenAI a través de Firebase. El desarrollador no almacena permanentemente los textos de traducción en sus servidores.</li>
+                <li><strong>Entrada de voz:</strong> Procesada a través del framework de reconocimiento de voz de Apple. El desarrollador no accede a los datos de voz.</li>
+                <li><strong>Cámara:</strong> Las imágenes se procesan en el dispositivo y no se envían a servidores externos.</li>
+                <li><strong>Pagos:</strong> Todos los pagos se procesan a través de Apple (App Store). El desarrollador no recopila información de pago.</li>
+                <li><strong>Sin venta de datos:</strong> Su información personal no se vende.</li>
+            </ul>
+            <p>Para la política de privacidad completa, consulte la versión en inglés a continuación.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Leer política completa (Read full Policy)</a>
+            <h3>Contacto</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- French Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-fr" class="card">
+            <h2>Politique de Confidentialité (Résumé)</h2>
+            <p>En utilisant <strong>SayWay</strong>, vous acceptez la présente politique. Voici un résumé des points principaux.</p>
+            <ul>
+                <li><strong>Stockage des données :</strong> L'historique des traductions et les favoris sont stockés localement sur votre appareil. Aucune inscription requise.</li>
+                <li><strong>Traduction par IA :</strong> Le texte de traduction est envoyé à l'API OpenAI via Firebase. Le développeur ne stocke pas de manière permanente les textes de traduction sur ses serveurs.</li>
+                <li><strong>Entrée vocale :</strong> Traitée par le framework de reconnaissance vocale d'Apple. Le développeur n'accède pas aux données vocales.</li>
+                <li><strong>Caméra :</strong> Les images sont traitées sur l'appareil et ne sont pas envoyées à des serveurs externes.</li>
+                <li><strong>Paiements :</strong> Tous les paiements sont traités par Apple (App Store). Le développeur ne collecte aucune information de paiement.</li>
+                <li><strong>Pas de vente de données :</strong> Vos informations personnelles ne sont pas vendues.</li>
+            </ul>
+            <p>Pour la politique de confidentialité complète, veuillez consulter la version anglaise ci-dessous.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Lire la politique complète (Read full Policy)</a>
+            <h3>Contact</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Traditional Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hant" class="card">
+            <h2>隱私政策 (摘要)</h2>
+            <p>使用 <strong>SayWay</strong> 即表示您同意本政策。以下為主要事項摘要：</p>
+            <ul>
+                <li><strong>數據儲存：</strong>翻譯記錄與收藏僅儲存於您的裝置本機。無需註冊帳號。</li>
+                <li><strong>AI 翻譯：</strong>翻譯文本透過 Firebase 發送至 OpenAI API。開發者不會在伺服器上永久儲存翻譯文本。</li>
+                <li><strong>語音輸入：</strong>透過 Apple 語音識別框架處理。開發者不會存取語音數據。</li>
+                <li><strong>相機：</strong>圖片在裝置上處理，不會發送至外部伺服器。</li>
+                <li><strong>付款：</strong>所有付款透過 Apple (App Store) 處理。開發者不收集付款資訊。</li>
+                <li><strong>不出售個人資訊：</strong>您的個人資訊不會被出售。</li>
+            </ul>
+            <p>如需完整的隱私政策，請參閱英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">閱讀完整政策 (Read full Policy)</a>
+            <h3>聯絡方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Simplified Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hans" class="card">
+            <h2>隐私政策 (摘要)</h2>
+            <p>使用 <strong>SayWay</strong> 即表示您同意本政策。以下为主要事项摘要：</p>
+            <ul>
+                <li><strong>数据存储：</strong>翻译记录与收藏仅保存在您的设备本地。无需注册账号。</li>
+                <li><strong>AI 翻译：</strong>翻译文本通过 Firebase 发送至 OpenAI API。开发者不会在服务器上永久存储翻译文本。</li>
+                <li><strong>语音输入：</strong>通过 Apple 语音识别框架处理。开发者不会访问语音数据。</li>
+                <li><strong>相机：</strong>图片在设备上处理，不会发送至外部服务器。</li>
+                <li><strong>付款：</strong>所有付款通过 Apple (App Store) 处理。开发者不收集付款信息。</li>
+                <li><strong>不出售个人信息：</strong>您的个人信息不会被出售。</li>
+            </ul>
+            <p>如需完整的隐私政策，请参阅英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">阅读完整政策 (Read full Policy)</a>
+            <h3>联系方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 KOTARO OMORI. All rights reserved.
+    </footer>
+
+    <script>
+        function detectLanguage() {
+            var lang = (navigator.language || navigator.userLanguage).toLowerCase();
+            var targetId = 'lang-en';
+
+            if (lang.startsWith('ja')) {
+                targetId = 'lang-ja';
+            } else if (lang.startsWith('ko')) {
+                targetId = 'lang-ko';
+            } else if (lang.startsWith('es')) {
+                targetId = 'lang-es';
+            } else if (lang.startsWith('fr')) {
+                targetId = 'lang-fr';
+            } else if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-hant') {
+                targetId = 'lang-zh-hant';
+            } else if (lang.startsWith('zh')) {
+                targetId = 'lang-zh-hans';
+            }
+
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+
+            var targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.classList.add('active');
+            } else {
+                document.getElementById('lang-en').classList.add('active');
+            }
+        }
+
+        function showEnglish() {
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById('lang-en').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', detectLanguage);
+    </script>
+</body>
+</html>
