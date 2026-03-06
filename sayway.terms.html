@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayWay | Terms of Service</title>
+    <style>
+        :root {
+            --primary-color: #5856D6;
+            --accent-color: #AF52DE;
+            --text-main: #1C1C1E;
+            --text-sub: #8E8E93;
+            --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%,
+                rgba(240,240,255,1) 50%, rgba(245,240,255,1) 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-main: #F2F2F7;
+                --text-sub: #AEAEB2;
+                --bg-gradient: linear-gradient(135deg, #1C1C1E 0%,
+                    #2C2C2E 50%, #1A1A1A 100%);
+            }
+            body {
+                background: #000;
+            }
+            .card {
+                background: #1C1C1E !important;
+                border: 1px solid #333 !important;
+            }
+            a {
+                color: #BF5AF2 !important;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(88, 86, 214, 0.1) 0%,
+                    transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(175, 82, 222, 0.1) 0%,
+                    transparent 40%);
+        }
+
+        header {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .app-icon-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+            color: white;
+        }
+
+        .app-icon-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 32px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            display: none;
+        }
+
+        .card.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 20px;
+            border-bottom: 2px solid rgba(88, 86, 214, 0.1);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        p, ul {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #5856D6;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .muted {
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+
+        .btn-english {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #5856D6, #AF52DE);
+            color: white !important;
+            border-radius: 99px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(88, 86, 214, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-english:active {
+            transform: scale(0.96);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg"></div>
+
+    <header>
+        <div class="app-icon-container">
+            <img src="sayway_icon.png" alt="SayWay App Icon">
+        </div>
+        <h1>SayWay</h1>
+        <p>Terms of Service / 利用規約</p>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- English Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-en" class="card">
+            <h2>SayWay Terms of Service</h2>
+            <p class="muted">Last updated: March 6, 2026</p>
+
+            <p>These Terms of Service ("Terms") govern your use of SayWay (the "App"), operated by Kotaro Omori ("Developer," "we," "us," or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+
+            <h3>1. Eligibility</h3>
+            <p>You must be at least 13 years of age to use this App. By using the App, you represent and warrant that you meet this age requirement. If you are under the age of majority in your jurisdiction, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+
+            <h3>2. Description of Service</h3>
+            <p>SayWay is an AI-powered translation application that understands the context, situation, and emotion of your communication to produce natural and accurate translations. The App supports text input and voice input, provides text-to-speech playback of translations, and offers camera-based text recognition for translation. All AI-generated translations are provided as-is and may not be perfectly accurate.</p>
+
+            <h3>3. User Accounts and Data</h3>
+            <p>The App stores translation history, favorites, and user preferences locally on your device using Apple's SwiftData framework and UserDefaults. No user account registration is required. The App uses anonymous authentication to communicate with cloud services. You are solely responsible for maintaining the security of your device and the data stored on it.</p>
+
+            <h3>4. Subscriptions and In-App Purchases</h3>
+            <p><strong>4.1 Subscription Plans</strong><br>
+            The App offers the following auto-renewable subscription plans:</p>
+            <ul>
+                <li>Standard Plan (Weekly / Monthly)</li>
+                <li>Premium Plan (Weekly / Monthly)</li>
+            </ul>
+            <p>Subscriptions are charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You may manage or cancel your subscription at any time through your Apple ID account settings in the App Store. No refund is provided for the unused portion of a subscription period, except as required by applicable law or Apple's refund policy.</p>
+
+            <p><strong>4.2 Consumable Purchases</strong><br>
+            The App offers consumable in-app purchases that provide additional translation credits. Consumable credits are non-refundable and have no cash value. Unused credits may expire or be forfeited upon termination of your access to the App.</p>
+
+            <p><strong>4.3 Free Tier</strong><br>
+            The App is available with limited functionality at no charge, including a limited number of daily translations. The Developer reserves the right to modify the features and limits available under the free tier at any time.</p>
+
+            <p><strong>4.4 Price Changes</strong><br>
+            The Developer reserves the right to modify subscription pricing at any time. You will be notified of any price changes in accordance with Apple's policies, and your continued subscription after a price change constitutes acceptance of the new pricing.</p>
+
+            <p><strong>4.5 Refund Policy</strong><br>
+            All purchases are made through Apple's App Store. Refund requests are handled exclusively by Apple in accordance with Apple's refund policies. The Developer has no ability to issue refunds directly.</p>
+
+            <h3>5. User-Provided Content</h3>
+            <p>The App allows you to input text and voice recordings for translation ("User Content"). You are solely responsible for all content you submit to the App. By using the App, you represent and warrant that your User Content does not violate any applicable law or infringe any third-party rights. The Developer does not store or review User Content on its servers beyond the scope necessary to provide the translation service.</p>
+
+            <h3>6. AI-Generated Content</h3>
+            <p><strong>6.1 Nature of AI Outputs</strong><br>
+            The App generates translations and text-to-speech audio using third-party AI services (including but not limited to OpenAI API) and on-device translation frameworks. All AI-generated translations are provided for informational and communication purposes and do not constitute professional translation services.</p>
+
+            <p><strong>6.2 No Guarantee of Accuracy</strong><br>
+            AI-generated translations may be inaccurate, incomplete, or contextually inappropriate. The Developer makes no representations or warranties regarding the accuracy, reliability, or suitability of any AI-generated translation. You should not rely solely on the App's translations for legal, medical, financial, or other critical communications.</p>
+
+            <p><strong>6.3 Offline Translation</strong><br>
+            The App provides offline translation functionality using Apple's on-device Translation framework. Offline translations may differ in quality from online AI-powered translations. Language packs must be downloaded separately through iOS Settings for offline use.</p>
+
+            <h3>7. Intellectual Property</h3>
+            <p><strong>7.1 App Ownership</strong><br>
+            The App, including its design, code, graphics, user interface, and all content created by the Developer, is owned by Kotaro Omori and is protected by applicable intellectual property laws, including copyright law. You are granted a limited, non-exclusive, non-transferable, revocable license to use the App solely for personal, non-commercial purposes in accordance with these Terms.</p>
+
+            <p><strong>7.2 Restrictions</strong><br>
+            You may not:</p>
+            <ul>
+                <li>Copy, modify, distribute, sell, or sublicense any part of the App;</li>
+                <li>Reverse engineer, decompile, or disassemble the App;</li>
+                <li>Use the App to develop a competing product or service;</li>
+                <li>Remove or alter any proprietary notices in the App.</li>
+            </ul>
+
+            <h3>8. Prohibited Conduct</h3>
+            <p>You agree not to use the App to:</p>
+            <ul>
+                <li>Generate, store, or distribute content that is unlawful, obscene, defamatory, or infringing;</li>
+                <li>Translate content for the purpose of harassment, threats, or harm to any person;</li>
+                <li>Attempt to circumvent any technical measures or usage limitations in the App;</li>
+                <li>Use automated means to access or interact with the App beyond its intended use;</li>
+                <li>Abuse the translation service by submitting excessive or fraudulent requests;</li>
+                <li>Violate any applicable local, national, or international law or regulation.</li>
+            </ul>
+
+            <h3>9. Third-Party Services</h3>
+            <p>The App integrates third-party services including Google Firebase (authentication and cloud functions), OpenAI API (translation and text-to-speech), Apple Translation Framework, and Apple StoreKit. Your use of such services is subject to their respective terms of service and privacy policies. The Developer is not responsible for the availability, accuracy, or conduct of any third-party service.</p>
+
+            <h3>10. Privacy</h3>
+            <p>Your use of the App is also governed by our Privacy Policy, available at <a href="https://omochisoft.github.io/sayway.privacy.html">https://omochisoft.github.io/sayway.privacy.html</a>. By using the App, you consent to the data practices described in the Privacy Policy.</p>
+
+            <h3>11. Disclaimer of Warranties</h3>
+            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE DEVELOPER DOES NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. THE DEVELOPER DOES NOT WARRANT THE ACCURACY OF ANY TRANSLATION PROVIDED BY THE APP.</p>
+
+            <h3>12. Limitation of Liability</h3>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR ANY DAMAGES ARISING FROM RELIANCE ON TRANSLATIONS PROVIDED BY THE APP, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+            <p>THE DEVELOPER'S TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED TO THE APP SHALL NOT EXCEED THE AMOUNT YOU PAID TO THE DEVELOPER IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.</p>
+
+            <h3>13. Indemnification</h3>
+            <p>You agree to indemnify, defend, and hold harmless the Developer from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with: (a) your use of the App; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party rights.</p>
+
+            <h3>14. Termination</h3>
+            <p>The Developer reserves the right to suspend or terminate your access to the App at any time, with or without notice, for any reason, including violation of these Terms. Upon termination, your license to use the App ceases immediately. Provisions that by their nature should survive termination shall survive, including Sections 5, 6, 7, 11, 12, 13, and 15.</p>
+
+            <h3>15. Governing Law and Dispute Resolution</h3>
+            <p>These Terms shall be governed by and construed in accordance with the laws of Japan, without regard to its conflict of law provisions. Any dispute arising from or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the Tokyo District Court as the court of first instance.</p>
+
+            <h3>16. Changes to These Terms</h3>
+            <p>The Developer reserves the right to modify these Terms at any time. If changes are material, the Developer will provide notice within the App or by updating the "Last updated" date above. Your continued use of the App after any changes constitutes your acceptance of the revised Terms.</p>
+
+            <h3>17. Severability</h3>
+            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+            <h3>18. Entire Agreement</h3>
+            <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Developer with respect to the App and supersede all prior agreements, representations, and understandings.</p>
+
+            <h3>19. Contact</h3>
+            <p>For any questions or legal inquiries regarding these Terms, please contact:</p>
+            <p>
+                Kotaro Omori<br>
+                Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a>
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Japanese Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-ja" class="card">
+            <h2>SayWay 利用規約</h2>
+            <p class="muted">最終更新日: 2026年3月6日</p>
+
+            <p>本利用規約（以下「本規約」）は、Kotaro Omori（以下「開発者」または「当社」）が提供する「SayWay」（以下「本アプリ」）の利用条件を定めるものです。本アプリをダウンロード、インストール、または利用することにより、お客様は本規約に拘束されることに同意したものとみなされます。同意されない場合は、本アプリをご利用にならないでください。</p>
+
+            <h3>第1条 利用資格</h3>
+            <p>本アプリを利用するには、13歳以上である必要があります。本アプリを利用することにより、お客様はこの年齢要件を満たしていることを表明し、保証するものとします。お客様がお住まいの地域の成人年齢に達していない場合、お客様の親または法定代理人がお客様に代わって本規約を確認し、同意したことを表明するものとします。</p>
+
+            <h3>第2条 サービスの内容</h3>
+            <p>SayWayは、コミュニケーションの文脈、シチュエーション、感情を理解し、自然で正確な翻訳を生成するAI搭載の翻訳アプリです。本アプリはテキスト入力および音声入力に対応し、翻訳結果の音声読み上げ機能を提供し、カメラを使用したテキスト認識による翻訳も可能です。すべてのAI生成翻訳は現状有姿で提供され、完全に正確であることを保証するものではありません。</p>
+
+            <h3>第3条 ユーザーアカウントとデータ</h3>
+            <p>本アプリは、AppleのSwiftDataフレームワークおよびUserDefaultsを使用して、翻訳履歴、お気に入り、およびユーザー設定をお客様のデバイス上にローカルに保存します。ユーザーアカウントの登録は不要です。本アプリはクラウドサービスとの通信に匿名認証を使用します。お客様は、ご自身のデバイスおよびそこに保存されているデータのセキュリティを維持する全責任を負うものとします。</p>
+
+            <h3>第4条 サブスクリプションおよびアプリ内課金</h3>
+            <p><strong>4.1 サブスクリプションプラン</strong><br>
+            本アプリでは、以下の自動更新サブスクリプションプランを提供しています：</p>
+            <ul>
+                <li>Standardプラン（週額 / 月額）</li>
+                <li>Premiumプラン（週額 / 月額）</li>
+            </ul>
+            <p>サブスクリプションの料金は、購入確認時にお客様のApple IDアカウントに請求されます。現在の期間が終了する少なくとも24時間前にキャンセルされない限り、サブスクリプションは自動的に更新されます。お客様は、App StoreのApple IDアカウント設定からいつでもサブスクリプションを管理またはキャンセルできます。適用される法律またはAppleの返金ポリシーで義務付けられている場合を除き、サブスクリプション期間の未使用部分に対する返金は行われません。</p>
+
+            <p><strong>4.2 消費型課金</strong><br>
+            本アプリでは、追加の翻訳クレジットを提供する消費型アプリ内課金を提供しています。消費型クレジットは返金不可であり、現金としての価値はありません。未使用のクレジットは、本アプリへのアクセスが終了した時点で有効期限が切れるか、没収される場合があります。</p>
+
+            <p><strong>4.3 無料枠</strong><br>
+            本アプリは、1日あたりの翻訳回数を制限した状態で無料で利用できます。開発者は、無料枠で利用できる機能および制限をいつでも変更する権利を留保します。</p>
+
+            <p><strong>4.4 価格の変更</strong><br>
+            開発者は、サブスクリプションの価格をいつでも変更する権利を留保します。価格変更はAppleのポリシーに従ってお客様に通知され、価格変更後もサブスクリプションを継続した場合は、新しい価格に同意したものとみなされます。</p>
+
+            <p><strong>4.5 返金ポリシー</strong><br>
+            すべての購入はAppleのApp Storeを通じて行われます。返金リクエストは、Appleの返金ポリシーに従い、Appleが専権的に処理します。開発者が直接返金を行うことはできません。</p>
+
+            <h3>第5条 ユーザー提供コンテンツ</h3>
+            <p>本アプリでは、翻訳のためにテキストおよび音声録音を入力すること（以下「ユーザーコンテンツ」）ができます。お客様は、本アプリに送信するすべてのコンテンツについて全責任を負うものとします。本アプリを利用することにより、お客様は、ご自身のユーザーコンテンツがいかなる適用法にも違反せず、第三者の権利を侵害しないことを表明し、保証するものとします。開発者は、翻訳サービスの提供に必要な範囲を超えて、サーバー上にユーザーコンテンツを保存または審査しません。</p>
+
+            <h3>第6条 AI生成コンテンツ</h3>
+            <p><strong>6.1 AI出力の性質</strong><br>
+            本アプリは、サードパーティのAIサービス（OpenAI APIを含みますがこれに限定されません）およびデバイス上の翻訳フレームワークを使用して、翻訳テキストおよび音声読み上げ音声を生成します。すべてのAI生成翻訳は情報提供およびコミュニケーション目的で提供され、専門的な翻訳サービスを構成するものではありません。</p>
+
+            <p><strong>6.2 正確性の非保証</strong><br>
+            AIが生成した翻訳は、不正確、不完全、または文脈的に不適切な場合があります。開発者は、AI生成翻訳の正確性、信頼性、または適合性に関して、いかなる表明も保証も行いません。法的、医療的、財務的、またはその他の重要なコミュニケーションにおいて、本アプリの翻訳のみに依存すべきではありません。</p>
+
+            <p><strong>6.3 オフライン翻訳</strong><br>
+            本アプリは、Appleのデバイス上翻訳フレームワークを使用したオフライン翻訳機能を提供します。オフライン翻訳は、オンラインのAI翻訳と品質が異なる場合があります。オフラインで使用するには、iOS設定から言語パックを別途ダウンロードする必要があります。</p>
+
+            <h3>第7条 知的財産権</h3>
+            <p><strong>7.1 アプリの所有権</strong><br>
+            本アプリ（デザイン、コード、グラフィック、ユーザーインターフェース、および開発者が作成したすべてのコンテンツを含む）はKotaro Omoriが所有しており、著作権法を含む適用される知的財産法によって保護されています。お客様には、本規約に従って個人的かつ非営利目的でのみ本アプリを使用するための、限定的、非独占的、譲渡不可、取り消し可能なライセンスが付与されます。</p>
+
+            <p><strong>7.2 制限事項</strong><br>
+            お客様は以下の行為を行ってはなりません：</p>
+            <ul>
+                <li>本アプリのいかなる部分の複製、変更、配布、販売、またはサブライセンス。</li>
+                <li>本アプリのリバースエンジニアリング、逆コンパイル、または逆アセンブル。</li>
+                <li>競合する製品やサービスを開発するための本アプリの使用。</li>
+                <li>本アプリ内の所有権表示の削除または変更。</li>
+            </ul>
+
+            <h3>第8条 禁止事項</h3>
+            <p>お客様は、本アプリを以下の目的で使用しないことに同意します：</p>
+            <ul>
+                <li>違法、わいせつ、名誉毀損的、または権利を侵害するコンテンツの生成、保存、または配布。</li>
+                <li>嫌がらせ、脅迫、または他者への危害を目的としたコンテンツの翻訳。</li>
+                <li>本アプリの技術的保護手段または使用制限を回避しようとする試み。</li>
+                <li>本アプリの意図された使用を超えた自動化された手段によるアクセスまたは操作。</li>
+                <li>過剰または不正なリクエストの送信による翻訳サービスの悪用。</li>
+                <li>適用される地域、国、または国際的な法律や規制への違反。</li>
+            </ul>
+
+            <h3>第9条 サードパーティサービス</h3>
+            <p>本アプリは、Google Firebase（認証およびクラウド機能）、OpenAI API（翻訳および音声読み上げ）、Apple Translationフレームワーク、Apple StoreKitなどのサードパーティサービスを統合しています。これらのサービスの使用には、それぞれの利用規約とプライバシーポリシーが適用されます。開発者は、サードパーティサービスの可用性、正確性、または動作について責任を負いません。</p>
+
+            <h3>第10条 プライバシー</h3>
+            <p>本アプリのご利用には、<a href="https://omochisoft.github.io/sayway.privacy.html">https://omochisoft.github.io/sayway.privacy.html</a> で公開されているプライバシーポリシーも適用されます。本アプリを利用することにより、お客様はプライバシーポリシーに記載されたデータ慣行に同意したものとみなされます。</p>
+
+            <h3>第11条 免責事項</h3>
+            <p>本アプリは「現状有姿」および「提供可能な範囲」で提供され、商品性、特定目的への適合性、および非侵害の黙示の保証を含むがこれらに限定されない、明示または黙示を問わずいかなる種類の保証も行いません。開発者は、本アプリが中断されないこと、エラーがないこと、またはウイルスやその他の有害なコンポーネントが含まれていないことを保証しません。開発者は、本アプリが提供する翻訳の正確性を保証しません。</p>
+
+            <h3>第12条 責任の制限</h3>
+            <p>適用される法律で認められる最大限の範囲において、いかなる場合も開発者は、データの喪失、利益の喪失、または本アプリが提供する翻訳への依存から生じる損害を含むがこれらに限定されない、間接的、偶発的、特別、結果的、または懲罰的損害について、たとえ当該損害の可能性について知らされていたとしても、お客様の本アプリの使用に起因または関連して責任を負わないものとします。</p>
+            <p>本アプリに起因または関連するすべての請求に対する、お客様に対する開発者の賠償責任の総額は、請求が行われる前の12ヶ月間にお客様が開発者に支払った金額を超えないものとします。</p>
+
+            <h3>第13条 補償</h3>
+            <p>お客様は、(a) 本アプリの使用、(b) ユーザーコンテンツ、(c) 本規約の違反、または (d) 第三者の権利の侵害に起因または関連して生じたあらゆる請求、責任、損害、損失、および費用（合理的な弁護士費用を含む）について、開発者を免責し、防御し、損害を与えないことに同意するものとします。</p>
+
+            <h3>第14条 利用停止および解除</h3>
+            <p>開発者は、本規約の違反を含むいかなる理由であれ、通知の有無にかかわらず、いつでも本アプリへのアクセスを一時停止または終了する権利を留保します。終了に伴い、お客様の本アプリを使用するライセンスは直ちに消滅します。第5条、第6条、第7条、第11条、第12条、第13条、および第15条を含む、その性質上終了後も存続すべき条項は、終了後も存続するものとします。</p>
+
+            <h3>第15条 準拠法および紛争解決</h3>
+            <p>本規約は、法の抵触に関する規定にかかわらず、日本法に準拠し、これに従って解釈されるものとします。本規約または本アプリに起因または関連するあらゆる紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+            <h3>第16条 本規約の変更</h3>
+            <p>開発者は、本規約をいつでも変更する権利を留保します。重要な変更がある場合、開発者は本アプリ内で通知を行うか、上部の「最終更新日」を更新します。変更後も本アプリを継続して使用することにより、お客様は改定された本規約に同意したものとみなされます。</p>
+
+            <h3>第17条 分離可能性</h3>
+            <p>本規約のいずれかの条項が執行不能または無効と判断された場合、当該条項は必要最小限の範囲で制限または削除され、残りの条項は引き続き完全に有効に存続するものとします。</p>
+
+            <h3>第18条 完全合意</h3>
+            <p>本規約およびプライバシーポリシーは、本アプリに関するお客様と開発者との間の完全な合意を構成し、以前のすべての合意、表明、および了解事項に優先します。</p>
+
+            <h3>第19条 お問い合わせ</h3>
+            <p>本規約に関するご質問や法的なお問い合わせについては、以下までご連絡ください：</p>
+            <p>
+                Kotaro Omori<br>
+                Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a>
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Korean Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-ko" class="card">
+            <h2>이용약관 (요약)</h2>
+            <p><strong>SayWay</strong>를 사용함으로써 귀하는 본 약관에 동의하게 됩니다. 다음은 주요 약관의 요약입니다.</p>
+            <ul>
+                <li><strong>연령 제한:</strong> 본 앱은 13세 이상부터 사용 가능합니다.</li>
+                <li><strong>서비스 내용:</strong> SayWay는 상황과 감정을 이해하여 자연스러운 번역을 제공하는 AI 번역 앱입니다.</li>
+                <li><strong>계정 및 데이터:</strong> 계정 가입이 필요 없습니다. 번역 기록과 즐겨찾기는 사용자의 기기에만 로컬로 저장됩니다.</li>
+                <li><strong>AI 번역:</strong> AI가 생성한 번역은 정확성을 보장하지 않습니다. 법적, 의료적, 재무적 커뮤니케이션에 전적으로 의존해서는 안 됩니다.</li>
+                <li><strong>결제 및 환불:</strong> 모든 결제 및 환불은 Apple(App Store)을 통해 처리됩니다. 개발자는 직접 환불을 처리할 수 없습니다.</li>
+                <li><strong>준거법:</strong> 본 약관은 일본법에 따라 해석되며, 도쿄지방재판소가 전속관할권을 가집니다.</li>
+            </ul>
+            <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
+            <a href="javascript:showEnglish();" class="btn-english">전체 약관 보기 (Read full Terms)</a>
+            <h3>문의</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Spanish Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-es" class="card">
+            <h2>Términos de Servicio (Resumen)</h2>
+            <p>Al utilizar <strong>SayWay</strong>, usted acepta estos términos. A continuación se presenta un resumen de los puntos principales.</p>
+            <ul>
+                <li><strong>Edad mínima:</strong> Debe tener al menos 13 años para usar esta aplicación.</li>
+                <li><strong>Descripción del servicio:</strong> SayWay es una aplicación de traducción con IA que comprende el contexto y las emociones para ofrecer traducciones naturales.</li>
+                <li><strong>Cuenta y datos:</strong> No se requiere registro. El historial de traducciones y los favoritos se almacenan localmente en su dispositivo.</li>
+                <li><strong>Traducción por IA:</strong> Las traducciones generadas por IA no garantizan exactitud. No debe depender exclusivamente de ellas para comunicaciones legales, médicas o financieras.</li>
+                <li><strong>Pagos y reembolsos:</strong> Todos los pagos y reembolsos se gestionan a través de Apple (App Store). El desarrollador no puede emitir reembolsos directamente.</li>
+                <li><strong>Ley aplicable:</strong> Estos términos se rigen por la ley japonesa, con jurisdicción exclusiva del Tribunal de Distrito de Tokio.</li>
+            </ul>
+            <p>Para los términos legales completos, consulte la versión en inglés a continuación.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Leer términos completos (Read full Terms)</a>
+            <h3>Contacto</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- French Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-fr" class="card">
+            <h2>Conditions d'utilisation (Résumé)</h2>
+            <p>En utilisant <strong>SayWay</strong>, vous acceptez les présentes conditions. Voici un résumé des points principaux.</p>
+            <ul>
+                <li><strong>Âge minimum :</strong> Vous devez avoir au moins 13 ans pour utiliser cette application.</li>
+                <li><strong>Description du service :</strong> SayWay est une application de traduction par IA qui comprend le contexte et les émotions pour fournir des traductions naturelles.</li>
+                <li><strong>Compte et données :</strong> Aucune inscription requise. L'historique des traductions et les favoris sont stockés localement sur votre appareil.</li>
+                <li><strong>Traduction par IA :</strong> Les traductions générées par l'IA ne sont pas garanties exactes. Vous ne devez pas vous y fier exclusivement pour des communications juridiques, médicales ou financières.</li>
+                <li><strong>Paiements et remboursements :</strong> Tous les paiements et remboursements sont gérés par Apple (App Store). Le développeur ne peut pas émettre de remboursements directement.</li>
+                <li><strong>Droit applicable :</strong> Les présentes conditions sont régies par le droit japonais, avec compétence exclusive du tribunal de district de Tokyo.</li>
+            </ul>
+            <p>Pour les conditions juridiques complètes, veuillez consulter la version anglaise ci-dessous.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Lire les conditions complètes (Read full Terms)</a>
+            <h3>Contact</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Traditional Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hant" class="card">
+            <h2>使用條款 (摘要)</h2>
+            <p>使用 <strong>SayWay</strong> 即表示您同意本條款。以下為主要條款摘要：</p>
+            <ul>
+                <li><strong>年齡限制：</strong>必須年滿 13 歲方可使用本 App。</li>
+                <li><strong>服務說明：</strong>SayWay 是一款 AI 翻譯應用程式，能理解情境與情感，提供自然的翻譯。</li>
+                <li><strong>帳號與資料：</strong>無需註冊帳號。翻譯記錄與收藏皆僅儲存於您的裝置本機。</li>
+                <li><strong>AI 翻譯：</strong>AI 產生的翻譯不保證準確性。您不應完全依賴翻譯結果進行法律、醫療或財務溝通。</li>
+                <li><strong>付款與退款：</strong>所有付款與退款皆透過 Apple (App Store) 處理。開發者無法直接處理退款。</li>
+                <li><strong>準據法：</strong>本條款適用日本法律，東京地方法院擁有專屬管轄權。</li>
+            </ul>
+            <p>如需具備法律效力的完整條款，請參閱英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">閱讀完整條款 (Read full Terms)</a>
+            <h3>聯絡方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Simplified Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hans" class="card">
+            <h2>使用条款 (摘要)</h2>
+            <p>使用 <strong>SayWay</strong> 即表示您同意本条款。以下为主要条款摘要：</p>
+            <ul>
+                <li><strong>年龄限制：</strong>必须年满 13 岁方可使用本应用。</li>
+                <li><strong>服务说明：</strong>SayWay 是一款 AI 翻译应用，能理解情境与情感，提供自然的翻译。</li>
+                <li><strong>账号与数据：</strong>无需注册账号。翻译记录与收藏皆仅保存在您的设备本地。</li>
+                <li><strong>AI 翻译：</strong>AI 生成的翻译不保证准确性。您不应完全依赖翻译结果进行法律、医疗或财务沟通。</li>
+                <li><strong>付款与退款：</strong>所有付款与退款皆通过 Apple (App Store) 处理。开发者无法直接处理退款。</li>
+                <li><strong>准据法：</strong>本条款适用日本法律，东京地方法院拥有专属管辖权。</li>
+            </ul>
+            <p>如需具备法律效力的完整条款，请参阅英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">阅读完整条款 (Read full Terms)</a>
+            <h3>联系方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 KOTARO OMORI. All rights reserved.
+    </footer>
+
+    <script>
+        function detectLanguage() {
+            const lang = (navigator.language || navigator.userLanguage).toLowerCase();
+            let targetId = 'lang-en';
+
+            if (lang.startsWith('ja')) {
+                targetId = 'lang-ja';
+            } else if (lang.startsWith('ko')) {
+                targetId = 'lang-ko';
+            } else if (lang.startsWith('es')) {
+                targetId = 'lang-es';
+            } else if (lang.startsWith('fr')) {
+                targetId = 'lang-fr';
+            } else if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-hant') {
+                targetId = 'lang-zh-hant';
+            } else if (lang.startsWith('zh')) {
+                targetId = 'lang-zh-hans';
+            }
+
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+
+            var targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.classList.add('active');
+            } else {
+                document.getElementById('lang-en').classList.add('active');
+            }
+        }
+
+        function showEnglish() {
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById('lang-en').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', detectLanguage);
+    </script>
+</body>
+</html>
