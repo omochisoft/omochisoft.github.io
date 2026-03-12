@@ -497,6 +497,66 @@
       <p>本プライバシーポリシーは日本法に準拠します。本プライバシーポリシーに関するいかなる紛争も、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
     </section>
 
+    <section class="card" id="lang-es">
+      <h2>Política de Privacidad y Soporte (Resumen)</h2>
+      
+      <div class="support-box">
+        <h3>Contacto / Soporte</h3>
+        <p>Si tiene alguna pregunta o necesita soporte, póngase en contacto con nosotros en:<br>
+        <strong>Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></strong></p>
+      </div>
+
+      <p><strong>TalkCase</strong> respeta profundamente su privacidad.</p>
+      <ul>
+        <li><strong>Requisito de edad:</strong> Debe tener al menos 18 años para utilizar esta aplicación.</li>
+        <li><strong>Sin cuenta y almacenamiento local:</strong> No necesita crear una cuenta. Todos sus avatares y el historial de chat se almacenan únicamente de forma local en su dispositivo.</li>
+        <li><strong>IA y servicios de terceros:</strong> Sus mensajes e imágenes se envían a Google Gemini AI para generar respuestas. La aplicación también utiliza Firebase para la seguridad de la API y AdMob para proporcionar anuncios (los anuncios se muestran de forma no personalizada, sin utilizar el identificador del dispositivo IDFA).</li>
+        <li><strong>Información de pago:</strong> Todas las transacciones son procesadas por Apple. El desarrollador no recopila ni almacena los datos de su tarjeta de crédito.</li>
+      </ul>
+      <p>Para conocer los términos legales completos, consulte la versión en inglés.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Leer la política completa (Read full Policy)</a>
+    </section>
+
+    <section class="card" id="lang-de">
+      <h2>Datenschutzerklärung & Support (Zusammenfassung)</h2>
+      
+      <div class="support-box">
+        <h3>Kontakt / Support</h3>
+        <p>Wenn Sie Fragen haben oder Support benötigen, kontaktieren Sie uns bitte unter:<br>
+        <strong>Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></strong></p>
+      </div>
+
+      <p><strong>TalkCase</strong> nimmt Ihre Privatsphäre sehr ernst.</p>
+      <ul>
+        <li><strong>Altersbeschränkung:</strong> Sie müssen mindestens 18 Jahre alt sein, um diese App nutzen zu können.</li>
+        <li><strong>Kein Konto & lokale Speicherung:</strong> Sie müssen kein Konto erstellen. Alle Ihre Avatare und der Chat-Verlauf werden ausschließlich lokal auf Ihrem Gerät gespeichert.</li>
+        <li><strong>KI & Drittanbieter-Dienste:</strong> Ihre Nachrichten und Bilder werden an Google Gemini AI gesendet, um Antworten zu generieren. Die App nutzt außerdem Firebase für die API-Sicherheit und AdMob für die Bereitstellung von Werbung (die Werbung wird nicht personalisiert ausgespielt und verwendet keine Geräte-ID IDFA).</li>
+        <li><strong>Zahlungsinformationen:</strong> Alle Transaktionen werden von Apple abgewickelt. Der Entwickler sammelt oder speichert Ihre Kreditkartendaten nicht.</li>
+      </ul>
+      <p>Die vollständigen rechtlichen Bedingungen finden Sie in der englischen Version.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Vollständige Richtlinie lesen (Read full Policy)</a>
+    </section>
+
+    <section class="card" id="lang-fr">
+      <h2>Politique de confidentialité et Support (Résumé)</h2>
+      
+      <div class="support-box">
+        <h3>Contact / Support</h3>
+        <p>Si vous avez des questions ou besoin d'assistance, veuillez nous contacter à l'adresse suivante :<br>
+        <strong>Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></strong></p>
+      </div>
+
+      <p><strong>TalkCase</strong> respecte profondément votre vie privée.</p>
+      <ul>
+        <li><strong>Âge requis :</strong> Vous devez avoir au moins 18 ans pour utiliser cette application.</li>
+        <li><strong>Pas de compte et stockage local :</strong> Vous n'avez pas besoin de créer de compte. Tous vos avatars et l'historique des discussions sont stockés uniquement localement sur votre appareil.</li>
+        <li><strong>IA et services tiers :</strong> Vos messages et images sont envoyés à Google Gemini AI pour générer des réponses. L'application utilise également Firebase pour la sécurité de l'API et AdMob pour diffuser des publicités (les annonces sont diffusées de manière non personnalisée, sans utiliser l'identifiant de l'appareil IDFA).</li>
+        <li><strong>Informations de paiement :</strong> Toutes les transactions sont traitées par Apple. Le développeur ne collecte ni ne stocke les informations de votre carte de crédit.</li>
+      </ul>
+      <p>Pour connaître les conditions légales complètes, veuillez vous référer à la version anglaise.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Lire la politique complète (Read full Policy)</a>
+    </section>
+
     <section class="card" id="lang-ko">
       <h2>개인정보 처리방침 및 지원 (요약)</h2>
       
@@ -565,25 +625,27 @@
 
   <script>
     function detectLanguage() {
-      // ブラウザの言語設定を取得
       const lang = navigator.language || navigator.userLanguage; 
       const langCode = lang.toLowerCase();
 
-      // デフォルトは英語
       let targetId = 'lang-en';
 
-      // 言語判定ロジック
       if (langCode.startsWith('ja')) {
         targetId = 'lang-ja';
+      } else if (langCode.startsWith('es')) {
+        targetId = 'lang-es';
+      } else if (langCode.startsWith('de')) {
+        targetId = 'lang-de';
+      } else if (langCode.startsWith('fr')) {
+        targetId = 'lang-fr';
       } else if (langCode.startsWith('ko')) {
         targetId = 'lang-ko';
       } else if (langCode === 'zh-tw' || langCode === 'zh-hk' || langCode === 'zh-hant') {
-        targetId = 'lang-zh-hant'; // 繁体字
+        targetId = 'lang-zh-hant';
       } else if (langCode.startsWith('zh')) {
-        targetId = 'lang-zh-hans'; // その他中国語は简体字へ
+        targetId = 'lang-zh-hans';
       }
 
-      // すべてのセクションを非表示にして、対象のみアクティブ化
       document.querySelectorAll('.card').forEach(el => {
         el.classList.remove('active');
       });
@@ -592,19 +654,16 @@
       if (targetEl) {
         targetEl.classList.add('active');
       } else {
-        // フォールバック
         document.getElementById('lang-en').classList.add('active');
       }
     }
 
-    // 英語全文を表示するボタン用関数
     function showEnglish() {
       document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
       document.getElementById('lang-en').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 実行
     document.addEventListener('DOMContentLoaded', detectLanguage);
   </script>
 </body>
