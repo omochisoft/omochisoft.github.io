@@ -447,6 +447,54 @@
       Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
     </section>
 
+    <section class="card" id="lang-es">
+      <h2>Términos de Uso (Resumen)</h2>
+      <p>Al usar <strong>TalkCase</strong>, aceptas estos términos. A continuación se muestra un resumen de los términos principales:</p>
+      <ul>
+        <li><strong>Restricción de edad:</strong> Debes tener al menos 18 años para utilizar esta aplicación.</li>
+        <li><strong>Cuenta y datos:</strong> No es necesario registrar una cuenta. Todos los datos de configuración y conversación se almacenan únicamente de forma local en tu dispositivo.</li>
+        <li><strong>IA y contenido:</strong> Las conversaciones y los personajes generados por la IA son totalmente ficticios. El usuario asume toda la responsabilidad sobre los derechos de autor y derechos de imagen de las fotos que suba.</li>
+        <li><strong>Pagos y reembolsos:</strong> Todas las suscripciones, compras y reembolsos se procesan a través de Apple (App Store). El desarrollador no puede procesar reembolsos directamente.</li>
+      </ul>
+      <p>Para conocer los términos legales completos, consulte la versión en inglés.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Leer los términos completos (Read full Terms)</a>
+      
+      <h3>Contacto</h3>
+      <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-de">
+      <h2>Nutzungsbedingungen (Zusammenfassung)</h2>
+      <p>Mit der Nutzung von <strong>TalkCase</strong> stimmen Sie diesen Bedingungen zu. Hier ist eine Zusammenfassung der wichtigsten Regeln:</p>
+      <ul>
+        <li><strong>Altersbeschränkung:</strong> Sie müssen mindestens 18 Jahre alt sein, um diese App nutzen zu können.</li>
+        <li><strong>Konto und Daten:</strong> Eine Kontoregistrierung ist nicht erforderlich. Alle Einstellungen und Chat-Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert.</li>
+        <li><strong>KI und Inhalte:</strong> Alle von der KI generierten Chats und Charaktere sind fiktiv. Die Nutzer tragen die volle Verantwortung für das Urheberrecht und das Recht am eigenen Bild bei den von ihnen hochgeladenen Bildern.</li>
+        <li><strong>Zahlungen und Rückerstattungen:</strong> Alle Abonnements, Käufe und Rückerstattungen werden über Apple (App Store) abgewickelt. Der Entwickler kann keine direkten Rückerstattungen vornehmen.</li>
+      </ul>
+      <p>Die vollständigen rechtlichen Bedingungen finden Sie in der englischen Version.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Vollständige Bedingungen lesen (Read full Terms)</a>
+      
+      <h3>Kontakt</h3>
+      <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+    </section>
+
+    <section class="card" id="lang-fr">
+      <h2>Conditions d'utilisation (Résumé)</h2>
+      <p>En utilisant <strong>TalkCase</strong>, vous acceptez ces conditions. Voici un résumé des règles principales :</p>
+      <ul>
+        <li><strong>Restriction d'âge :</strong> Vous devez avoir au moins 18 ans pour utiliser cette application.</li>
+        <li><strong>Compte et données :</strong> Aucune inscription de compte n'est requise. Tous les paramètres et données de conversation sont stockés uniquement localement sur votre appareil.</li>
+        <li><strong>IA et contenu :</strong> Toutes les discussions et tous les personnages générés par l'IA sont entièrement fictifs. L'utilisateur assume l'entière responsabilité des droits d'auteur et du droit à l'image pour les photos téléchargées.</li>
+        <li><strong>Paiements et remboursements :</strong> Tous les abonnements, achats et remboursements sont traités via Apple (App Store). Le développeur ne peut pas traiter les remboursements directement.</li>
+      </ul>
+      <p>Pour connaître les conditions légales complètes, veuillez vous référer à la version anglaise.</p>
+      <a href="#" onclick="showEnglish(); return false;" class="btn-english">Lire les conditions complètes (Read full Terms)</a>
+      
+      <h3>Contact</h3>
+      <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+    </section>
+
     <section class="card" id="lang-ko">
       <h2>이용약관 (요약)</h2>
       <p><strong>TalkCase</strong>를 사용함으로써 귀하는 본 약관에 동의하게 됩니다. 다음은 주요 약관의 요약입니다.</p>
@@ -476,7 +524,7 @@
       <a href="#" onclick="showEnglish(); return false;" class="btn-english">閱讀完整條款 (Read full Terms)</a>
       
       <h3>聯絡方式</h3>
-      <p><a href="mailto:omochi_soft-dev@yahoo.co.jp">omochi_soft-dev@yahoo.co.jp</a></p>
+      <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
     </section>
 
     <section class="card" id="lang-zh-hans">
@@ -503,25 +551,27 @@
 
   <script>
     function detectLanguage() {
-      // ブラウザの言語設定を取得
       const lang = navigator.language || navigator.userLanguage; 
       const langCode = lang.toLowerCase();
 
-      // デフォルトは英語
       let targetId = 'lang-en';
 
-      // 言語判定ロジック
       if (langCode.startsWith('ja')) {
         targetId = 'lang-ja';
+      } else if (langCode.startsWith('es')) {
+        targetId = 'lang-es';
+      } else if (langCode.startsWith('de')) {
+        targetId = 'lang-de';
+      } else if (langCode.startsWith('fr')) {
+        targetId = 'lang-fr';
       } else if (langCode.startsWith('ko')) {
         targetId = 'lang-ko';
       } else if (langCode === 'zh-tw' || langCode === 'zh-hk' || langCode === 'zh-hant') {
-        targetId = 'lang-zh-hant'; // 繁体字
+        targetId = 'lang-zh-hant';
       } else if (langCode.startsWith('zh')) {
-        targetId = 'lang-zh-hans'; // その他中国語は簡体字へ
+        targetId = 'lang-zh-hans';
       }
 
-      // すべてのセクションを非表示にして、対象のみアクティブ化
       document.querySelectorAll('.card').forEach(el => {
         el.classList.remove('active');
       });
@@ -530,19 +580,16 @@
       if (targetEl) {
         targetEl.classList.add('active');
       } else {
-        // フォールバック
         document.getElementById('lang-en').classList.add('active');
       }
     }
 
-    // 英語全文を表示するボタン用関数
     function showEnglish() {
       document.querySelectorAll('.card').forEach(el => el.classList.remove('active'));
       document.getElementById('lang-en').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 実行
     document.addEventListener('DOMContentLoaded', detectLanguage);
   </script>
 </body>
