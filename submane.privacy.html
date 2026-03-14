@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Tracker:Cost/Hour | Privacy Policy</title>
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --accent-color: #3B82F6;
+            --text-main: #1C1C1E;
+            --text-sub: #8E8E93;
+            --bg-gradient: linear-gradient(135deg, rgba(255,255,255,1) 0%,
+                rgba(235,240,255,1) 50%, rgba(240,245,255,1) 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-main: #F2F2F7;
+                --text-sub: #AEAEB2;
+                --bg-gradient: linear-gradient(135deg, #1C1C1E 0%,
+                    #2C2C2E 50%, #1A1A1A 100%);
+            }
+            body {
+                background: #000;
+            }
+            .card {
+                background: #1C1C1E !important;
+                border: 1px solid #333 !important;
+            }
+            a {
+                color: #60A5FA !important;
+            }
+            table {
+                border-color: #444 !important;
+            }
+            th {
+                background: #2C2C2E !important;
+            }
+            td, th {
+                border-color: #444 !important;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%,
+                    transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.1) 0%,
+                    transparent 40%);
+        }
+
+        header {
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .app-icon-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1A5ADB, #5A8DF5);
+            color: white;
+        }
+
+        .app-icon-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 32px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            display: none;
+        }
+
+        .card.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 20px;
+            border-bottom: 2px solid rgba(37, 99, 235, 0.1);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 28px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        p, ul {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #2563EB;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .muted {
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f5f5f7;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .btn-english {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #2563EB, #3B82F6);
+            color: white !important;
+            border-radius: 99px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-english:active {
+            transform: scale(0.96);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg"></div>
+
+    <header>
+        <div class="app-icon-container">
+            <img src="AppIcon.png" alt="App Icon">
+        </div>
+        <h1>Subscription Tracker:Cost/Hour</h1>
+        <p>Privacy Policy / プライバシーポリシー</p>
+    </header>
+
+    <main>
+        <!-- ============================================================ -->
+        <!-- English Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-en" class="card">
+            <h2>Subscription Tracker:Cost/Hour Privacy Policy</h2>
+            <p class="muted">Last updated: March 15, 2026</p>
+
+            <p>This Privacy Policy describes how Kotaro Omori ("Developer," "we," "us," or "our") handles information in connection with the Subscription Tracker:Cost/Hour mobile application (the "App"). We are committed to protecting your privacy and being transparent about our data practices.</p>
+
+            <h3>Contact / Support</h3>
+            <p>If you have any questions, need support, or have requests regarding this Privacy Policy, please contact:<br>
+            Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+
+            <h3>1. Overview</h3>
+            <p>Subscription Tracker:Cost/Hour is a subscription management app designed with privacy in mind. The App does not require account creation or the provision of personally identifiable information. All data generated by your use of the App is stored locally on your device and is never transmitted to the Developer's servers.</p>
+
+            <h3>2. Information We Collect and How We Use It</h3>
+
+            <p><strong>2.1 Information You Provide</strong></p>
+
+            <p><strong>Subscription Data:</strong> When you register subscriptions (service names, prices, billing cycles, categories, renewal dates, notes), all data is stored locally on your device using Apple's SwiftData framework. This information is never transmitted to any external server.</p>
+
+            <p><strong>2.2 Information Collected Automatically</strong></p>
+
+            <p><strong>Screen Time Data:</strong> With your explicit permission, the App uses Apple's Screen Time API (FamilyControls / DeviceActivity framework) to measure app usage time and days. This data is processed entirely on your device by Apple's framework and is not accessible to the Developer in raw form. Usage statistics are stored locally on your device.</p>
+
+            <p><strong>2.3 Permissions</strong></p>
+
+            <p><strong>Screen Time (FamilyControls):</strong> Required for automatic usage tracking. You may deny or revoke this permission at any time through your device's Settings. The App will function without this permission; automatic usage tracking will simply be unavailable.</p>
+
+            <p><strong>Notifications:</strong> Used to send renewal date reminders. You may deny or revoke this permission at any time. The App will function normally without notifications enabled.</p>
+
+            <p><strong>2.4 Purchase Information</strong></p>
+
+            <p>All in-app purchases (Pro lifetime unlock) are processed exclusively by Apple through the App Store. The Developer does not collect, process, or store any payment information. Purchase status is verified locally on your device using Apple's StoreKit 2 framework.</p>
+
+            <h3>3. How We Share Your Information</h3>
+            <p>We do not sell, share, or transmit your personal information. This App is a fully offline application. The only external communication occurs through Apple's built-in frameworks:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recipient</th>
+                        <th>Data Shared</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple Inc. (StoreKit)</td>
+                        <td>Purchase transactions</td>
+                        <td>Payment processing</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc. (FamilyControls)</td>
+                        <td>App selection tokens</td>
+                        <td>Screen Time usage measurement</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc. (UNUserNotification)</td>
+                        <td>Notification content</td>
+                        <td>Renewal date reminders</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>No third-party analytics, advertising SDKs, or tracking tools are used in this App.</p>
+
+            <h3>4. Data Storage and Retention</h3>
+
+            <p><strong>Local Storage:</strong> All subscription data, usage records, and user preferences are stored locally on your device using Apple's SwiftData framework and UserDefaults. This data remains on your device until you delete it within the App or uninstall the App.</p>
+
+            <p><strong>No Server Storage:</strong> The Developer does not operate any servers for this App. No user data is ever transmitted to or stored on external servers.</p>
+
+            <h3>5. Your Privacy Rights and Choices</h3>
+
+            <p><strong>Access and Deletion:</strong> You can view and delete your subscription data directly within the App. To delete all App data, you may uninstall the App from your device.</p>
+
+            <p><strong>Screen Time Permission:</strong> You may revoke Screen Time permission at any time through your device's Settings. This will disable automatic usage tracking but will not affect other functionality.</p>
+
+            <p><strong>Notification Permission:</strong> You may revoke notification permission at any time through your device's Settings. This will disable renewal reminders but will not affect other functionality.</p>
+
+            <h3>6. Security</h3>
+            <p>Since all data is stored locally on your device and no data is transmitted to external servers, your information is protected by your device's built-in security features (device passcode, Face ID, Touch ID, and iOS data encryption). We do not have access to your data.</p>
+
+            <h3>7. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you by updating the "Last updated" date at the top of this policy or by providing notice within the App. Your continued use of the App after any changes constitutes your acceptance of the revised Privacy Policy.</p>
+
+            <h3>8. Governing Law</h3>
+            <p>This Privacy Policy is governed by the laws of Japan. Any dispute arising from or relating to this Privacy Policy shall be subject to the exclusive jurisdiction of the Tokyo District Court.</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Japanese Version (Full) -->
+        <!-- ============================================================ -->
+        <div id="lang-ja" class="card">
+            <h2>サブスク管理 - コスパ見える化 プライバシーポリシー</h2>
+            <p class="muted">最終更新日: 2026年3月15日</p>
+
+            <p>本プライバシーポリシーは、Kotaro Omori（以下「開発者」または「当社」）が「サブスク管理 - コスパ見える化」モバイルアプリケーション（以下「本アプリ」）に関連して情報をどのように取り扱うかを説明するものです。当社は、お客様のプライバシーを保護し、データの取り扱いについて透明性を確保することに努めています。</p>
+
+            <h3>サポート・お問い合わせ</h3>
+            <p>本プライバシーポリシーに関するご質問、サポートのご依頼、またはご要望がございましたら、下記までご連絡ください：<br>
+            Email: <a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+
+            <h3>1. 概要</h3>
+            <p>本アプリはプライバシーに配慮して設計されたサブスクリプション管理アプリです。本アプリの利用にあたり、アカウントの作成や個人を特定できる情報の提供は不要です。本アプリの利用により生成されるすべてのデータは、お客様のデバイス上にローカルに保存され、開発者のサーバーに送信されることはありません。</p>
+
+            <h3>2. 収集する情報と利用目的</h3>
+
+            <p><strong>2.1 お客様が提供する情報</strong></p>
+
+            <p><strong>サブスクリプションデータ：</strong>サブスクリプション（サービス名、料金、請求サイクル、カテゴリ、更新日、メモ）を登録すると、すべてのデータはAppleのSwiftDataフレームワークを使用してデバイス上にローカルに保存されます。この情報が外部サーバーに送信されることはありません。</p>
+
+            <p><strong>2.2 自動的に収集される情報</strong></p>
+
+            <p><strong>スクリーンタイムデータ：</strong>お客様の明示的な許可のもと、本アプリはAppleのScreen Time API（FamilyControls / DeviceActivityフレームワーク）を使用してアプリの使用時間と利用日数を測定します。このデータはAppleのフレームワークによりデバイス上で完全に処理され、開発者が生データにアクセスすることはできません。利用統計はデバイス上にローカルに保存されます。</p>
+
+            <p><strong>2.3 アクセス許可</strong></p>
+
+            <p><strong>スクリーンタイム（FamilyControls）：</strong>自動利用状況追跡に必要です。デバイスの設定からいつでも許可を取り消すことができます。この許可がなくても本アプリは動作しますが、自動的な利用状況追跡が利用できなくなります。</p>
+
+            <p><strong>通知：</strong>更新日のリマインダー通知に使用します。いつでも許可を取り消すことができます。通知が無効でも本アプリは正常に動作します。</p>
+
+            <p><strong>2.4 購入情報</strong></p>
+
+            <p>すべてのアプリ内課金（Pro買い切り）は、App Storeを通じてAppleが専権的に処理します。開発者は、いかなる支払い情報も収集、処理、または保存しません。購入状況は、AppleのStoreKit 2フレームワークを使用してデバイス上でローカルに検証されます。</p>
+
+            <h3>3. 情報の共有について</h3>
+            <p>当社はお客様の個人情報を販売、共有、または外部に送信することはありません。本アプリは完全オフラインのアプリケーションです。外部通信はAppleの組み込みフレームワークを通じてのみ発生します：</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>共有先</th>
+                        <th>共有データ</th>
+                        <th>目的</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple Inc.（StoreKit）</td>
+                        <td>購入トランザクション</td>
+                        <td>決済処理</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.（FamilyControls）</td>
+                        <td>アプリ選択トークン</td>
+                        <td>スクリーンタイム利用測定</td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.（UNUserNotification）</td>
+                        <td>通知コンテンツ</td>
+                        <td>更新日リマインダー</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>本アプリでは、サードパーティの分析ツール、広告SDK、またはトラッキングツールは一切使用していません。</p>
+
+            <h3>4. データの保存と保持</h3>
+
+            <p><strong>ローカル保存：</strong>すべてのサブスクリプションデータ、利用記録、およびユーザー設定は、AppleのSwiftDataフレームワークとUserDefaultsを使用してデバイス上にローカルに保存されます。このデータは、お客様がアプリ内で削除するか、アプリをアンインストールするまでデバイス上に保持されます。</p>
+
+            <p><strong>サーバー保存なし：</strong>開発者は本アプリのためのサーバーを運用していません。ユーザーデータが外部サーバーに送信または保存されることはありません。</p>
+
+            <h3>5. プライバシー権と選択肢</h3>
+
+            <p><strong>アクセスと削除：</strong>サブスクリプションデータは、アプリ内で直接閲覧および削除できます。すべてのアプリデータを削除するには、デバイスからアプリをアンインストールしてください。</p>
+
+            <p><strong>スクリーンタイムの許可：</strong>デバイスの設定からスクリーンタイムの許可をいつでも取り消すことができます。これにより自動利用状況追跡は無効になりますが、その他の機能には影響しません。</p>
+
+            <p><strong>通知の許可：</strong>デバイスの設定から通知の許可をいつでも取り消すことができます。これにより更新日リマインダーは無効になりますが、その他の機能には影響しません。</p>
+
+            <h3>6. セキュリティ</h3>
+            <p>すべてのデータはデバイス上にローカルに保存され、外部サーバーにデータが送信されることはないため、お客様の情報はデバイスの組み込みセキュリティ機能（パスコード、Face ID、Touch ID、iOSデータ暗号化）によって保護されます。当社はお客様のデータにアクセスすることができません。</p>
+
+            <h3>7. 本プライバシーポリシーの変更</h3>
+            <p>当社は、本プライバシーポリシーを随時更新する場合があります。重要な変更を行う場合は、本ポリシー上部の「最終更新日」を更新するか、アプリ内で通知を行います。変更後も本アプリを継続して使用することにより、お客様は改定されたプライバシーポリシーに同意したものとみなされます。</p>
+
+            <h3>8. 準拠法</h3>
+            <p>本プライバシーポリシーは日本法に準拠します。本プライバシーポリシーに起因または関連するあらゆる紛争については、東京地方裁判所を専属的合意管轄裁判所とします。</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Korean Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-ko" class="card">
+            <h2>개인정보 처리방침 (요약)</h2>
+            <p><strong>구독 관리 - 시간당 비용 분석</strong>을 사용함으로써 귀하는 본 방침에 동의하게 됩니다. 다음은 주요 사항의 요약입니다.</p>
+            <ul>
+                <li><strong>완전 오프라인:</strong> 모든 데이터는 사용자의 기기에만 로컬로 저장됩니다. 외부 서버로 전송되지 않습니다.</li>
+                <li><strong>계정 불필요:</strong> 계정 가입이나 개인정보 제공이 필요 없습니다.</li>
+                <li><strong>스크린 타임:</strong> 사용자의 명시적 허가 하에 Apple의 Screen Time API로 앱 사용 시간을 측정합니다. 개발자는 원시 데이터에 접근할 수 없습니다.</li>
+                <li><strong>결제:</strong> 모든 결제는 Apple(App Store)을 통해 처리됩니다. 개발자는 결제 정보를 수집하지 않습니다.</li>
+                <li><strong>광고/추적 없음:</strong> 서드파티 분석, 광고 SDK, 추적 도구를 사용하지 않습니다.</li>
+                <li><strong>개인정보 판매 금지:</strong> 귀하의 개인정보는 판매되지 않습니다.</li>
+            </ul>
+            <p>자세한 법적 내용은 아래의 영문 버전을 확인해 주십시오.</p>
+            <a href="javascript:showEnglish();" class="btn-english">전체 방침 보기 (Read full Policy)</a>
+            <h3>문의</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Spanish Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-es" class="card">
+            <h2>Política de Privacidad (Resumen)</h2>
+            <p>Al utilizar <strong>Gestor Suscripciones:Coste/h</strong>, usted acepta esta política. A continuación se presenta un resumen de los puntos principales.</p>
+            <ul>
+                <li><strong>Completamente offline:</strong> Todos los datos se almacenan localmente en su dispositivo. No se transmiten a servidores externos.</li>
+                <li><strong>Sin cuenta requerida:</strong> No necesita crear una cuenta ni proporcionar información personal.</li>
+                <li><strong>Screen Time:</strong> Con su permiso explícito, la app mide el tiempo de uso mediante la API Screen Time de Apple. El desarrollador no accede a los datos brutos.</li>
+                <li><strong>Pagos:</strong> Todos los pagos se procesan a través de Apple (App Store). El desarrollador no recopila información de pago.</li>
+                <li><strong>Sin anuncios/rastreo:</strong> No se utilizan análisis de terceros, SDKs publicitarios ni herramientas de seguimiento.</li>
+                <li><strong>Sin venta de datos:</strong> Su información personal no se vende.</li>
+            </ul>
+            <p>Para la política de privacidad completa, consulte la versión en inglés a continuación.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Leer política completa (Read full Policy)</a>
+            <h3>Contacto</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- French Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-fr" class="card">
+            <h2>Politique de Confidentialité (Résumé)</h2>
+            <p>En utilisant <strong>Suivi Abonnements: Coût/Heure</strong>, vous acceptez la présente politique. Voici un résumé des points principaux.</p>
+            <ul>
+                <li><strong>Entièrement hors ligne :</strong> Toutes les données sont stockées localement sur votre appareil. Aucune transmission vers des serveurs externes.</li>
+                <li><strong>Aucun compte requis :</strong> Pas besoin de créer un compte ni de fournir d'informations personnelles.</li>
+                <li><strong>Screen Time :</strong> Avec votre autorisation explicite, l'app mesure le temps d'utilisation via l'API Screen Time d'Apple. Le développeur n'accède pas aux données brutes.</li>
+                <li><strong>Paiements :</strong> Tous les paiements sont traités par Apple (App Store). Le développeur ne collecte aucune information de paiement.</li>
+                <li><strong>Sans publicité/suivi :</strong> Aucun outil d'analyse tiers, SDK publicitaire ou outil de suivi n'est utilisé.</li>
+                <li><strong>Pas de vente de données :</strong> Vos informations personnelles ne sont pas vendues.</li>
+            </ul>
+            <p>Pour la politique de confidentialité complète, veuillez consulter la version anglaise ci-dessous.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Lire la politique complète (Read full Policy)</a>
+            <h3>Contact</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- German Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-de" class="card">
+            <h2>Datenschutzrichtlinie (Zusammenfassung)</h2>
+            <p>Durch die Nutzung von <strong>Abo-Tracker: Kosten/Stunde</strong> stimmen Sie dieser Richtlinie zu. Im Folgenden finden Sie eine Zusammenfassung der wichtigsten Punkte.</p>
+            <ul>
+                <li><strong>Vollständig offline:</strong> Alle Daten werden lokal auf Ihrem Gerät gespeichert. Es erfolgt keine Übertragung an externe Server.</li>
+                <li><strong>Kein Konto erforderlich:</strong> Sie müssen kein Konto erstellen oder persönliche Daten angeben.</li>
+                <li><strong>Screen Time:</strong> Mit Ihrer ausdrücklichen Genehmigung misst die App die Nutzungszeit über Apples Screen Time API. Der Entwickler hat keinen Zugriff auf Rohdaten.</li>
+                <li><strong>Zahlungen:</strong> Alle Zahlungen werden über Apple (App Store) abgewickelt. Der Entwickler erhebt keine Zahlungsinformationen.</li>
+                <li><strong>Keine Werbung/Tracking:</strong> Es werden keine Drittanbieter-Analysen, Werbe-SDKs oder Tracking-Tools verwendet.</li>
+                <li><strong>Kein Datenverkauf:</strong> Ihre persönlichen Daten werden nicht verkauft.</li>
+            </ul>
+            <p>Die vollständige Datenschutzrichtlinie finden Sie in der englischen Version unten.</p>
+            <a href="javascript:showEnglish();" class="btn-english">Vollständige Richtlinie lesen (Read full Policy)</a>
+            <h3>Kontakt</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Traditional Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hant" class="card">
+            <h2>隱私政策 (摘要)</h2>
+            <p>使用 <strong>訂閱管理 - 時均成本分析</strong> 即表示您同意本政策。以下為主要事項摘要：</p>
+            <ul>
+                <li><strong>完全離線：</strong>所有數據僅儲存於您的裝置本機。不會傳輸至外部伺服器。</li>
+                <li><strong>無需帳號：</strong>無需註冊帳號或提供個人資訊。</li>
+                <li><strong>螢幕使用時間：</strong>經您明確許可，本應用程式透過 Apple 的 Screen Time API 測量應用使用時間。開發者無法存取原始數據。</li>
+                <li><strong>付款：</strong>所有付款透過 Apple (App Store) 處理。開發者不收集付款資訊。</li>
+                <li><strong>無廣告/追蹤：</strong>不使用任何第三方分析、廣告 SDK 或追蹤工具。</li>
+                <li><strong>不出售個人資訊：</strong>您的個人資訊不會被出售。</li>
+            </ul>
+            <p>如需完整的隱私政策，請參閱英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">閱讀完整政策 (Read full Policy)</a>
+            <h3>聯絡方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- Simplified Chinese Version (Summary) -->
+        <!-- ============================================================ -->
+        <div id="lang-zh-hans" class="card">
+            <h2>隐私政策 (摘要)</h2>
+            <p>使用 <strong>订阅管理 - 时均成本分析</strong> 即表示您同意本政策。以下为主要事项摘要：</p>
+            <ul>
+                <li><strong>完全离线：</strong>所有数据仅保存在您的设备本地。不会传输至外部服务器。</li>
+                <li><strong>无需账号：</strong>无需注册账号或提供个人信息。</li>
+                <li><strong>屏幕使用时间：</strong>经您明确许可，本应用通过 Apple 的 Screen Time API 测量应用使用时间。开发者无法访问原始数据。</li>
+                <li><strong>付款：</strong>所有付款通过 Apple (App Store) 处理。开发者不收集付款信息。</li>
+                <li><strong>无广告/追踪：</strong>不使用任何第三方分析、广告 SDK 或追踪工具。</li>
+                <li><strong>不出售个人信息：</strong>您的个人信息不会被出售。</li>
+            </ul>
+            <p>如需完整的隐私政策，请参阅英文版本。</p>
+            <a href="javascript:showEnglish();" class="btn-english">阅读完整政策 (Read full Policy)</a>
+            <h3>联系方式</h3>
+            <p><a href="mailto:omochisoft-dev@yahoo.co.jp">omochisoft-dev@yahoo.co.jp</a></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 KOTARO OMORI. All rights reserved.
+    </footer>
+
+    <script>
+        function detectLanguage() {
+            var lang = (navigator.language || navigator.userLanguage).toLowerCase();
+            var targetId = 'lang-en';
+
+            if (lang.startsWith('ja')) {
+                targetId = 'lang-ja';
+            } else if (lang.startsWith('ko')) {
+                targetId = 'lang-ko';
+            } else if (lang.startsWith('es')) {
+                targetId = 'lang-es';
+            } else if (lang.startsWith('fr')) {
+                targetId = 'lang-fr';
+            } else if (lang.startsWith('de')) {
+                targetId = 'lang-de';
+            } else if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-hant') {
+                targetId = 'lang-zh-hant';
+            } else if (lang.startsWith('zh')) {
+                targetId = 'lang-zh-hans';
+            }
+
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+
+            var targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.classList.add('active');
+            } else {
+                document.getElementById('lang-en').classList.add('active');
+            }
+        }
+
+        function showEnglish() {
+            document.querySelectorAll('.card').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById('lang-en').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', detectLanguage);
+    </script>
+</body>
+</html>
