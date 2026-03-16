@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Omochi Soft – Soft Technology for Your Day.</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600;700&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
-  
   <style>
     :root {
       --bg-body: #f8f9fc;
@@ -24,7 +22,6 @@
       --card-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
       --card-radius: 24px;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -34,7 +31,6 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
     header {
       position: relative;
       padding: 100px 24px 60px;
@@ -42,7 +38,6 @@
       overflow: hidden;
       background: linear-gradient(to bottom, #ffffff, var(--bg-body));
     }
-
     header::before, header::after {
       content: '';
       position: absolute;
@@ -54,20 +49,17 @@
       z-index: 0;
       animation: floatOrb 15s infinite alternate ease-in-out;
     }
-
     header::before {
       background: var(--hero-gradient-1);
       top: -20%;
       left: -20%;
     }
-
     header::after {
       background: var(--hero-gradient-2);
       bottom: -20%;
       right: -10%;
       animation-delay: -5s;
     }
-
     .header-content {
       position: relative;
       z-index: 1;
@@ -78,7 +70,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     .logo-wrapper {
       display: flex;
       align-items: center;
@@ -86,13 +77,11 @@
       gap: 16px;
       margin-bottom: 8px;
     }
-
     .logo-svg {
       width: 64px;
       height: 64px;
       filter: drop-shadow(0 4px 6px rgba(99, 102, 241, 0.3));
     }
-
     .logo-title {
       font-size: 3.5rem;
       font-weight: 700;
@@ -103,7 +92,6 @@
       -webkit-text-fill-color: transparent;
       line-height: 1;
     }
-
     .tagline {
       font-size: 1.25rem;
       font-weight: 300;
@@ -111,7 +99,6 @@
       margin-top: 0;
       letter-spacing: 0.05em;
     }
-
     main {
       max-width: 1000px;
       margin: 0 auto;
@@ -119,7 +106,6 @@
       position: relative;
       z-index: 1;
     }
-
     .section-title {
       font-size: 0.9rem;
       font-weight: 600;
@@ -130,13 +116,11 @@
       text-align: center;
       opacity: 0.8;
     }
-
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
       gap: 24px;
     }
-
     .app-card {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
@@ -153,7 +137,6 @@
       transform: translateY(30px);
       animation: fadeUpCard 0.6s ease-out forwards;
     }
-
     .app-card:nth-child(1) { animation-delay: 0.1s; }
     .app-card:nth-child(2) { animation-delay: 0.2s; }
     .app-card:nth-child(3) { animation-delay: 0.3s; }
@@ -163,13 +146,12 @@
     .app-card:nth-child(7) { animation-delay: 0.7s; }
     .app-card:nth-child(8) { animation-delay: 0.8s; }
     .app-card:nth-child(9) { animation-delay: 0.9s; }
-
+    .app-card:nth-child(10) { animation-delay: 1.0s; }
     .app-card:hover {
       transform: translateY(-8px) scale(1.01);
       box-shadow: 0 20px 40px rgba(31, 38, 135, 0.12);
       border-color: rgba(255, 255, 255, 0.8);
     }
-
     .app-icon-wrapper {
       width: 72px;
       height: 72px;
@@ -181,22 +163,18 @@
       justify-content: center;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
     }
-
     .app-icon-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-
     .app-card:hover .app-icon-wrapper img {
       transform: scale(1.1);
     }
-
     .app-info {
       flex: 1;
     }
-
     .app-badge {
       display: inline-block;
       font-size: 0.75rem;
@@ -208,20 +186,17 @@
       margin-bottom: 10px;
       letter-spacing: 0.02em;
     }
-
     .app-info h2 {
       margin: 0 0 8px 0;
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--text-primary);
     }
-
     .app-info p {
       margin: 0 0 6px 0;
       font-size: 0.92rem;
       color: var(--text-secondary);
     }
-
     .app-links {
       margin-top: 16px;
       font-size: 0.85rem;
@@ -229,7 +204,6 @@
       flex-wrap: wrap;
       gap: 12px 20px;
     }
-
     .app-links a {
       color: var(--text-primary);
       text-decoration: none;
@@ -237,7 +211,6 @@
       position: relative;
       transition: color 0.3s ease;
     }
-
     .app-links a::after {
       content: '';
       position: absolute;
@@ -251,16 +224,13 @@
       transition: transform 0.3s ease-out;
       opacity: 0.7;
     }
-
     .app-links a:hover {
       color: var(--accent-color);
     }
-
     .app-links a:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
-
     footer {
       text-align: center;
       font-size: 0.8rem;
@@ -269,22 +239,18 @@
       border-top: 1px solid rgba(0,0,0,0.05);
       background: var(--bg-body);
     }
-
     @keyframes floatOrb {
       0% { transform: translate(0, 0) rotate(0deg); }
       100% { transform: translate(5%, 10%) rotate(5deg); }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeUpCard {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @media (max-width: 600px) {
       .logo-wrapper { flex-direction: column; gap: 8px; }
       .logo-svg { width: 56px; height: 56px; }
@@ -317,11 +283,24 @@
       <p class="tagline">Soft Technology for Your Day.</p>
     </div>
   </header>
-
   <main>
     <h2 class="section-title">Applications</h2>
-
     <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon-wrapper">
+          <img src="submane_icon.png" alt="Subscription Tracker icon">
+        </div>
+        <div class="app-info">
+          <span class="app-badge">iOS • Free</span>
+          <h2>Subscription Tracker: Cost/Hour</h2>
+          <p>See what your subscriptions really cost — per hour, per day. Powered by Screen Time integration.</p>
+          <p>Track spending, simulate cancellations, and never miss a renewal date.</p>
+          <div class="app-links">
+            <a href="#">View on the App Store</a>
+            <a href="https://omochisoft.github.io/submane.privacy.html">Contact / Support & Privacy Policy</a>
+          </div>
+        </div>
+      </div>
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="SayWay_icon.png" alt="SayWay icon">
@@ -338,7 +317,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="talkcase_icon.png" alt="TalkCase icon">
@@ -355,7 +333,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="homu_icon.png" alt="HOMU+ icon">
@@ -372,7 +349,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="anniversary-keeper-icon.png" alt="Anniversary Keeper icon">
@@ -388,7 +364,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="giftnote_icon.png" alt="Gift Note icon">
@@ -404,7 +379,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="smartsavings_icon.png" alt="Smart Savings Tracker icon">
@@ -420,7 +394,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="iconf.png" alt="Fridge Inventory icon">
@@ -437,7 +410,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="breezefree-icon2.png" alt="BreezeChat Air icon">
@@ -453,7 +425,6 @@
           </div>
         </div>
       </div>
-
       <div class="app-card">
         <div class="app-icon-wrapper">
           <img src="galaxy_icon.png" alt="Slide Puzzle Galaxy icon">
@@ -471,7 +442,6 @@
       </div>
     </div>
   </main>
-
   <footer>
     <p>&copy; 2026 Omochi Soft. All rights reserved.</p>
   </footer>
